@@ -51,7 +51,7 @@ services:
       WORDPRESS_DEBUG: ${WORDPRESS_DEBUG:-false}
     volumes:
       - wordpress_data:/var/www/html
-      - /Users/md.nahidhasan/ea-plugins:/tmp/ea-plugins:ro
+      - ${EA_PLUGINS_PATH}:/tmp/ea-plugins:ro
     networks:
       - wp_network
 
@@ -75,7 +75,7 @@ services:
       WP_CLI_CACHE_DIR: /tmp/wp-cli-cache
     volumes:
       - wordpress_data:/var/www/html
-      - /Users/md.nahidhasan/ea-plugins:/tmp/ea-plugins:ro
+      - ${EA_PLUGINS_PATH}:/tmp/ea-plugins:ro
       - ./scripts:/scripts:ro
     networks:
       - wp_network

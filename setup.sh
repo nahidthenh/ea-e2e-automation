@@ -38,8 +38,14 @@ bash "${SCRIPT_DIR}/scripts/wait-for-wordpress.sh"
 # ── 4. Run WP-CLI configuration ───────────────────────────────────────────────
 
 echo ""
-echo "[3/3] Configuring WordPress..."
+echo "[3/4] Configuring WordPress..."
 docker compose run --rm wpcli bash /scripts/configure-wordpress.sh
+
+# ── 5. Create and seed test pages ─────────────────────────────────────────────
+
+echo ""
+echo "[4/4] Setting up test pages..."
+docker compose run --rm wpcli bash /scripts/setup-test-pages.sh
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 

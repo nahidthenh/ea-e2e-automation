@@ -51,8 +51,10 @@ function ea_widget( string $css_class, string $widget_type, array $settings ): a
 }
 
 /**
- * Build an Elementor core heading widget — used as a visual label above each
- * button variant so the test page is easy to read in a browser.
+ * Build an Elementor core heading widget.
+ *
+ * @param string $title   Heading text — should describe what the widget below is testing.
+ * @param string $tag     h2 for group banners, h4 for individual widget labels.
  */
 function ea_heading( string $title, string $tag = 'h4' ): array {
     return [
@@ -132,94 +134,106 @@ $page_id = ea_upsert_page( $slug, 'Creative Button' );
 
 $widgets = [
 
-    // ── free effects ─────────────────────────────────────────────────────────
+    // ══════════════════════════════════════════════════════════════════════════
+    // Free Effects
+    // ══════════════════════════════════════════════════════════════════════════
 
-    ea_heading( 'Default Button', 'h3' ),
+    ea_heading( '── Free Effects ──', 'h2' ),
+
+    ea_heading( 'Default Button' ),
     ea_widget( 'test-cb-default', 'eael-creative-button',
         cb_base( 'eael-creative-button--default' )
     ),
 
-    ea_heading( 'Effect — Winona' ),
+    ea_heading( 'Effect: Winona' ),
     ea_widget( 'test-cb-winona', 'eael-creative-button',
         cb_base( 'eael-creative-button--winona' )
     ),
 
-    ea_heading( 'Effect — Ujarak' ),
+    ea_heading( 'Effect: Ujarak' ),
     ea_widget( 'test-cb-ujarak', 'eael-creative-button',
         cb_base( 'eael-creative-button--ujarak' )
     ),
 
-    ea_heading( 'Effect — Wayra' ),
+    ea_heading( 'Effect: Wayra' ),
     ea_widget( 'test-cb-wayra', 'eael-creative-button',
         cb_base( 'eael-creative-button--wayra' )
     ),
 
     // Tamaya is special: renders explicit before/after DOM nodes for secondary text
-    ea_heading( 'Effect — Tamaya' ),
+    ea_heading( 'Effect: Tamaya (renders before/after DOM nodes)' ),
     ea_widget( 'test-cb-tamaya', 'eael-creative-button',
         cb_base( 'eael-creative-button--tamaya' )
     ),
 
-    ea_heading( 'Effect — Rayen' ),
+    ea_heading( 'Effect: Rayen' ),
     ea_widget( 'test-cb-rayen', 'eael-creative-button',
         cb_base( 'eael-creative-button--rayen' )
     ),
 
-    // ── pro effects ───────────────────────────────────────────────────────────
+    // ══════════════════════════════════════════════════════════════════════════
+    // Pro Effects
+    // ══════════════════════════════════════════════════════════════════════════
 
-    ea_heading( 'Pro — Pipaluk', 'h3' ),
+    ea_heading( '── Pro Effects ──', 'h2' ),
+
+    ea_heading( 'Pro Effect: Pipaluk' ),
     ea_widget( 'test-cb-pipaluk', 'eael-creative-button',
         cb_base( 'eael-creative-button--pipaluk' )
     ),
 
-    ea_heading( 'Pro — Moema' ),
+    ea_heading( 'Pro Effect: Moema' ),
     ea_widget( 'test-cb-moema', 'eael-creative-button',
         cb_base( 'eael-creative-button--moema' )
     ),
 
-    ea_heading( 'Pro — Wave' ),
+    ea_heading( 'Pro Effect: Wave' ),
     ea_widget( 'test-cb-wave', 'eael-creative-button',
         cb_base( 'eael-creative-button--wave' )
     ),
 
-    ea_heading( 'Pro — Aylen' ),
+    ea_heading( 'Pro Effect: Aylen' ),
     ea_widget( 'test-cb-aylen', 'eael-creative-button',
         cb_base( 'eael-creative-button--aylen' )
     ),
 
-    ea_heading( 'Pro — Saqui' ),
+    ea_heading( 'Pro Effect: Saqui' ),
     ea_widget( 'test-cb-saqui', 'eael-creative-button',
         cb_base( 'eael-creative-button--saqui' )
     ),
 
-    ea_heading( 'Pro — Wapasha' ),
+    ea_heading( 'Pro Effect: Wapasha' ),
     ea_widget( 'test-cb-wapasha', 'eael-creative-button',
         cb_base( 'eael-creative-button--wapasha' )
     ),
 
-    ea_heading( 'Pro — Nuka' ),
+    ea_heading( 'Pro Effect: Nuka' ),
     ea_widget( 'test-cb-nuka', 'eael-creative-button',
         cb_base( 'eael-creative-button--nuka' )
     ),
 
-    ea_heading( 'Pro — Antiman' ),
+    ea_heading( 'Pro Effect: Antiman' ),
     ea_widget( 'test-cb-antiman', 'eael-creative-button',
         cb_base( 'eael-creative-button--antiman' )
     ),
 
-    ea_heading( 'Pro — Quidel' ),
+    ea_heading( 'Pro Effect: Quidel' ),
     ea_widget( 'test-cb-quidel', 'eael-creative-button',
         cb_base( 'eael-creative-button--quidel' )
     ),
 
-    ea_heading( 'Pro — Shikoba' ),
+    ea_heading( 'Pro Effect: Shikoba' ),
     ea_widget( 'test-cb-shikoba', 'eael-creative-button',
         cb_base( 'eael-creative-button--shikoba' )
     ),
 
-    // ── icon variants ─────────────────────────────────────────────────────────
+    // ══════════════════════════════════════════════════════════════════════════
+    // Icon Variants
+    // ══════════════════════════════════════════════════════════════════════════
 
-    ea_heading( 'Icon Left', 'h3' ),
+    ea_heading( '── Icon Variants ──', 'h2' ),
+
+    ea_heading( 'Default Button | Icon Position: Left' ),
     ea_widget( 'test-cb-icon-left', 'eael-creative-button',
         cb_base( 'eael-creative-button--default', [
             'eael_creative_button_icon_new'       => $ea_icon,
@@ -227,7 +241,7 @@ $widgets = [
         ] )
     ),
 
-    ea_heading( 'Icon Right' ),
+    ea_heading( 'Default Button | Icon Position: Right' ),
     ea_widget( 'test-cb-icon-right', 'eael-creative-button',
         cb_base( 'eael-creative-button--default', [
             'eael_creative_button_icon_new'       => $ea_icon,
@@ -235,9 +249,13 @@ $widgets = [
         ] )
     ),
 
-    // ── link behaviour ────────────────────────────────────────────────────────
+    // ══════════════════════════════════════════════════════════════════════════
+    // Link Behaviour
+    // ══════════════════════════════════════════════════════════════════════════
 
-    ea_heading( 'External Link', 'h3' ),
+    ea_heading( '── Link Behaviour ──', 'h2' ),
+
+    ea_heading( 'Default Button | External Link (target=_blank)' ),
     ea_widget( 'test-cb-external', 'eael-creative-button',
         cb_base( 'eael-creative-button--default', [
             'creative_button_link_url' => [
@@ -249,7 +267,7 @@ $widgets = [
         ] )
     ),
 
-    ea_heading( 'Nofollow Link' ),
+    ea_heading( 'Default Button | Nofollow Link (rel=nofollow)' ),
     ea_widget( 'test-cb-nofollow', 'eael-creative-button',
         cb_base( 'eael-creative-button--default', [
             'creative_button_link_url' => [
@@ -261,27 +279,30 @@ $widgets = [
         ] )
     ),
 
-    // ── alignment ─────────────────────────────────────────────────────────────
+    // ══════════════════════════════════════════════════════════════════════════
+    // Button Alignment
+    // ══════════════════════════════════════════════════════════════════════════
 
-    ea_heading( 'Align Left', 'h3' ),
+    ea_heading( '── Button Alignment ──', 'h2' ),
+
+    ea_heading( 'Default Button | Align: Left (justify-content: flex-start)' ),
     ea_widget( 'test-cb-align-left', 'eael-creative-button',
         cb_base( 'eael-creative-button--default', [
             'eael_creative_button_alignment' => [
                 'unit' => 'px', 'size' => '', 'sizes' => [],
             ],
-            // justify-content: flex-start
             '__globals__' => [],
         ] )
     ),
 
-    ea_heading( 'Align Center' ),
+    ea_heading( 'Default Button | Align: Center (justify-content: center)' ),
     ea_widget( 'test-cb-align-center', 'eael-creative-button',
         cb_base( 'eael-creative-button--default', [
             'eael_creative_button_alignment' => 'center',
         ] )
     ),
 
-    ea_heading( 'Align Right' ),
+    ea_heading( 'Default Button | Align: Right (justify-content: flex-end)' ),
     ea_widget( 'test-cb-align-right', 'eael-creative-button',
         cb_base( 'eael-creative-button--default', [
             'eael_creative_button_alignment' => 'flex-end',

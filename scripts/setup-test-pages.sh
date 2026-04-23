@@ -12,4 +12,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-test-pages.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-code-snippet-page.php
+
 log "Test pages ready."

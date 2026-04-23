@@ -1,0 +1,20 @@
+{
+  "name": "ea-e2e-automation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "setup": "bash setup.sh",
+    "teardown": "bash teardown.sh",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "dotenv": "^16.4.0"
+  }
+}

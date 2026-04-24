@@ -42,4 +42,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-advanced-accordion-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-tooltip-page.php
+
 log "Test pages ready."

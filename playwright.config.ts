@@ -1,7 +1,24 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig, devices, ReporterDescription } from "@playwright/test";
 import * as dotenv from "dotenv";
 
 dotenv.config();
+
+const slackReporter: ReporterDescription = [
+  "./node_modules/playwright-slack-report/dist/src/SlackReporter.js",
+  {
+    channels: [process.env.SLACK_CHANNEL_ID ?? ""],
+    sendResults: "always",
+    maxNumberOfFailuresToShow: 0,
+    meta: [
+      {
+        key: ":essential-addons-logo: E2E Automation - Test Results",
+        value: process.env.PAGES_URL
+          ? `🖥️ <${process.env.PAGES_URL}|View Results!>`
+          : "Local run",
+      },
+    ],
+  },
+];
 
 export default defineConfig({
   testDir: "./tests",
@@ -11,8 +28,9 @@ export default defineConfig({
   workers: process.env.CI ? 1 : 1,
 
   reporter: [
-    ["list"],
+    process.env.CI ? ["github"] : ["list"],
     ["html", { outputFolder: "playwright-report", open: "never" }],
+    ...(process.env.SLACK_BOT_TOKEN ? [slackReporter] : []),
   ],
 
   use: {

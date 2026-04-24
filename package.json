@@ -15,6 +15,7 @@
     "@playwright/test": "^1.44.0",
     "@types/node": "^20.0.0",
     "typescript": "^5.4.0",
-    "dotenv": "^16.4.0"
+    "dotenv": "^16.4.0",
+    "playwright-slack-report": "^1.1.110"
   }
 }

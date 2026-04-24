@@ -6,10 +6,18 @@ on:
     # Every Monday at 08:00 BDT (UTC+6) = 02:00 UTC
     - cron: "0 2 * * 1"
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   e2e:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     env:
       EA_PLUGINS_PATH: ${{ github.workspace }}/ea-plugins
@@ -85,17 +93,26 @@ jobs:
       # ── Run tests ────────────────────────────────────────────────────────────
 
       - name: Run E2E tests
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: npm test
 
-      # ── Artifacts ────────────────────────────────────────────────────────────
+      # ── Publish report to GitHub Pages ───────────────────────────────────────
 
-      - name: Upload Playwright HTML report
+      - name: Upload Pages artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: playwright-report
           path: playwright-report/
-          retention-days: 30
+
+      - name: Deploy to GitHub Pages
+        if: always()
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # ── Failure artifacts ────────────────────────────────────────────────────
 
       - name: Upload failure artifacts (screenshots & videos)
         if: failure()

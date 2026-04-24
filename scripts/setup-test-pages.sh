@@ -32,4 +32,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-progress-bar-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-flip-box-page.php
+
 log "Test pages ready."

@@ -27,4 +27,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-counter-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-progress-bar-page.php
+
 log "Test pages ready."

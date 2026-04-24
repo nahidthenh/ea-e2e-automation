@@ -6,6 +6,7 @@ dotenv.config();
 const slackReporter: ReporterDescription = [
   "./node_modules/playwright-slack-report/dist/src/SlackReporter.js",
   {
+    slackOAuthToken: process.env.SLACK_BOT_TOKEN,
     channels: [process.env.SLACK_CHANNEL_ID ?? ""],
     sendResults: "always",
     maxNumberOfFailuresToShow: 0,

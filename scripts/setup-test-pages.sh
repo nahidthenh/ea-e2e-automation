@@ -22,4 +22,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-info-box-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-counter-page.php
+
 log "Test pages ready."

@@ -2,6 +2,17 @@ name: EA E2E Tests
 
 on:
   workflow_dispatch:
+    inputs:
+      free_branch:
+        description: "EA Free plugin branch"
+        required: false
+        default: "master"
+        type: string
+      pro_branch:
+        description: "EA Pro plugin branch"
+        required: false
+        default: "master"
+        type: string
   schedule:
     # Every Monday at 08:00 BDT (UTC+6) = 02:00 UTC
     - cron: "0 2 * * 1"
@@ -38,15 +49,15 @@ jobs:
 
       # ── Fetch EA plugins ─────────────────────────────────────────────────────
 
-      - name: Fetch EA Free plugin
+      - name: Fetch EA Free plugin (${{ inputs.free_branch || 'master' }})
         run: |
-          git clone \
+          git clone --branch ${{ inputs.free_branch || 'master' }} --single-branch \
             https://x-access-token:${{ secrets.PLUGIN_REPO_TOKEN }}@github.com/WPDevelopers/essential-addons-for-elementor-lite.git \
             ea-plugins/essential-addons-for-elementor-lite
 
-      - name: Fetch EA Pro plugin
+      - name: Fetch EA Pro plugin (${{ inputs.pro_branch || 'master' }})
         run: |
-          git clone \
+          git clone --branch ${{ inputs.pro_branch || 'master' }} --single-branch \
             https://x-access-token:${{ secrets.PLUGIN_REPO_TOKEN }}@github.com/WPDevelopers/essential-addons-elementor.git \
             ea-plugins/essential-addons-elementor
 

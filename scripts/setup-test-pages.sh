@@ -47,4 +47,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-tooltip-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-advanced-tabs-page.php
+
 log "Test pages ready."

@@ -38,7 +38,7 @@ Last updated: 2026-04-25
 | 26 | Facebook Feed | ❌ Needed |
 | 27 | Fancy Text | ✅ Done |
 | 28 | Feature List | ✅ Done |
-| 29 | Filterable Gallery | ❌ Needed |
+| 29 | Filterable Gallery | ✅ Done |
 | 30 | Fluent Form | ❌ Needed |
 | 31 | Formstack | ❌ Needed |
 | 32 | Gravity Forms | ❌ Needed |

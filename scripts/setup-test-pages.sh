@@ -77,4 +77,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-filterable-gallery-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-dual-color-heading-page.php
+
 log "Test pages ready."

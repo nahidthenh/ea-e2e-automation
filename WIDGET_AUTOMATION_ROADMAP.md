@@ -30,14 +30,14 @@ Last updated: 2026-04-25
 | 18 | Contact Form 7 | ❌ Needed |
 | 19 | Content Ticker | ❌ Needed |
 | 20 | Countdown | ❌ Needed |
-| 21 | CTA Box | ❌ Needed |
-| 22 | Data Table | ❌ Needed |
+| 21 | CTA Box |  |
+| 22 | Data Table | ✅ Done | ❌ Needed |
 | 23 | Dual Color Header | ❌ Needed |
 | 24 | EmbedPress | ❌ Needed |
 | 25 | Event Calendar | ❌ Needed |
 | 26 | Facebook Feed | ❌ Needed |
-| 27 | Fancy Text | ❌ Needed |
-| 28 | Feature List | ❌ Needed |
+| 27 | Fancy Text | ✅ Done |
+| 28 | Feature List | ✅ Done |
 | 29 | Filterable Gallery | ❌ Needed |
 | 30 | Fluent Form | ❌ Needed |
 | 31 | Formstack | ❌ Needed |

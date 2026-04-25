@@ -62,4 +62,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-cta-box-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-feature-list-page.php
+
 log "Test pages ready."

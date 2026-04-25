@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 15 | 2 | **17** |
-| Not covered | 45 | 39 | **84** |
-| **Coverage** | **25%** | **5%** | **17%** |
+| Covered | 16 | 2 | **18** |
+| Not covered | 44 | 39 | **83** |
+| **Coverage** | **27%** | **5%** | **18%** |
 
 ---
 
@@ -38,6 +38,7 @@
 | Info Box | Free | [tests/info-box.spec.ts](tests/info-box.spec.ts) |
 | Progress Bar | Free | [tests/progress-bar.spec.ts](tests/progress-bar.spec.ts) |
 | Simple Menu | Free | [tests/simple-menu.spec.ts](tests/simple-menu.spec.ts) |
+| Content Ticker | Free | [tests/content-ticker.spec.ts](tests/content-ticker.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 
 ---
@@ -51,7 +52,6 @@
 | Advanced Data Table | `Advanced_Data_Table.php` |
 | Business Reviews | `Business_Reviews.php` |
 | Career Page | `Career_Page.php` |
-| Content Ticker | `Content_Ticker.php` |
 | Countdown | `Countdown.php` |
 | Data Table | `Data_Table.php` |
 | Image Accordion | `Image_Accordion.php` |

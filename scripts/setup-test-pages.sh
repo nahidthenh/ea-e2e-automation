@@ -67,4 +67,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-feature-list-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-fancy-text-page.php
+
 log "Test pages ready."

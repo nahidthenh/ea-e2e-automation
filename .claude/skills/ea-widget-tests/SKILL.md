@@ -386,6 +386,14 @@ const PRO_STYLES  = [ /* pro values found in Step 5 */ ] as const;
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
+  const body = await page.content();
+  if (
+    body.includes("Fatal error") ||
+    body.includes("Parse error") ||
+    body.includes("WordPress database error")
+  ) {
+    throw new Error("PHP fatal/parse error detected on page load");
+  }
 }
 
 function watchErrors(page: Page): string[] {
@@ -394,6 +402,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 ```
+
+> **Every test must call `openPage(page)` first** — this ensures no test proceeds
+> if a PHP fatal error is present on the page.
 
 ### Required test sections
 
@@ -439,6 +450,21 @@ Same pattern as section 2, using the pro style map.
 
 ---
 
+## Step 13 — Update COVERAGE.md
+
+Open `/Users/md.nahidhasan/ea-e2e-automation/COVERAGE.md` if it exists.
+If it does not exist, skip this step (COVERAGE.md is generated separately).
+
+If it exists, find the row for `{SLUG}` and mark it as covered:
+
+```markdown
+| {SLUG} | ✅ |
+```
+
+If no row exists for `{SLUG}`, append one under the appropriate section.
+
+---
+
 ## Output checklist
 
 Before finishing, confirm:
@@ -449,3 +475,5 @@ Before finishing, confirm:
 - [ ] `scripts/setup-test-pages.sh` — new eval-file line added
 - [ ] Docker setup ran without PHP fatal errors (warnings about Array-to-string from Elementor internals are acceptable)
 - [ ] Verify command confirms `widgets=N headings=M` with correct N
+- [ ] `openPage()` includes PHP fatal error check — every test calls it before any assertion
+- [ ] `COVERAGE.md` updated if the file exists

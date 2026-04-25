@@ -31,6 +31,14 @@ const tabPanel = (hook: string, n: number) =>
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
+  const body = await page.content();
+  if (
+    body.includes("Fatal error") ||
+    body.includes("Parse error") ||
+    body.includes("WordPress database error")
+  ) {
+    throw new Error("PHP fatal/parse error detected on page load");
+  }
 }
 
 function watchErrors(page: Page): string[] {

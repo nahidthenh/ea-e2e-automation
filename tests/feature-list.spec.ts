@@ -27,12 +27,11 @@ const desc   = (hook: string) => `.${hook} .eael-feature-list-content`;
 // ── known shape / shape-view values ──────────────────────────────────────
 const FREE_SHAPES      = ["circle", "square", "rhombus"] as const;
 const SHAPE_VIEWS      = ["stacked", "framed"] as const;
-const ICON_POSITIONS   = ["left", "top", "right"] as const;
 
 // ── helpers ───────────────────────────────────────────────────────────────
 
 async function openPage(page: Page) {
-  await page.goto(PAGE_URL);
+  await page.goto(PAGE_URL, { waitUntil: "domcontentloaded" });
 }
 
 function watchErrors(page: Page): string[] {
@@ -108,8 +107,8 @@ test.describe("Icon position", () => {
   for (const [hook, posClass] of Object.entries(positionMap)) {
     test(`${posClass} wrapper class is present`, async ({ page }) => {
       await openPage(page);
-      const wrapper = page.locator(`.${hook} > .elementor-widget-container > div`).first();
-      await expect(wrapper).toHaveClass(new RegExp(posClass.replace("-icon-position-", "-icon-position-")));
+      const wrapper = page.locator(`.${hook} > div`).first();
+      await expect(wrapper).toHaveClass(new RegExp(posClass));
     });
 
     test(`${posClass} icon box is visible`, async ({ page }) => {

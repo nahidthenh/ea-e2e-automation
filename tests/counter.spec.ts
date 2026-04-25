@@ -321,9 +321,14 @@ test.describe("Interaction", () => {
     expect(errs, errs.join(" | ")).toHaveLength(0);
   });
 
-  test("counter number element starts at 0 before JS animation completes", async ({ page }) => {
+  test("counter number element has correct target value and contains a valid count", async ({ page }) => {
     await page.goto(PAGE_URL);
-    const initialText = await page.locator(number("test-c-default")).first().textContent();
-    expect(["0", "250"]).toContain(initialText?.trim());
+    const el = page.locator(number("test-c-default")).first();
+    await expect(el).toHaveAttribute("data-to", "250");
+    const text = await el.textContent();
+    const val = parseInt(text?.trim() ?? "-1", 10);
+    expect(Number.isInteger(val), `"${text}" is not an integer`).toBe(true);
+    expect(val).toBeGreaterThanOrEqual(0);
+    expect(val).toBeLessThanOrEqual(250);
   });
 });

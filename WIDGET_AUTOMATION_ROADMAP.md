@@ -17,13 +17,13 @@ Last updated: 2026-04-25
 | 5 | Info Box | ✅ Done |
 | 6 | Progress Bar | ✅ Done |
 | 7 | Tooltip | ✅ Done |
-| 8 | Advanced Tabs | ❌ Needed |
+| 8 | Advanced Tabs | ✅ Done |
 | 9 | Advanced Data Table | ❌ Needed |
 | 10 | Better Payment | ❌ Needed |
 | 11 | BetterDocs Category Box | ❌ Needed |
 | 12 | BetterDocs Category Grid | ❌ Needed |
 | 13 | BetterDocs Search Form | ❌ Needed |
-| 14 | Breadcrumbs | ❌ Needed |
+| 14 | Breadcrumbs | ✅ Done |
 | 15 | Business Reviews | ❌ Needed |
 | 16 | Caldera Forms | ❌ Needed |
 | 17 | Career Page | ❌ Needed |

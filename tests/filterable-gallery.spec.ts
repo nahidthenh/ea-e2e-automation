@@ -32,7 +32,6 @@ const caption    = (hook: string) => `.${hook} .gallery-item-caption-wrap`;
 
 // ── known values ──────────────────────────────────────────────────────────
 const FREE_LAYOUTS   = ["hoverer", "card", "layout_3"] as const;
-const HOVER_STYLES   = ["eael-slide-up", "eael-none", "eael-fade-in", "eael-zoom-in"] as const;
 
 // ── helpers ───────────────────────────────────────────────────────────────
 
@@ -333,8 +332,9 @@ test.describe("Element structure", () => {
 
 // ══════════════════════════════════════════════════════════════════════════
 // 9. Pro layouts (grid_flow_gallery, harmonic_gallery)
-//    Without EA Pro the gallery body is empty (do_action hook not bound),
-//    but the wrapper, data-layout-mode, and filter bar ARE still rendered.
+//    The free plugin always renders the wrapper + data-layout-mode + filter
+//    bar regardless of whether EA Pro is installed. Tests assert only that
+//    stable free-plugin structure so CI/CD passes either way.
 // ══════════════════════════════════════════════════════════════════════════
 
 test.describe("Pro layouts", () => {
@@ -344,12 +344,12 @@ test.describe("Pro layouts", () => {
   };
 
   for (const [hook, layoutMode] of Object.entries(proLayoutMap)) {
-    test(`${layoutMode} wrapper is rendered`, async ({ page }) => {
+    test(`${layoutMode} wrapper is attached`, async ({ page }) => {
       await openPage(page);
       await expect(page.locator(wrapper(hook)).first()).toBeAttached();
     });
 
-    test(`${layoutMode} wrapper has correct data-layout-mode`, async ({ page }) => {
+    test(`${layoutMode} data-layout-mode is '${layoutMode}'`, async ({ page }) => {
       await openPage(page);
       await expect(page.locator(wrapper(hook)).first()).toHaveAttribute(
         "data-layout-mode",
@@ -357,7 +357,7 @@ test.describe("Pro layouts", () => {
       );
     });
 
-    test(`${layoutMode} filter bar is rendered`, async ({ page }) => {
+    test(`${layoutMode} filter bar is attached`, async ({ page }) => {
       await openPage(page);
       await expect(page.locator(filterBar(hook)).first()).toBeAttached();
     });
@@ -367,6 +367,14 @@ test.describe("Pro layouts", () => {
       await expect(
         page.locator(`.${hook} .eael-filter-gallery-control li.all-control`).first()
       ).toBeAttached();
+    });
+
+    test(`${layoutMode} category filter buttons are rendered`, async ({ page }) => {
+      await openPage(page);
+      const controls = page.locator(
+        `.${hook} .eael-filter-gallery-control li.control:not(.all-control)`
+      );
+      await expect(controls).toHaveCount(2);
     });
   }
 });
@@ -409,8 +417,6 @@ test.describe("Interaction", () => {
       "test-fg-hover-zoom",
       "test-fg-popup-media",
       "test-fg-popup-none",
-      "test-fg-pro-grid-flow",
-      "test-fg-pro-harmonic",
     ]) {
       await page.locator(galleryItem(hook)).first().hover();
       await page.waitForTimeout(150);

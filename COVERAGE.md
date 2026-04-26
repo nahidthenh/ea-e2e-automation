@@ -1,6 +1,6 @@
 # EA Widget Test Coverage
 
-> **Last updated:** 2026-04-25
+> **Last updated:** 2026-04-26
 > **Plugin sources:**
 > - Free: `ea-plugins/essential-addons-for-elementor-lite/includes/Elements/`
 > - Pro:  `ea-plugins/essential-addons-elementor/includes/Elements/`
@@ -12,24 +12,28 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 19 | 3 | **22** |
-| Not covered | 41 | 38 | **79** |
-| **Coverage** | **32%** | **7%** | **22%** |
+| Covered | 21 | 6 | **27** |
+| Not covered | 39 | 35 | **74** |
+| **Coverage** | **35%** | **15%** | **27%** |
 
 ---
 
-## ✅ Covered Widgets (22)
+## ✅ Covered Widgets (27)
 
 | Widget | Plugin | Test File |
 |---|---|---|
 | Advanced Accordion | Free | [tests/advanced-accordion.spec.ts](tests/advanced-accordion.spec.ts) |
+| Career Page | Free | [tests/career-page.spec.ts](tests/career-page.spec.ts) |
 | Image Accordion | Free | [tests/image-accordion.spec.ts](tests/image-accordion.spec.ts) |
+| Image Comparison | Pro | [tests/image-comparison.spec.ts](tests/image-comparison.spec.ts) |
+| Image Hot Spots | Pro | [tests/image-hot-spots.spec.ts](tests/image-hot-spots.spec.ts) |
 | Advanced Menu | Pro | [tests/advanced-menu.spec.ts](tests/advanced-menu.spec.ts) |
 | Advanced Tabs | Free | [tests/advanced-tabs.spec.ts](tests/advanced-tabs.spec.ts) |
 | Breadcrumbs | Free | [tests/breadcrumbs.spec.ts](tests/breadcrumbs.spec.ts) |
 | Code Snippet | Free | [tests/code-snippet.spec.ts](tests/code-snippet.spec.ts) |
 | Counter | Pro | [tests/counter.spec.ts](tests/counter.spec.ts) |
 | Price Menu | Pro | [tests/price-menu.spec.ts](tests/price-menu.spec.ts) |
+| Pricing Slider | Pro | [tests/pricing-slider.spec.ts](tests/pricing-slider.spec.ts) |
 | Creative Button | Free | [tests/creative-button.spec.ts](tests/creative-button.spec.ts) |
 | CTA Box | Free | [tests/cta-box.spec.ts](tests/cta-box.spec.ts) |
 | Dual Color Heading | Free | [tests/dual-color-heading.spec.ts](tests/dual-color-heading.spec.ts) |
@@ -43,11 +47,12 @@
 | Content Ticker | Free | [tests/content-ticker.spec.ts](tests/content-ticker.spec.ts) |
 | SVG Draw | Free | [tests/svg-draw.spec.ts](tests/svg-draw.spec.ts) |
 | Team Member | Free | [tests/team-member.spec.ts](tests/team-member.spec.ts) |
+| Testimonial | Free | [tests/testimonial.spec.ts](tests/testimonial.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (45)
+## ❌ Not Covered — Free Widgets (39)
 
 ### Core / General
 
@@ -55,7 +60,6 @@
 |---|---|
 | Advanced Data Table | `Advanced_Data_Table.php` |
 | Business Reviews | `Business_Reviews.php` |
-| Career Page | `Career_Page.php` |
 | Countdown | `Countdown.php` |
 | Data Table | `Data_Table.php` |
 | Interactive Circle | `Interactive_Circle.php` |
@@ -67,7 +71,6 @@
 ~~| SVG Draw | `SVG_Draw.php` |~~
 | Sticky Video | `Sticky_Video.php` |
 ~~| Team Member | `Team_Member.php` |~~
-| Testimonial | `Testimonial.php` |
 | Twitter Feed | `Twitter_Feed.php` |
 
 ### Form Integrations
@@ -114,7 +117,7 @@
 
 ---
 
-## ❌ Not Covered — Pro Widgets (39)
+## ❌ Not Covered — Pro Widgets (35)
 
 ### Core / General
 
@@ -128,8 +131,6 @@
 | Figma To Elementor | `Figma_To_Elementor.php` |
 | Flip Carousel | `Flip_Carousel.php` |
 | Google Map | `Google_Map.php` |
-| Image Comparison | `Image_Comparison.php` | ✅ |
-| Image Hot Spots | `Image_Hot_Spots.php` | ✅ |
 | Image Scroller | `Image_Scroller.php` |
 | Interactive Card | `Interactive_Card.php` |
 | Interactive Promo | `Interactive_Promo.php` |
@@ -142,7 +143,6 @@
 | Post Carousel | `Post_Carousel.php` |
 | Post List | `Post_List.php` |
 ~~| Price Menu | `Price_Menu.php` |~~
-| Pricing Slider | `Pricing_Slider.php` | ✅ |
 | Protected Content | `Protected_Content.php` |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Stacked Cards | `Stacked_Cards.php` |

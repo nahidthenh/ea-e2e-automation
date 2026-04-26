@@ -132,4 +132,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-image-hot-spots-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-testimonial-page.php
+
 log "Test pages ready."

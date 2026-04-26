@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 21 | 6 | **27** |
-| Not covered | 39 | 35 | **74** |
-| **Coverage** | **35%** | **15%** | **27%** |
+| Covered | 22 | 6 | **28** |
+| Not covered | 38 | 35 | **73** |
+| **Coverage** | **37%** | **15%** | **28%** |
 
 ---
 
@@ -24,6 +24,7 @@
 |---|---|---|
 | Advanced Accordion | Free | [tests/advanced-accordion.spec.ts](tests/advanced-accordion.spec.ts) |
 | Career Page | Free | [tests/career-page.spec.ts](tests/career-page.spec.ts) |
+| Countdown | Free | [tests/countdown.spec.ts](tests/countdown.spec.ts) |
 | Image Accordion | Free | [tests/image-accordion.spec.ts](tests/image-accordion.spec.ts) |
 | Image Comparison | Pro | [tests/image-comparison.spec.ts](tests/image-comparison.spec.ts) |
 | Image Hot Spots | Pro | [tests/image-hot-spots.spec.ts](tests/image-hot-spots.spec.ts) |
@@ -60,7 +61,7 @@
 |---|---|
 | Advanced Data Table | `Advanced_Data_Table.php` |
 | Business Reviews | `Business_Reviews.php` |
-| Countdown | `Countdown.php` |
+~~| Countdown | `Countdown.php` |~~
 | Data Table | `Data_Table.php` |
 | Interactive Circle | `Interactive_Circle.php` |
 | Login / Register | `Login_Register.php` |

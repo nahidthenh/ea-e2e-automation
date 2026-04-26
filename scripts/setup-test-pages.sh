@@ -137,4 +137,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-testimonial-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-countdown-page.php
+
 log "Test pages ready."

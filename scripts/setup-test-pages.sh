@@ -112,4 +112,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-price-menu-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-pricing-slider-page.php
+
 log "Test pages ready."

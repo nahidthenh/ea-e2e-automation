@@ -142,7 +142,7 @@
 | Post Carousel | `Post_Carousel.php` |
 | Post List | `Post_List.php` |
 ~~| Price Menu | `Price_Menu.php` |~~
-| Pricing Slider | `Pricing_Slider.php` |
+| Pricing Slider | `Pricing_Slider.php` | ✅ |
 | Protected Content | `Protected_Content.php` |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Stacked Cards | `Stacked_Cards.php` |

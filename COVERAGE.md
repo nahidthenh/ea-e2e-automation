@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 18 | 2 | **20** |
-| Not covered | 42 | 39 | **81** |
-| **Coverage** | **30%** | **5%** | **20%** |
+| Covered | 18 | 3 | **21** |
+| Not covered | 42 | 38 | **80** |
+| **Coverage** | **30%** | **7%** | **21%** |
 
 ---
 
-## ✅ Covered Widgets (20)
+## ✅ Covered Widgets (21)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -28,6 +28,7 @@
 | Breadcrumbs | Free | [tests/breadcrumbs.spec.ts](tests/breadcrumbs.spec.ts) |
 | Code Snippet | Free | [tests/code-snippet.spec.ts](tests/code-snippet.spec.ts) |
 | Counter | Pro | [tests/counter.spec.ts](tests/counter.spec.ts) |
+| Price Menu | Pro | [tests/price-menu.spec.ts](tests/price-menu.spec.ts) |
 | Creative Button | Free | [tests/creative-button.spec.ts](tests/creative-button.spec.ts) |
 | CTA Box | Free | [tests/cta-box.spec.ts](tests/cta-box.spec.ts) |
 | Dual Color Heading | Free | [tests/dual-color-heading.spec.ts](tests/dual-color-heading.spec.ts) |
@@ -140,7 +141,7 @@
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
 | Post List | `Post_List.php` |
-| Price Menu | `Price_Menu.php` |
+~~| Price Menu | `Price_Menu.php` |~~
 | Pricing Slider | `Pricing_Slider.php` |
 | Protected Content | `Protected_Content.php` |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |

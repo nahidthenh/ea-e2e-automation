@@ -102,4 +102,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-svg-draw-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-team-member-page.php
+
 log "Test pages ready."

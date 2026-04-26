@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 16 | 2 | **18** |
-| Not covered | 44 | 39 | **83** |
-| **Coverage** | **27%** | **5%** | **18%** |
+| Covered | 17 | 2 | **19** |
+| Not covered | 43 | 39 | **82** |
+| **Coverage** | **28%** | **5%** | **19%** |
 
 ---
 
-## ✅ Covered Widgets (17)
+## ✅ Covered Widgets (19)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -39,6 +39,7 @@
 | Progress Bar | Free | [tests/progress-bar.spec.ts](tests/progress-bar.spec.ts) |
 | Simple Menu | Free | [tests/simple-menu.spec.ts](tests/simple-menu.spec.ts) |
 | Content Ticker | Free | [tests/content-ticker.spec.ts](tests/content-ticker.spec.ts) |
+| SVG Draw | Free | [tests/svg-draw.spec.ts](tests/svg-draw.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 
 ---
@@ -61,7 +62,7 @@
 | Post Grid | `Post_Grid.php` |
 | Post Timeline | `Post_Timeline.php` |
 | Pricing Table | `Pricing_Table.php` |
-| SVG Draw | `SVG_Draw.php` |
+~~| SVG Draw | `SVG_Draw.php` |~~
 | Sticky Video | `Sticky_Video.php` |
 | Team Member | `Team_Member.php` |
 | Testimonial | `Testimonial.php` |

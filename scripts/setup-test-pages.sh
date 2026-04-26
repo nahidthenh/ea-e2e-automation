@@ -97,4 +97,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-content-ticker-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-svg-draw-page.php
+
 log "Test pages ready."

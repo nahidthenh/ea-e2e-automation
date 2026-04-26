@@ -12,17 +12,18 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 18 | 3 | **21** |
-| Not covered | 42 | 38 | **80** |
-| **Coverage** | **30%** | **7%** | **21%** |
+| Covered | 19 | 3 | **22** |
+| Not covered | 41 | 38 | **79** |
+| **Coverage** | **32%** | **7%** | **22%** |
 
 ---
 
-## ✅ Covered Widgets (21)
+## ✅ Covered Widgets (22)
 
 | Widget | Plugin | Test File |
 |---|---|---|
 | Advanced Accordion | Free | [tests/advanced-accordion.spec.ts](tests/advanced-accordion.spec.ts) |
+| Image Accordion | Free | [tests/image-accordion.spec.ts](tests/image-accordion.spec.ts) |
 | Advanced Menu | Pro | [tests/advanced-menu.spec.ts](tests/advanced-menu.spec.ts) |
 | Advanced Tabs | Free | [tests/advanced-tabs.spec.ts](tests/advanced-tabs.spec.ts) |
 | Breadcrumbs | Free | [tests/breadcrumbs.spec.ts](tests/breadcrumbs.spec.ts) |
@@ -57,7 +58,6 @@
 | Career Page | `Career_Page.php` |
 | Countdown | `Countdown.php` |
 | Data Table | `Data_Table.php` |
-| Image Accordion | `Image_Accordion.php` |
 | Interactive Circle | `Interactive_Circle.php` |
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` |

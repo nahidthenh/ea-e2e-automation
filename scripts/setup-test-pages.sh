@@ -117,4 +117,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-pricing-slider-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-image-accordion-page.php
+
 log "Test pages ready."

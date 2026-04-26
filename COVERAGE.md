@@ -128,7 +128,7 @@
 | Figma To Elementor | `Figma_To_Elementor.php` |
 | Flip Carousel | `Flip_Carousel.php` |
 | Google Map | `Google_Map.php` |
-| Image Comparison | `Image_Comparison.php` |
+| Image Comparison | `Image_Comparison.php` | ✅ |
 | Image Hot Spots | `Image_Hot_Spots.php` |
 | Image Scroller | `Image_Scroller.php` |
 | Interactive Card | `Interactive_Card.php` |

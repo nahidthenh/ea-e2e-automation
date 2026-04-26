@@ -122,4 +122,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-image-accordion-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-image-comparison-page.php
+
 log "Test pages ready."

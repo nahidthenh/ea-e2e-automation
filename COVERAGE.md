@@ -52,6 +52,7 @@
 | Team Member Carousel | Pro | [tests/team-member-carousel.spec.ts](tests/team-member-carousel.spec.ts) |
 | Pricing Table | Free | [tests/pricing-table.spec.ts](tests/pricing-table.spec.ts) |
 | Multicolumn Pricing Table | Pro | [tests/multicolumn-pricing-table.spec.ts](tests/multicolumn-pricing-table.spec.ts) |
+| Divider | Pro | [tests/divider.spec.ts](tests/divider.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 
 ---
@@ -128,7 +129,7 @@
 |---|---|
 | Advanced Search | `Advanced_Search.php` |
 | Content Timeline | `Content_Timeline.php` |
-| Divider | `Divider.php` |
+~~| Divider | `Divider.php` |~~
 | Dynamic Filterable Gallery | `Dynamic_Filterable_Gallery.php` |
 | Fancy Chart | `Fancy_Chart.php` |
 | Figma To Elementor | `Figma_To_Elementor.php` |

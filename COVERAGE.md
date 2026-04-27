@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 22 | 6 | **28** |
-| Not covered | 38 | 35 | **73** |
-| **Coverage** | **37%** | **15%** | **28%** |
+| Covered | 22 | 7 | **29** |
+| Not covered | 38 | 34 | **72** |
+| **Coverage** | **37%** | **17%** | **29%** |
 
 ---
 
@@ -49,6 +49,7 @@
 | SVG Draw | Free | [tests/svg-draw.spec.ts](tests/svg-draw.spec.ts) |
 | Team Member | Free | [tests/team-member.spec.ts](tests/team-member.spec.ts) |
 | Testimonial | Free | [tests/testimonial.spec.ts](tests/testimonial.spec.ts) |
+| Team Member Carousel | Pro | [tests/team-member-carousel.spec.ts](tests/team-member-carousel.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 
 ---
@@ -118,7 +119,7 @@
 
 ---
 
-## ❌ Not Covered — Pro Widgets (35)
+## ❌ Not Covered — Pro Widgets (34)
 
 ### Core / General
 
@@ -148,7 +149,7 @@
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Stacked Cards | `Stacked_Cards.php` |
 | Static Product | `Static_Product.php` |
-| Team Member Carousel | `Team_Member_Carousel.php` |
+~~| Team Member Carousel | `Team_Member_Carousel.php` |~~
 | Testimonial Slider | `Testimonial_Slider.php` |
 | Toggle | `Toggle.php` |
 | Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |

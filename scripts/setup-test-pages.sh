@@ -167,4 +167,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-toggle-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-one-page-navigation-page.php
+
 log "Test pages ready."

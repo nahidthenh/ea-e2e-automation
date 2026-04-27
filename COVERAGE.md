@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 23 | 7 | **30** |
-| Not covered | 37 | 34 | **71** |
-| **Coverage** | **38%** | **17%** | **30%** |
+| Covered | 23 | 8 | **31** |
+| Not covered | 37 | 33 | **70** |
+| **Coverage** | **38%** | **20%** | **31%** |
 
 ---
 
@@ -55,6 +55,7 @@
 | Divider | Pro | [tests/divider.spec.ts](tests/divider.spec.ts) |
 | Toggle | Pro | [tests/toggle.spec.ts](tests/toggle.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
+| One Page Navigation | Pro | [tests/one-page-navigation.spec.ts](tests/one-page-navigation.spec.ts) |
 
 ---
 
@@ -142,7 +143,7 @@
 | Lightbox | `Lightbox.php` |
 | Logo Carousel | `Logo_Carousel.php` |
 | Offcanvas | `Offcanvas.php` |
-| One Page Navigation | `One_Page_Navigation.php` |
+~~| One Page Navigation | `One_Page_Navigation.php` |~~
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
 | Post List | `Post_List.php` |

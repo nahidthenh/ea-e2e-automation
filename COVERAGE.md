@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 22 | 7 | **29** |
-| Not covered | 38 | 34 | **72** |
-| **Coverage** | **37%** | **17%** | **29%** |
+| Covered | 23 | 7 | **30** |
+| Not covered | 37 | 34 | **71** |
+| **Coverage** | **38%** | **17%** | **30%** |
 
 ---
 
-## ✅ Covered Widgets (27)
+## ✅ Covered Widgets (30)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -50,11 +50,12 @@
 | Team Member | Free | [tests/team-member.spec.ts](tests/team-member.spec.ts) |
 | Testimonial | Free | [tests/testimonial.spec.ts](tests/testimonial.spec.ts) |
 | Team Member Carousel | Pro | [tests/team-member-carousel.spec.ts](tests/team-member-carousel.spec.ts) |
+| Pricing Table | Free | [tests/pricing-table.spec.ts](tests/pricing-table.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (39)
+## ❌ Not Covered — Free Widgets (37)
 
 ### Core / General
 
@@ -69,7 +70,6 @@
 | NFT Gallery | `NFT_Gallery.php` |
 | Post Grid | `Post_Grid.php` |
 | Post Timeline | `Post_Timeline.php` |
-| Pricing Table | `Pricing_Table.php` |
 ~~| SVG Draw | `SVG_Draw.php` |~~
 | Sticky Video | `Sticky_Video.php` |
 ~~| Team Member | `Team_Member.php` |~~

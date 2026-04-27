@@ -152,4 +152,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-pricing-table-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-multicolumn-pricing-table-page.php
+
 log "Test pages ready."

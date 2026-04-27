@@ -51,6 +51,7 @@
 | Testimonial | Free | [tests/testimonial.spec.ts](tests/testimonial.spec.ts) |
 | Team Member Carousel | Pro | [tests/team-member-carousel.spec.ts](tests/team-member-carousel.spec.ts) |
 | Pricing Table | Free | [tests/pricing-table.spec.ts](tests/pricing-table.spec.ts) |
+| Multicolumn Pricing Table | Pro | [tests/multicolumn-pricing-table.spec.ts](tests/multicolumn-pricing-table.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 
 ---
@@ -138,7 +139,6 @@
 | Interactive Promo | `Interactive_Promo.php` |
 | Lightbox | `Lightbox.php` |
 | Logo Carousel | `Logo_Carousel.php` |
-| Multicolumn Pricing Table | `Multicolumn_Pricing_Table.php` |
 | Offcanvas | `Offcanvas.php` |
 | One Page Navigation | `One_Page_Navigation.php` |
 | Post Block | `Post_Block.php` |

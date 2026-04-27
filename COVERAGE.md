@@ -53,6 +53,7 @@
 | Pricing Table | Free | [tests/pricing-table.spec.ts](tests/pricing-table.spec.ts) |
 | Multicolumn Pricing Table | Pro | [tests/multicolumn-pricing-table.spec.ts](tests/multicolumn-pricing-table.spec.ts) |
 | Divider | Pro | [tests/divider.spec.ts](tests/divider.spec.ts) |
+| Toggle | Pro | [tests/toggle.spec.ts](tests/toggle.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 
 ---
@@ -152,7 +153,7 @@
 | Static Product | `Static_Product.php` |
 ~~| Team Member Carousel | `Team_Member_Carousel.php` |~~
 | Testimonial Slider | `Testimonial_Slider.php` |
-| Toggle | `Toggle.php` |
+~~| Toggle | `Toggle.php` |~~
 | Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |
 
 ### Third-party Integrations (Pro)

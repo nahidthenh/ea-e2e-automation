@@ -182,4 +182,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-interactive-card-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-interactive-promo-page.php
+
 log "Test pages ready."

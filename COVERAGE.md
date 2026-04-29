@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 24 | 9 | **33** |
-| Not covered | 36 | 32 | **68** |
-| **Coverage** | **40%** | **22%** | **33%** |
+| Covered | 24 | 10 | **34** |
+| Not covered | 36 | 31 | **67** |
+| **Coverage** | **40%** | **24%** | **34%** |
 
 ---
 
-## ✅ Covered Widgets (33)
+## ✅ Covered Widgets (34)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -56,6 +56,7 @@
 | Toggle | Pro | [tests/toggle.spec.ts](tests/toggle.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
 | Interactive Card | Pro | [tests/interactive-card.spec.ts](tests/interactive-card.spec.ts) |
+| Interactive Promo | Pro | [tests/interactive-promo.spec.ts](tests/interactive-promo.spec.ts) |
 | Interactive Circle | Free | [tests/interactive-circle.spec.ts](tests/interactive-circle.spec.ts) |
 | One Page Navigation | Pro | [tests/one-page-navigation.spec.ts](tests/one-page-navigation.spec.ts) |
 
@@ -141,7 +142,7 @@
 | Google Map | `Google_Map.php` |
 | Image Scroller | `Image_Scroller.php` |
 ~~| Interactive Card | `Interactive_Card.php` |~~
-| Interactive Promo | `Interactive_Promo.php` |
+~~| Interactive Promo | `Interactive_Promo.php` |~~
 | Lightbox | `Lightbox.php` |
 | Logo Carousel | `Logo_Carousel.php` |
 | Offcanvas | `Offcanvas.php` |

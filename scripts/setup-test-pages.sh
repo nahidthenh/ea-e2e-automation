@@ -172,4 +172,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-one-page-navigation-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-interactive-circle-page.php
+
 log "Test pages ready."

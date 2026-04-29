@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 23 | 8 | **31** |
-| Not covered | 37 | 33 | **70** |
-| **Coverage** | **38%** | **20%** | **31%** |
+| Covered | 24 | 8 | **32** |
+| Not covered | 36 | 33 | **69** |
+| **Coverage** | **40%** | **20%** | **32%** |
 
 ---
 
-## ✅ Covered Widgets (30)
+## ✅ Covered Widgets (32)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -55,6 +55,7 @@
 | Divider | Pro | [tests/divider.spec.ts](tests/divider.spec.ts) |
 | Toggle | Pro | [tests/toggle.spec.ts](tests/toggle.spec.ts) |
 | Tooltip | Free | [tests/tooltip.spec.ts](tests/tooltip.spec.ts) |
+| Interactive Circle | Free | [tests/interactive-circle.spec.ts](tests/interactive-circle.spec.ts) |
 | One Page Navigation | Pro | [tests/one-page-navigation.spec.ts](tests/one-page-navigation.spec.ts) |
 
 ---
@@ -69,7 +70,7 @@
 | Business Reviews | `Business_Reviews.php` |
 ~~| Countdown | `Countdown.php` |~~
 | Data Table | `Data_Table.php` |
-| Interactive Circle | `Interactive_Circle.php` |
+~~| Interactive Circle | `Interactive_Circle.php` |~~
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` |
 | Post Grid | `Post_Grid.php` |

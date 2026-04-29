@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 24 | 11 | **35** |
-| Not covered | 36 | 30 | **66** |
-| **Coverage** | **40%** | **27%** | **35%** |
+| Covered | 24 | 12 | **36** |
+| Not covered | 36 | 29 | **65** |
+| **Coverage** | **40%** | **29%** | **36%** |
 
 ---
 
@@ -62,6 +62,7 @@
 | Logo Carousel | Pro | [tests/logo-carousel.spec.ts](tests/logo-carousel.spec.ts) |
 | Lightbox | Pro | [tests/lightbox.spec.ts](tests/lightbox.spec.ts) |
 | Offcanvas | Pro | [tests/offcanvas.spec.ts](tests/offcanvas.spec.ts) |
+| Post List (Smart Post List) | Pro | [tests/post-list.spec.ts](tests/post-list.spec.ts) |
 
 ---
 
@@ -141,7 +142,7 @@
 | Image Scroller | `Image_Scroller.php` |
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
-| Post List | `Post_List.php` |
+| ~~Post List~~ | ~~`Post_List.php`~~ |
 | Protected Content | `Protected_Content.php` |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Stacked Cards | `Stacked_Cards.php` |

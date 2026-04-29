@@ -187,4 +187,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-interactive-promo-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-logo-carousel-page.php
+
 log "Test pages ready."

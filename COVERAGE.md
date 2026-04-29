@@ -144,7 +144,7 @@
 ~~| Interactive Card | `Interactive_Card.php` |~~
 ~~| Interactive Promo | `Interactive_Promo.php` |~~
 | Lightbox | `Lightbox.php` |
-| Logo Carousel | `Logo_Carousel.php` |
+~~| Logo Carousel | `Logo_Carousel.php` |~~
 | Offcanvas | `Offcanvas.php` |
 ~~| One Page Navigation | `One_Page_Navigation.php` |~~
 | Post Block | `Post_Block.php` |

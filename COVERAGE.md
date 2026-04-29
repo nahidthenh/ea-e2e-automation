@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 12 | **37** |
-| Not covered | 35 | 29 | **64** |
-| **Coverage** | **42%** | **29%** | **37%** |
+| Covered | 25 | 13 | **38** |
+| Not covered | 35 | 28 | **63** |
+| **Coverage** | **42%** | **32%** | **38%** |
 
 ---
 
@@ -64,6 +64,7 @@
 | Offcanvas | Pro | [tests/offcanvas.spec.ts](tests/offcanvas.spec.ts) |
 | Post List (Smart Post List) | Pro | [tests/post-list.spec.ts](tests/post-list.spec.ts) |
 | Woo Product List | Free | [tests/woo-product-list.spec.ts](tests/woo-product-list.spec.ts) |
+| Testimonial Slider | Pro | [tests/testimonial-slider.spec.ts](tests/testimonial-slider.spec.ts) |
 
 ---
 
@@ -148,7 +149,7 @@
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Stacked Cards | `Stacked_Cards.php` |
 | Static Product | `Static_Product.php` |
-| Testimonial Slider | `Testimonial_Slider.php` |
+| ~~Testimonial Slider~~ | ~~`Testimonial_Slider.php`~~ |
 | Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |
 
 ### Third-party Integrations (Pro)

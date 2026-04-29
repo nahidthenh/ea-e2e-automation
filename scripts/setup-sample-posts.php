@@ -8,6 +8,8 @@
 WP_CLI::log( '' );
 WP_CLI::log( '--- Sample Posts ---' );
 
+require_once __DIR__ . '/helpers-sample-data.php';
+
 // ── helpers ───────────────────────────────────────────────────────────────────
 
 function ea_get_or_create_category( string $name, string $slug ): int {
@@ -59,6 +61,11 @@ function ea_create_post( array $data ): int {
         wp_set_post_tags( $id, array_map( fn( $t ) => get_term( $t, 'post_tag' )->name, $data['tags'] ) );
     }
 
+    $img_id = ea_create_placeholder_image( $data['title'], $data['color'] ?? '#4a90d9' );
+    if ( $img_id ) {
+        set_post_thumbnail( $id, $img_id );
+    }
+
     WP_CLI::log( "  created: {$data['title']} (ID {$id})" );
     return (int) $id;
 }
@@ -90,6 +97,7 @@ $posts = [
         'date'       => '2025-01-15 10:00:00',
         'categories' => [ $cat_design ],
         'tags'       => [ $tag_tutorial ],
+        'color'      => '#7b68ee',
     ],
     [
         'title'      => 'Top 10 UI Trends in 2025',
@@ -99,6 +107,7 @@ $posts = [
         'date'       => '2025-01-22 09:00:00',
         'categories' => [ $cat_design ],
         'tags'       => [ $tag_tips, $tag_news ],
+        'color'      => '#9b59b6',
     ],
     [
         'title'      => 'How to Build a REST API with Node.js',
@@ -108,6 +117,7 @@ $posts = [
         'date'       => '2025-02-03 11:00:00',
         'categories' => [ $cat_tech ],
         'tags'       => [ $tag_tutorial ],
+        'color'      => '#2980b9',
     ],
     [
         'title'      => 'Understanding JavaScript Promises',
@@ -117,6 +127,7 @@ $posts = [
         'date'       => '2025-02-10 14:00:00',
         'categories' => [ $cat_tech ],
         'tags'       => [ $tag_tutorial, $tag_tips ],
+        'color'      => '#16a085',
     ],
     [
         'title'      => 'The Future of Artificial Intelligence',
@@ -126,6 +137,7 @@ $posts = [
         'date'       => '2025-02-18 08:00:00',
         'categories' => [ $cat_tech ],
         'tags'       => [ $tag_news ],
+        'color'      => '#1abc9c',
     ],
     [
         'title'      => 'Building a Successful Online Business',
@@ -135,6 +147,7 @@ $posts = [
         'date'       => '2025-03-01 10:00:00',
         'categories' => [ $cat_business ],
         'tags'       => [ $tag_tips ],
+        'color'      => '#e67e22',
     ],
     [
         'title'      => 'Email Marketing Best Practices',
@@ -144,6 +157,7 @@ $posts = [
         'date'       => '2025-03-08 09:30:00',
         'categories' => [ $cat_business ],
         'tags'       => [ $tag_tips, $tag_tutorial ],
+        'color'      => '#d35400',
     ],
     [
         'title'      => 'Productivity Hacks for Remote Workers',
@@ -153,6 +167,7 @@ $posts = [
         'date'       => '2025-03-15 12:00:00',
         'categories' => [ $cat_lifestyle ],
         'tags'       => [ $tag_tips ],
+        'color'      => '#27ae60',
     ],
     [
         'title'      => 'Review: Best Standing Desks of 2025',
@@ -162,6 +177,7 @@ $posts = [
         'date'       => '2025-03-22 11:00:00',
         'categories' => [ $cat_lifestyle ],
         'tags'       => [ $tag_review ],
+        'color'      => '#2ecc71',
     ],
     [
         'title'      => 'Mindfulness and Mental Health at Work',
@@ -171,6 +187,7 @@ $posts = [
         'date'       => '2025-04-01 10:00:00',
         'categories' => [ $cat_lifestyle ],
         'tags'       => [ $tag_tips, $tag_news ],
+        'color'      => '#3498db',
     ],
     [
         'title'      => 'CSS Grid vs Flexbox: When to Use Which',
@@ -180,6 +197,7 @@ $posts = [
         'date'       => '2025-04-08 09:00:00',
         'categories' => [ $cat_design, $cat_tech ],
         'tags'       => [ $tag_tutorial ],
+        'color'      => '#8e44ad',
     ],
     [
         'title'      => 'E-Commerce Growth Strategies for 2025',
@@ -189,6 +207,7 @@ $posts = [
         'date'       => '2025-04-15 10:00:00',
         'categories' => [ $cat_business ],
         'tags'       => [ $tag_news, $tag_tips ],
+        'color'      => '#c0392b',
     ],
 ];
 

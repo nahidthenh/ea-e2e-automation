@@ -139,7 +139,6 @@
 | Flip Carousel | `Flip_Carousel.php` |
 | Google Map | `Google_Map.php` |
 | Image Scroller | `Image_Scroller.php` |
-| ~~Offcanvas~~ | ~~`Offcanvas.php`~~ |
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
 | Post List | `Post_List.php` |

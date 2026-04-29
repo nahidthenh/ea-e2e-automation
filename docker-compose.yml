@@ -52,6 +52,7 @@ services:
     volumes:
       - wordpress_data:/var/www/html
       - ${EA_PLUGINS_PATH}:/tmp/ea-plugins:ro
+      - ./mu-plugins:/var/www/html/wp-content/mu-plugins:ro
     networks:
       - wp_network
 

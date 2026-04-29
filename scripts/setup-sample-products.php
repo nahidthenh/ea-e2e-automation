@@ -12,6 +12,8 @@ if ( ! class_exists( 'WooCommerce' ) ) {
 WP_CLI::log( '' );
 WP_CLI::log( '--- Sample WooCommerce Products ---' );
 
+require_once __DIR__ . '/helpers-sample-data.php';
+
 // ── helpers ───────────────────────────────────────────────────────────────────
 
 function ea_get_or_create_term( string $name, string $taxonomy ): int {
@@ -55,6 +57,12 @@ function ea_create_simple_product( array $data ): int {
     }
 
     $id = $product->save();
+
+    $img_id = ea_create_placeholder_image( $data['name'], $data['color'] ?? '#e74c3c' );
+    if ( $img_id ) {
+        set_post_thumbnail( $id, $img_id );
+    }
+
     WP_CLI::log( "  created: {$data['name']} (ID {$id}, SKU: {$data['sku']})" );
     return (int) $id;
 }
@@ -85,6 +93,7 @@ $products = [
         'featured'          => true,
         'category_ids'      => [ $cat_clothing ],
         'tag_ids'           => [ $tag_sale, $tag_featured ],
+        'color'             => '#e74c3c',
     ],
     [
         'name'              => 'Slim Fit Hoodie',
@@ -95,6 +104,7 @@ $products = [
         'featured'          => false,
         'category_ids'      => [ $cat_clothing ],
         'tag_ids'           => [ $tag_new ],
+        'color'             => '#c0392b',
     ],
     [
         'name'              => 'Wireless Headphones',
@@ -106,6 +116,7 @@ $products = [
         'featured'          => true,
         'category_ids'      => [ $cat_electronics ],
         'tag_ids'           => [ $tag_sale, $tag_featured ],
+        'color'             => '#2980b9',
     ],
     [
         'name'              => 'Smartwatch Pro',
@@ -116,6 +127,7 @@ $products = [
         'featured'          => true,
         'category_ids'      => [ $cat_electronics ],
         'tag_ids'           => [ $tag_new, $tag_featured ],
+        'color'             => '#1a5276',
     ],
     [
         'name'              => 'Leather Wallet',
@@ -126,6 +138,7 @@ $products = [
         'featured'          => false,
         'category_ids'      => [ $cat_accessories ],
         'tag_ids'           => [ $tag_new ],
+        'color'             => '#784212',
     ],
     [
         'name'              => 'Canvas Backpack',
@@ -137,6 +150,7 @@ $products = [
         'featured'          => false,
         'category_ids'      => [ $cat_accessories ],
         'tag_ids'           => [ $tag_sale ],
+        'color'             => '#6e2f1a',
     ],
     [
         'name'              => 'Ceramic Coffee Mug',
@@ -147,6 +161,7 @@ $products = [
         'featured'          => false,
         'category_ids'      => [ $cat_home ],
         'tag_ids'           => [],
+        'color'             => '#1e8449',
     ],
     [
         'name'              => 'Scented Candle Set',
@@ -157,6 +172,7 @@ $products = [
         'featured'          => false,
         'category_ids'      => [ $cat_home ],
         'tag_ids'           => [ $tag_new ],
+        'color'             => '#6c3483',
     ],
 ];
 

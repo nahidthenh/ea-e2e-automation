@@ -64,6 +64,12 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
+// ── Sample posts (required for Post List widget to render items) ───────────────
+// setup-sample-posts.php seeds 12 posts with categories, tags, and thumbnails.
+// When run standalone (not via setup-test-pages.sh), this require_once ensures
+// posts are present before the widget page is created.
+require_once '/scripts/setup-sample-posts.php';
+
 // ── Post List page ─────────────────────────────────────────────────────────────
 
 WP_CLI::log( '' );

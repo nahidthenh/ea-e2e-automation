@@ -5,7 +5,7 @@
  */
 
 if ( ! class_exists( 'WooCommerce' ) ) {
-    WP_CLI::error( 'WooCommerce is not active. Skipping product setup.' );
+    WP_CLI::warning( 'WooCommerce is not active — skipping product seed.' );
     return;
 }
 

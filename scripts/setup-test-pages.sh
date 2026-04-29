@@ -197,4 +197,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-lightbox-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-offcanvas-page.php
+
 log "Test pages ready."

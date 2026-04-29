@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 24 | 10 | **34** |
-| Not covered | 36 | 31 | **67** |
-| **Coverage** | **40%** | **24%** | **34%** |
+| Covered | 24 | 11 | **35** |
+| Not covered | 36 | 30 | **66** |
+| **Coverage** | **40%** | **27%** | **35%** |
 
 ---
 
@@ -61,6 +61,7 @@
 | One Page Navigation | Pro | [tests/one-page-navigation.spec.ts](tests/one-page-navigation.spec.ts) |
 | Logo Carousel | Pro | [tests/logo-carousel.spec.ts](tests/logo-carousel.spec.ts) |
 | Lightbox | Pro | [tests/lightbox.spec.ts](tests/lightbox.spec.ts) |
+| Offcanvas | Pro | [tests/offcanvas.spec.ts](tests/offcanvas.spec.ts) |
 
 ---
 
@@ -138,7 +139,7 @@
 | Flip Carousel | `Flip_Carousel.php` |
 | Google Map | `Google_Map.php` |
 | Image Scroller | `Image_Scroller.php` |
-| Offcanvas | `Offcanvas.php` |
+| ~~Offcanvas~~ | ~~`Offcanvas.php`~~ |
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
 | Post List | `Post_List.php` |

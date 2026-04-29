@@ -72,6 +72,9 @@ jobs:
       - name: Configure WordPress via WP-CLI
         run: docker compose run --rm wpcli bash /scripts/configure-wordpress.sh
 
+      - name: Seed sample data (products & posts)
+        run: docker compose run --rm wpcli bash /scripts/setup-sample-data.sh
+
       - name: Seed test pages
         run: docker compose run --rm wpcli bash /scripts/setup-test-pages.sh
 

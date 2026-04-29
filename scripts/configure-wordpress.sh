@@ -89,6 +89,7 @@ wp rewrite flush
 # ── free plugins from WordPress.org ───────────────────────────────────────────
 
 install_plugin_from_org "elementor"
+install_plugin_from_org "woocommerce"
 
 # ── local plugins from ./ea-plugins ───────────────────────────────────────────
 

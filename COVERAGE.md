@@ -59,6 +59,8 @@
 | Interactive Promo | Pro | [tests/interactive-promo.spec.ts](tests/interactive-promo.spec.ts) |
 | Interactive Circle | Free | [tests/interactive-circle.spec.ts](tests/interactive-circle.spec.ts) |
 | One Page Navigation | Pro | [tests/one-page-navigation.spec.ts](tests/one-page-navigation.spec.ts) |
+| Logo Carousel | Pro | [tests/logo-carousel.spec.ts](tests/logo-carousel.spec.ts) |
+| Lightbox | Pro | [tests/lightbox.spec.ts](tests/lightbox.spec.ts) |
 
 ---
 
@@ -70,16 +72,12 @@
 |---|---|
 | Advanced Data Table | `Advanced_Data_Table.php` |
 | Business Reviews | `Business_Reviews.php` |
-~~| Countdown | `Countdown.php` |~~
 | Data Table | `Data_Table.php` |
-~~| Interactive Circle | `Interactive_Circle.php` |~~
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` |
 | Post Grid | `Post_Grid.php` |
 | Post Timeline | `Post_Timeline.php` |
-~~| SVG Draw | `SVG_Draw.php` |~~
 | Sticky Video | `Sticky_Video.php` |
-~~| Team Member | `Team_Member.php` |~~
 | Twitter Feed | `Twitter_Feed.php` |
 
 ### Form Integrations
@@ -134,30 +132,21 @@
 |---|---|
 | Advanced Search | `Advanced_Search.php` |
 | Content Timeline | `Content_Timeline.php` |
-~~| Divider | `Divider.php` |~~
 | Dynamic Filterable Gallery | `Dynamic_Filterable_Gallery.php` |
 | Fancy Chart | `Fancy_Chart.php` |
 | Figma To Elementor | `Figma_To_Elementor.php` |
 | Flip Carousel | `Flip_Carousel.php` |
 | Google Map | `Google_Map.php` |
 | Image Scroller | `Image_Scroller.php` |
-~~| Interactive Card | `Interactive_Card.php` |~~
-~~| Interactive Promo | `Interactive_Promo.php` |~~
-| Lightbox | `Lightbox.php` |
-~~| Logo Carousel | `Logo_Carousel.php` |~~
 | Offcanvas | `Offcanvas.php` |
-~~| One Page Navigation | `One_Page_Navigation.php` |~~
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
 | Post List | `Post_List.php` |
-~~| Price Menu | `Price_Menu.php` |~~
 | Protected Content | `Protected_Content.php` |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Stacked Cards | `Stacked_Cards.php` |
 | Static Product | `Static_Product.php` |
-~~| Team Member Carousel | `Team_Member_Carousel.php` |~~
 | Testimonial Slider | `Testimonial_Slider.php` |
-~~| Toggle | `Toggle.php` |~~
 | Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |
 
 ### Third-party Integrations (Pro)
@@ -179,15 +168,3 @@
 | Woo Thank You | `Woo_Thank_You.php` |
 
 ---
-
-## How to Update This File
-
-নতুন widget এর test যোগ করলে:
-
-1. **Covered** — widget টি "✅ Covered Widgets" table এ যোগ করো (alphabetical order), test file লিংকসহ।
-2. **Not covered table** — সেই widget এর row টি "❌ Not Covered" section থেকে মুছে দাও।
-3. **Summary counters** আপডেট করো (covered ও not covered সংখ্যা)।
-
-নতুন widget EA plugin এ যোগ হলে:
-1. "❌ Not Covered" section এ সঠিক category তে যোগ করো।
-2. Summary এর Total এবং "Not covered" count বাড়াও।

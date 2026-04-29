@@ -36,18 +36,18 @@ const PAGE_URL = `/${process.env.INTERACTIVE_CARD_PAGE_SLUG ?? "interactive-card
 //           (video type):
 //             iframe
 
-const card        = (hook: string) => `.${hook} .interactive-card`;
-const frontText   = (hook: string) => `.${hook} .front-text-content`;
-const frontBtn    = (hook: string) => `.${hook} .front-text-content .footer .interactive-btn`;
-const frontTitle  = (hook: string) => `.${hook} .front-text-content h2.title`;
-const rearPanel   = (hook: string) => `.${hook} .interactive-card .content`;
-const rearBtn     = (hook: string) => `.${hook} .interactive-card .content .interactive-btn`;
-const rearTitle   = (hook: string) => `.${hook} .interactive-card .content h2.title`;
-const closeBtn    = (hook: string) => `.${hook} .close.close-me`;
+const card = (hook: string) => `.${hook} .interactive-card`;
+const frontText = (hook: string) => `.${hook} .front-text-content`;
+const frontBtn = (hook: string) => `.${hook} .front-text-content .footer .interactive-btn`;
+const frontTitle = (hook: string) => `.${hook} .front-text-content h2.title`;
+const rearPanel = (hook: string) => `.${hook} .interactive-card .content`;
+const rearBtn = (hook: string) => `.${hook} .interactive-card .content .interactive-btn`;
+const rearTitle = (hook: string) => `.${hook} .interactive-card .content h2.title`;
+const closeBtn = (hook: string) => `.${hook} .close.close-me`;
 
 // ── animation → expected data-animation value ──────────────────────────────
 const animMap: Record<string, string> = {
-  "test-icard-anim-left":  "slide-in-left",
+  "test-icard-anim-left": "slide-in-left",
   "test-icard-anim-right": "slide-in-right",
 };
 

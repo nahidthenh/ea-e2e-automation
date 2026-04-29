@@ -1,6 +1,6 @@
 # EA Widget Test Coverage
 
-> **Last updated:** 2026-04-26
+> **Last updated:** 2026-04-29
 > **Plugin sources:**
 > - Free: `ea-plugins/essential-addons-for-elementor-lite/includes/Elements/`
 > - Pro:  `ea-plugins/essential-addons-elementor/includes/Elements/`
@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 24 | 12 | **36** |
-| Not covered | 36 | 29 | **65** |
-| **Coverage** | **40%** | **29%** | **36%** |
+| Covered | 25 | 12 | **37** |
+| Not covered | 35 | 29 | **64** |
+| **Coverage** | **42%** | **29%** | **37%** |
 
 ---
 
-## ✅ Covered Widgets (34)
+## ✅ Covered Widgets (37)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -63,6 +63,7 @@
 | Lightbox | Pro | [tests/lightbox.spec.ts](tests/lightbox.spec.ts) |
 | Offcanvas | Pro | [tests/offcanvas.spec.ts](tests/offcanvas.spec.ts) |
 | Post List (Smart Post List) | Pro | [tests/post-list.spec.ts](tests/post-list.spec.ts) |
+| Woo Product List | Free | [tests/woo-product-list.spec.ts](tests/woo-product-list.spec.ts) |
 
 ---
 
@@ -107,7 +108,7 @@
 | Woo Product Compare | `Woo_Product_Compare.php` |
 | Woo Product Gallery | `Woo_Product_Gallery.php` |
 | Woo Product Images | `Woo_Product_Images.php` |
-| Woo Product List | `Woo_Product_List.php` |
+| ~~Woo Product List~~ | ~~`Woo_Product_List.php`~~ |
 | Woo Product Price | `Woo_Product_Price.php` |
 | Woo Product Rating | `Woo_Product_Rating.php` |
 | Product Grid | `Product_Grid.php` |

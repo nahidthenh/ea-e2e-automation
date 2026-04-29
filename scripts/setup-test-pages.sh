@@ -221,4 +221,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-post-list-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-woo-product-list-page.php
+
 log "Test pages ready."

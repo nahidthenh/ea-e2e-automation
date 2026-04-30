@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 16 | **41** |
-| Not covered | 35 | 25 | **60** |
-| **Coverage** | **42%** | **39%** | **41%** |
+| Covered | 25 | 17 | **42** |
+| Not covered | 35 | 24 | **59** |
+| **Coverage** | **42%** | **41%** | **42%** |
 
 ---
 
-## ✅ Covered Widgets (38)
+## ✅ Covered Widgets (39)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -68,6 +68,7 @@
 | Static Product | Pro | [tests/static-product.spec.ts](tests/static-product.spec.ts) |
 | Stacked Cards | Pro | [tests/stacked-cards.spec.ts](tests/stacked-cards.spec.ts) |
 | Protected Content | Pro | [tests/protected-content.spec.ts](tests/protected-content.spec.ts) |
+| Flip Carousel | Pro | [tests/flip-carousel.spec.ts](tests/flip-carousel.spec.ts) |
 
 ---
 
@@ -142,7 +143,7 @@
 | Dynamic Filterable Gallery | `Dynamic_Filterable_Gallery.php` |
 | Fancy Chart | `Fancy_Chart.php` |
 | Figma To Elementor | `Figma_To_Elementor.php` |
-| Flip Carousel | `Flip_Carousel.php` |
+| ~~Flip Carousel~~ | ~~`Flip_Carousel.php`~~ |
 | Google Map | `Google_Map.php` |
 | Image Scroller | `Image_Scroller.php` |
 | Post Block | `Post_Block.php` |

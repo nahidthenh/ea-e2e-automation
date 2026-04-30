@@ -363,3 +363,34 @@ test.describe("Interaction", () => {
     expect(texts.map((t) => t.trim())).toContain("Home");
   });
 });
+
+// ══════════════════════════════════════════════════════════════════════════════
+// Visual regression
+// ══════════════════════════════════════════════════════════════════════════════
+
+test.describe("Visual regression", () => {
+  const HOOKS = [
+    "test-ic-default",
+    "test-ic-preset-2",
+    "test-ic-preset-3",
+    "test-ic-preset-4",
+    "test-ic-btn-icon-off",
+    "test-ic-btn-text-off",
+    "test-ic-content-icon",
+    "test-ic-event-hover",
+    "test-ic-rotation",
+    "test-ic-link",
+  ];
+
+  for (const hook of HOOKS) {
+    test(`${hook} matches visual snapshot`, async ({ page }) => {
+      await openPage(page);
+      await page.waitForLoadState("networkidle");
+      await page.locator(`.${hook}`).first().scrollIntoViewIfNeeded();
+      await expect(page.locator(`.${hook}`).first()).toHaveScreenshot(
+        `${hook}.png`,
+        { animations: "disabled" }
+      );
+    });
+  }
+});

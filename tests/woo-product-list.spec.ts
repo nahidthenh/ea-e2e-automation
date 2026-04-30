@@ -310,3 +310,36 @@ test.describe("Interaction", () => {
     expect(errs).toHaveLength(0);
   });
 });
+
+// ══════════════════════════════════════════════════════════════════════════════
+// Visual regression
+// ══════════════════════════════════════════════════════════════════════════════
+
+test.describe("Visual regression", () => {
+  const HOOKS = [
+    "test-wpl-default",
+    "test-wpl-preset-2",
+    "test-wpl-preset-3",
+    "test-wpl-img-right",
+    "test-wpl-no-rating",
+    "test-wpl-no-title",
+    "test-wpl-no-price",
+    "test-wpl-btn-static",
+    "test-wpl-btn-hover",
+    "test-wpl-total-sold",
+    "test-wpl-featured",
+    "test-wpl-sale",
+  ];
+
+  for (const hook of HOOKS) {
+    test(`${hook} matches visual snapshot`, async ({ page }) => {
+      await openPage(page);
+      await page.waitForLoadState("networkidle");
+      await page.locator(`.${hook}`).first().scrollIntoViewIfNeeded();
+      await expect(page.locator(`.${hook}`).first()).toHaveScreenshot(
+        `${hook}.png`,
+        { animations: "disabled" }
+      );
+    });
+  }
+});

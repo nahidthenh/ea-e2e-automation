@@ -419,7 +419,7 @@ test.describe("Page health", () => {
 
 **2. {Widget} styles (free)**  
 Iterate over the free style map (hook → style-value). For each:
-- button/element is visible
+- button/element is `toBeVisible()` (not just attached — must be rendered on screen)
 - correct CSS class or `data-*` attribute is applied
 - primary text/content renders
 
@@ -439,14 +439,50 @@ Same pattern as section 2, using the pro style map.
 **6. Interaction**
 - Widget is keyboard-focusable (if interactive)
 - Hover on each instance triggers no JS errors
-- Click on default instance causes no JS errors
+- Click on interactive elements (filters, buttons, tabs) — **verify the DOM actually changed**, not just "no JS errors":
+  ```ts
+  await page.locator(filterBtn).click();
+  await expect(page.locator(filterBtn)).toHaveClass(/active/);
+  // or: item count changed, class added, panel expanded, etc.
+  ```
+
+**7. JS-initialized widgets (charts, maps, carousels, players)**  
+If the widget renders its visual content via JavaScript (ApexCharts, Google Maps, Swiper, etc.):
+- Wait for the JS-rendered element: `await page.waitForSelector('.apexcharts-canvas', { state: 'attached' })` 
+- Assert the JS output is present: `toBeAttached()` or `toBeVisible()` on the rendered element
+- Example for a chart: assert `svg` or `.apexcharts-canvas` is inside the widget container
+- Example for a carousel: assert `.swiper-slide` is visible after init
+- Do NOT skip this — a container div existing proves PHP rendered; the JS-rendered child proves the widget actually works
+
+**8. Visual regression**
+```ts
+test.describe("Visual regression", () => {
+  const HOOKS = [
+    // list every hook used in the PHP setup script
+  ];
+
+  for (const hook of HOOKS) {
+    test(`${hook} matches visual snapshot`, async ({ page }) => {
+      await openPage(page);
+      await page.waitForLoadState("networkidle");
+      await page.locator(`.${hook}`).first().scrollIntoViewIfNeeded();
+      await expect(page.locator(`.${hook}`).first()).toHaveScreenshot(
+        `${hook}.png`,
+        { animations: "disabled" }
+      );
+    });
+  }
+});
+```
+This section is **mandatory** — it catches CSS/layout regressions that structural tests cannot.
 
 ### Coding conventions (follow exactly)
 - `for...of Object.entries(styleMap)` — no `forEach`
 - Test name includes the value: `` `${styleClass} is visible` ``
+- Use `toBeVisible()` for elements that should appear on screen; use `toBeAttached()` only for elements that may be off-screen or hidden by CSS
 - No `await page.waitForTimeout()` except inside the hover loop (keep at 150 ms)
 - `getComputedStyle(el).{property}` for CSS assertions
-- `toBeAttached()` for structural assertions where visibility is not guaranteed
+- For JS-initialized widgets, always assert on the JS-rendered output, not just the PHP container
 
 ---
 
@@ -470,7 +506,11 @@ If no row exists for `{SLUG}`, append one under the appropriate section.
 Before finishing, confirm:
 
 - [ ] `scripts/setup-{SLUG}-page.php` — complete, all `ea_widget()` + `ea_heading()` calls present, CSS regeneration at end
-- [ ] `tests/{SLUG}.spec.ts` — all 6 sections, no placeholder `TODO` strings
+- [ ] `tests/{SLUG}.spec.ts` — all 8 sections present, no placeholder `TODO` strings
+- [ ] Style assertions use `toBeVisible()`, not just `toBeAttached()`
+- [ ] Interaction tests verify DOM state change after click (not just "no JS errors")
+- [ ] JS-initialized widgets have an assertion on the JS-rendered output (svg, canvas, slide, etc.)
+- [ ] Visual regression section present with all hooks listed
 - [ ] `.env` and `.env.example` — `{ENV_VAR}={SLUG}` appended
 - [ ] `scripts/setup-test-pages.sh` — new eval-file line added
 - [ ] Docker setup ran without PHP fatal errors (warnings about Array-to-string from Elementor internals are acceptable)

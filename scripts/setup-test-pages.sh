@@ -266,4 +266,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-content-timeline-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-dynamic-filterable-gallery-page.php
+
 log "Test pages ready."

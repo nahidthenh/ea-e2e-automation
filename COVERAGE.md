@@ -1,6 +1,6 @@
 # EA Widget Test Coverage
 
-> **Last updated:** 2026-04-29
+> **Last updated:** 2026-04-30
 > **Plugin sources:**
 > - Free: `ea-plugins/essential-addons-for-elementor-lite/includes/Elements/`
 > - Pro:  `ea-plugins/essential-addons-elementor/includes/Elements/`
@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 18 | **43** |
-| Not covered | 35 | 23 | **58** |
-| **Coverage** | **42%** | **44%** | **43%** |
+| Covered | 25 | 26 | **51** |
+| Not covered | 35 | 15 | **50** |
+| **Coverage** | **42%** | **63%** | **50%** |
 
 ---
 
-## ✅ Covered Widgets (40)
+## ✅ Covered Widgets (51)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -70,10 +70,13 @@
 | Protected Content | Pro | [tests/protected-content.spec.ts](tests/protected-content.spec.ts) |
 | Flip Carousel | Pro | [tests/flip-carousel.spec.ts](tests/flip-carousel.spec.ts) |
 | Image Scroller | Pro | [tests/image-scroller.spec.ts](tests/image-scroller.spec.ts) |
+| Advanced Search | Pro | [tests/advanced-search.spec.ts](tests/advanced-search.spec.ts) |
+| Content Timeline | Pro | [tests/content-timeline.spec.ts](tests/content-timeline.spec.ts) |
+| Dynamic Filterable Gallery | Pro | [tests/dynamic-filterable-gallery.spec.ts](tests/dynamic-filterable-gallery.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (37)
+## ❌ Not Covered — Free Widgets (35)
 
 ### Core / General
 
@@ -141,7 +144,7 @@
 |---|---|
 | Advanced Search | `Advanced_Search.php` | ✅ |
 | Content Timeline | `Content_Timeline.php` | ✅ |
-| Dynamic Filterable Gallery | `Dynamic_Filterable_Gallery.php` |
+| Dynamic Filterable Gallery | `Dynamic_Filterable_Gallery.php` | ✅ |
 | Fancy Chart | `Fancy_Chart.php` |
 | Figma To Elementor | `Figma_To_Elementor.php` |
 | ~~Flip Carousel~~ | ~~`Flip_Carousel.php`~~ |

@@ -281,4 +281,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-google-map-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-post-grid-page.php
+
 log "Test pages ready."

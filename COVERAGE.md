@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 28 | **53** |
-| Not covered | 35 | 13 | **48** |
-| **Coverage** | **42%** | **68%** | **52%** |
+| Covered | 26 | 28 | **54** |
+| Not covered | 34 | 13 | **47** |
+| **Coverage** | **43%** | **68%** | **53%** |
 
 ---
 
@@ -75,6 +75,7 @@
 | Dynamic Filterable Gallery | Pro | [tests/dynamic-filterable-gallery.spec.ts](tests/dynamic-filterable-gallery.spec.ts) |
 | Fancy Chart | Pro | [tests/fancy-chart.spec.ts](tests/fancy-chart.spec.ts) |
 | Google Map | Pro | [tests/google-map.spec.ts](tests/google-map.spec.ts) |
+| Post Grid | Free | [tests/post-grid.spec.ts](tests/post-grid.spec.ts) |
 
 ---
 
@@ -89,7 +90,7 @@
 | Data Table | `Data_Table.php` |
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` |
-| Post Grid | `Post_Grid.php` |
+| ~~Post Grid~~ | ~~`Post_Grid.php`~~ |
 | Post Timeline | `Post_Timeline.php` |
 | Sticky Video | `Sticky_Video.php` |
 | Post Block | `Post_Block.php` |

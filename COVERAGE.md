@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 17 | **42** |
-| Not covered | 35 | 24 | **59** |
-| **Coverage** | **42%** | **41%** | **42%** |
+| Covered | 25 | 18 | **43** |
+| Not covered | 35 | 23 | **58** |
+| **Coverage** | **42%** | **44%** | **43%** |
 
 ---
 
-## ✅ Covered Widgets (39)
+## ✅ Covered Widgets (40)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -69,6 +69,7 @@
 | Stacked Cards | Pro | [tests/stacked-cards.spec.ts](tests/stacked-cards.spec.ts) |
 | Protected Content | Pro | [tests/protected-content.spec.ts](tests/protected-content.spec.ts) |
 | Flip Carousel | Pro | [tests/flip-carousel.spec.ts](tests/flip-carousel.spec.ts) |
+| Image Scroller | Pro | [tests/image-scroller.spec.ts](tests/image-scroller.spec.ts) |
 
 ---
 
@@ -145,7 +146,7 @@
 | Figma To Elementor | `Figma_To_Elementor.php` |
 | ~~Flip Carousel~~ | ~~`Flip_Carousel.php`~~ |
 | Google Map | `Google_Map.php` |
-| Image Scroller | `Image_Scroller.php` |
+| ~~Image Scroller~~ | ~~`Image_Scroller.php`~~ |
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
 | ~~Post List~~ | ~~`Post_List.php`~~ |

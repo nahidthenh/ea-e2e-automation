@@ -251,4 +251,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-flip-carousel-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-image-scroller-page.php
+
 log "Test pages ready."

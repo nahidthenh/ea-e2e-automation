@@ -271,4 +271,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-dynamic-filterable-gallery-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-fancy-chart-page.php
+
 log "Test pages ready."

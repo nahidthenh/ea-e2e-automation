@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 26 | **51** |
-| Not covered | 35 | 15 | **50** |
-| **Coverage** | **42%** | **63%** | **50%** |
+| Covered | 25 | 27 | **52** |
+| Not covered | 35 | 14 | **49** |
+| **Coverage** | **42%** | **66%** | **51%** |
 
 ---
 
-## ✅ Covered Widgets (51)
+## ✅ Covered Widgets (52)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -73,6 +73,7 @@
 | Advanced Search | Pro | [tests/advanced-search.spec.ts](tests/advanced-search.spec.ts) |
 | Content Timeline | Pro | [tests/content-timeline.spec.ts](tests/content-timeline.spec.ts) |
 | Dynamic Filterable Gallery | Pro | [tests/dynamic-filterable-gallery.spec.ts](tests/dynamic-filterable-gallery.spec.ts) |
+| Fancy Chart | Pro | [tests/fancy-chart.spec.ts](tests/fancy-chart.spec.ts) |
 
 ---
 
@@ -142,22 +143,12 @@
 
 | Widget | PHP File |
 |---|---|
-| Advanced Search | `Advanced_Search.php` | ✅ |
-| Content Timeline | `Content_Timeline.php` | ✅ |
-| Dynamic Filterable Gallery | `Dynamic_Filterable_Gallery.php` | ✅ |
-| Fancy Chart | `Fancy_Chart.php` |
+| ~~Fancy Chart~~ | ~~`Fancy_Chart.php`~~ |
 | Figma To Elementor | `Figma_To_Elementor.php` |
-| ~~Flip Carousel~~ | ~~`Flip_Carousel.php`~~ |
 | Google Map | `Google_Map.php` |
-| ~~Image Scroller~~ | ~~`Image_Scroller.php`~~ |
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
-| ~~Post List~~ | ~~`Post_List.php`~~ |
-| ~~Protected Content~~ | ~~`Protected_Content.php`~~ |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
-| ~~Stacked Cards~~ | ~~`Stacked_Cards.php`~~ |
-| ~~Static Product~~ | ~~`Static_Product.php`~~ |
-| ~~Testimonial Slider~~ | ~~`Testimonial_Slider.php`~~ |
 | Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |
 
 ### Third-party Integrations (Pro)

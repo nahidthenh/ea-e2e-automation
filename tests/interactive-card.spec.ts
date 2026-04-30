@@ -404,6 +404,3 @@ test.describe("Interaction", () => {
     await expect(page.locator(rearPanel("test-icard-default")).first()).toBeAttached();
   });
 });
-
-  }
-});

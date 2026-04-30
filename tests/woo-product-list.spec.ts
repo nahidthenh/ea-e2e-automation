@@ -310,6 +310,3 @@ test.describe("Interaction", () => {
     expect(errs).toHaveLength(0);
   });
 });
-
-  }
-});

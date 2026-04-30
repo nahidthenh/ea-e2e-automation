@@ -358,6 +358,3 @@ test.describe("Interaction", () => {
     await expect(link).toBeFocused();
   });
 });
-
-  }
-});

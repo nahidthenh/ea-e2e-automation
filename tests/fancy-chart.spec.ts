@@ -275,6 +275,3 @@ test.describe("Interaction", () => {
     ).toBeAttached();
   });
 });
-
-  }
-});

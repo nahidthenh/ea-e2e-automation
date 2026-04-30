@@ -375,6 +375,3 @@ test.describe("Interaction", () => {
     expect(href?.trim()).toBeTruthy();
   });
 });
-
-  }
-});

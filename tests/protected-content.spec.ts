@@ -324,6 +324,3 @@ test.describe("Interaction", () => {
     ).toBeVisible();
   });
 });
-
-  }
-});

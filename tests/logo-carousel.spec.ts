@@ -457,6 +457,3 @@ test.describe("Element structure", () => {
 //     expect(errs, errs.join(" | ")).toHaveLength(0);
 //   });
 // });
-
-  }
-});

@@ -331,6 +331,3 @@ test.describe("Interaction", () => {
     expect(errs, errs.join(" | ")).toHaveLength(0);
   });
 });
-
-  }
-});

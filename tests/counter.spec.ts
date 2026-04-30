@@ -340,6 +340,3 @@ test.describe("Interaction", () => {
     expect(val).toBeLessThanOrEqual(250);
   });
 });
-
-  }
-});

@@ -363,6 +363,3 @@ test.describe("Interaction", () => {
     expect(texts.map((t) => t.trim())).toContain("Home");
   });
 });
-
-  }
-});

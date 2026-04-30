@@ -350,6 +350,3 @@ test.describe("Interaction", () => {
     await expect(button).toBeFocused();
   });
 });
-
-  }
-});

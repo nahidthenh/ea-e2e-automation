@@ -304,6 +304,3 @@ test.describe("Interaction", () => {
     expect(tabindexVal).toBe("0");
   });
 });
-
-  }
-});

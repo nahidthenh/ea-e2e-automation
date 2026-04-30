@@ -75,8 +75,8 @@ WP_CLI::log( '--- Flip Carousel page ---' );
 $slug    = getenv( 'FLIP_CAROUSEL_PAGE_SLUG' ) ?: 'flip-carousel';
 $page_id = ea_upsert_page( $slug, 'Flip Carousel' );
 
-// Use a WordPress built-in image that is always present in any WP installation.
-$slide_img_url = includes_url( 'images/media/default.png' );
+// Use EA Pro's bundled default slide image (same URL the widget uses for its own defaults).
+$slide_img_url = EAEL_PRO_PLUGIN_URL . 'assets/front-end/img/slide.png';
 
 // Helper closure: create one repeater slide item.
 $mk = function (

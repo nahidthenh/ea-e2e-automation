@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 15 | **40** |
-| Not covered | 35 | 26 | **61** |
-| **Coverage** | **42%** | **37%** | **40%** |
+| Covered | 25 | 16 | **41** |
+| Not covered | 35 | 25 | **60** |
+| **Coverage** | **42%** | **39%** | **41%** |
 
 ---
 
-## ✅ Covered Widgets (37)
+## ✅ Covered Widgets (38)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -67,6 +67,7 @@
 | Testimonial Slider | Pro | [tests/testimonial-slider.spec.ts](tests/testimonial-slider.spec.ts) |
 | Static Product | Pro | [tests/static-product.spec.ts](tests/static-product.spec.ts) |
 | Stacked Cards | Pro | [tests/stacked-cards.spec.ts](tests/stacked-cards.spec.ts) |
+| Protected Content | Pro | [tests/protected-content.spec.ts](tests/protected-content.spec.ts) |
 
 ---
 
@@ -147,7 +148,7 @@
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
 | ~~Post List~~ | ~~`Post_List.php`~~ |
-| Protected Content | `Protected_Content.php` |
+| ~~Protected Content~~ | ~~`Protected_Content.php`~~ |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | ~~Stacked Cards~~ | ~~`Stacked_Cards.php`~~ |
 | ~~Static Product~~ | ~~`Static_Product.php`~~ |

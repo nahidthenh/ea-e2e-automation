@@ -1,3 +1,18 @@
+/**
+ * Covered: Essential Addons — Toggle widget
+ *
+ * 1. Page health           — HTTP 200, no PHP errors, no JS errors
+ * 2. Effects styles        — default (checkbox+slider) / glossy (2 radio inputs) /
+ *                            grasshopper (flip inputs); container visible, switch rendered
+ * 3. Switch styles         — round (default) / rectangle; correct class on container
+ * 4. Switch alignment      — center (default) / left / right prefix class on widget wrapper
+ * 5. Content panels/labels — primary label "Light", secondary label "Dark";
+ *                            primary and secondary wrap present; configured content text;
+ *                            initial "primary" class; grasshopper labels inside switch buttons
+ * 6. Element structure     — container, switch-wrap, switch-inner, tabindex="0" on switch
+ * 7. Interaction           — keyboard focus; click default/glossy/grasshopper (no JS errors);
+ *                            hover on all three effects styles
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TOGGLE_PAGE_SLUG ?? "toggle"}/`;

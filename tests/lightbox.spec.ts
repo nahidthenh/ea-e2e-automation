@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Lightbox widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Trigger types      — button / text / icon / image trigger elements
+ * 3. Popup configuration — popup window renders; close button; ESC exit;
+ *                          click-outside exit
+ * 4. Data attributes    — lightbox-type; popup-layout; close_button;
+ *                          esc_exit; click_exit; effect; trigger-element
+ * 5. Interaction        — click trigger opens popup (no JS errors);
+ *                          close button dismisses popup
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.LIGHTBOX_PAGE_SLUG ?? "lightbox"}/`;

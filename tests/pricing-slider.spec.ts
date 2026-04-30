@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Pricing Slider widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Slider styles     — style-1 / style-2 class on wrapper
+ * 3. Slider control    — bar / handle / tooltip; data-value; data-tooltip-text;
+ *                        dot + label
+ * 4. Description toggle — description text shown / hidden
+ * 5. Pricing plans     — title / subtitle / status / content per plan
+ * 6. Plan filter       — data-filter attribute; filtering by slider value
+ * 7. Interaction       — drag slider (no JS errors); hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.PRICING_SLIDER_PAGE_SLUG ?? "pricing-slider"}/`;

@@ -1,3 +1,16 @@
+/**
+ * Covered: Essential Addons — Team Member widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Team item         — item with preset class (e.g. team-avatar-rounded)
+ * 3. Name tag          — member name rendered
+ * 4. Position tag      — job position rendered
+ * 5. Social profiles   — social links with correct hrefs
+ * 6. Description       — description text rendered
+ * 7. Avatar            — figure > img element present
+ * 8. Free presets      — all free preset layout classes verified
+ * 9. Interaction       — hover (no JS errors); social link click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TEAM_MEMBER_PAGE_SLUG ?? "team-member"}/`;

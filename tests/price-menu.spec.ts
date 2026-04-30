@@ -1,3 +1,16 @@
+/**
+ * Covered: Essential Addons — Price Menu widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Menu styles      — style-1 / style-2 / style-3 / style-4 / eael CSS classes
+ * 3. Item wrap        — item wrapper elements present
+ * 4. Title/price      — title with connector and price rendered (style-1)
+ * 5. Description      — item description text rendered
+ * 6. Divider          — divider element between items
+ * 7. Link variants    — full_item link / title-only link
+ * 8. Image toggle     — image shown / hidden
+ * 9. Interaction      — hover (no JS errors); item link click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.PRICE_MENU_PAGE_SLUG ?? "price-menu"}/`;

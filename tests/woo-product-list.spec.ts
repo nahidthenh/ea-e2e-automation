@@ -1,3 +1,22 @@
+/**
+ * Covered: Essential Addons — Woo Product List widget
+ *
+ * 1. Page health             — HTTP 200, no PHP errors, no JS errors
+ * 2. Layout presets          — preset-1 / preset-2 / preset-3; wrapper attached,
+ *                              items rendered, title visible, price visible
+ * 3. Image alignment         — no alignment class by default; image-alignment-right class;
+ *                              image wrap present for all items
+ * 4. Rating toggle           — rating element present (default) / absent when disabled
+ * 5. Title toggle            — title visible (default) / absent when disabled
+ * 6. Price toggle            — price visible (default) / absent when disabled
+ * 7. Button positions        — both (static footer + hover on image); static-only;
+ *                              on-hover-only
+ * 8. Total sold progress bar — absent by default; present + inner element when enabled
+ * 9. Product filters         — featured / sale filter wrappers render without error
+ * 10. Element structure      — wrapper class, item class, image wrap, h3 price tag, excerpt
+ * 11. Interaction            — hover items (no JS errors); add-to-cart click (no JS errors);
+ *                              all three presets render without JS errors
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.WOO_PRODUCT_LIST_PAGE_SLUG ?? "woo-product-list"}/`;

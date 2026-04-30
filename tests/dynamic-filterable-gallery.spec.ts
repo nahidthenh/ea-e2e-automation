@@ -1,3 +1,18 @@
+/**
+ * Covered: Essential Addons — Dynamic Filterable Gallery widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Style presets      — eael-hoverer / eael-cards preset class on wrapper
+ * 3. Layout modes       — grid / masonry with data-settings layout_mode
+ * 4. Filter controls    — show / hide; "All" button (data-filter=*); label text
+ * 5. Filter position    — top / left filter bar position
+ * 6. Title visibility   — show / hide title on gallery items
+ * 7. Excerpt visibility — show / hide excerpt on gallery items
+ * 8. Hover styles       — eael-fade-in / eael-slide-up / eael-zoom-in / eael-none
+ *                         on caption overlay
+ * 9. Gallery items      — count > 0; data-itemid; thumbnail img; data-settings JSON
+ * 10. Interaction       — filter click (no JS errors); hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.DYNAMIC_FILTERABLE_GALLERY_PAGE_SLUG ?? "dynamic-filterable-gallery"}/`;

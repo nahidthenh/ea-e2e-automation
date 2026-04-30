@@ -1,3 +1,14 @@
+/**
+ * Covered: Essential Addons — Post List widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Container        — wrapper with layout type class
+ * 3. Header           — topbar title; filter tabs "All" link
+ * 4. Post items       — thumbnail; title; excerpt; read-more button
+ * 5. Pagination       — prev/next buttons present and functional
+ * 6. Advanced layout  — advanced layout variant renders correctly
+ * 7. Interaction      — filter tab click (no JS errors); pagination click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.POST_LIST_PAGE_SLUG ?? "post-list"}/`;

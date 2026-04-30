@@ -1,3 +1,14 @@
+/**
+ * Covered: Essential Addons — Flip Carousel widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Carousel types   — coverflow / carousel / flat / wheel via data-style
+ * 3. Slide text       — .flip-carousel-text "Slide Alpha" / "Slide Beta"
+ * 4. Content view     — hover class / always class with content element / none without
+ * 5. Slide links      — external target="_blank"; nofollow rel; no-target default
+ * 6. Element structure — div/ul/li tags; img inside slide; data-fadein; data-start
+ * 7. Interaction      — hover (no JS errors); click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FLIP_CAROUSEL_PAGE_SLUG ?? "flip-carousel"}/`;

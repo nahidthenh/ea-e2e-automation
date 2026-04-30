@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Offcanvas widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Toggle button      — text label; icon; size class variants
+ * 3. Content wrap       — data-settings JSON attached to content wrap
+ * 4. Offcanvas panel    — title h3; close button; body with custom widgets;
+ *                         panel moved to <body> by JS
+ * 5. Position/direction — left / right / top / bottom position variants
+ * 6. Interaction        — click toggle opens panel; close button dismisses;
+ *                          ESC key closes (no JS errors)
+ */
 import { test, expect, Page, Locator } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.OFFCANVAS_PAGE_SLUG ?? "offcanvas"}/`;

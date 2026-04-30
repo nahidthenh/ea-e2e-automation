@@ -1,3 +1,20 @@
+/**
+ * Covered: Essential Addons — Testimonial Slider widget
+ *
+ * 1. Page health          — HTTP 200, no PHP errors, no JS errors
+ * 2. Slider skins         — 8 skins (default/classic/simple/icon-right/middle/
+ *                           content-top-inline/icon-left/content-bottom-inline);
+ *                           skin class on outer wrap, first slide visible,
+ *                           reviewer name "Alice Anderson" and description rendered
+ * 3. Quote icon           — present when enabled; absent when disabled
+ * 4. Navigation controls  — arrows (next/prev) show/hide; pagination dots show/hide
+ * 5. Alignment            — left (default) / center / right class on each slide
+ * 6. Avatar               — image block present / absent based on toggle
+ * 7. Rating stars         — element present; 5 <li> items in first slide
+ * 8. Carousel effect      — data-effect: "slide" default; "fade" variant
+ * 9. Element structure    — outer wrap class, swiper-wrapper, ≥3 slides, <p> user tag
+ * 10. Interaction         — hover per skin (no JS errors); prev/next arrow clicks
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TESTIMONIAL_SLIDER_PAGE_SLUG ?? "testimonial-slider"}/`;

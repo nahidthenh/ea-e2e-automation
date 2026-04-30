@@ -1,3 +1,16 @@
+/**
+ * Covered: Essential Addons — Code Snippet widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Themes             — light / dark theme class
+ * 3. Language rendering — html / php / js; data-language attr; language- CSS class
+ * 4. View modes         — default / fixed / collapsed; "Show more"/"Show less" indicator
+ * 5. Header visibility  — show / hide; file name; traffic lights; file icon emoji
+ * 6. Copy button        — visible / hidden; aria-label; tooltip text
+ * 7. Line numbers       — show / hide; line count matches code line count
+ * 8. Element structure  — <pre> and <button> tags
+ * 9. Interaction        — copy button click (no JS errors); hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.CODE_SNIPPET_PAGE_SLUG ?? "code-snippet"}/`;

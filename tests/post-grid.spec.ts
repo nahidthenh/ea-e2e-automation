@@ -1,3 +1,14 @@
+/**
+ * Covered: Essential Addons — Post Grid widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Grid container   — grid wrapper present
+ * 3. Skin classes     — skin-one / skin-two / skin-three CSS class on wrapper
+ * 4. Layout modes     — grid / masonry layout class
+ * 5. Post cards       — title links; excerpts; read-more buttons; thumbnails
+ * 6. Pagination       — pagination controls present and functional
+ * 7. Interaction      — hover (no JS errors); pagination click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.POST_GRID_PAGE_SLUG ?? "post-grid"}/`;

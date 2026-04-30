@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Advanced Accordion widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Accordion types  — accordion mode (data-accordion-type="accordion") /
+ *                       toggle mode (data-accordion-type="toggle")
+ * 3. Toggle icon      — icon visible / hidden; left / right position
+ * 4. Per-tab icon     — open icon / closed icon shown per state
+ * 5. Default active   — active-default class applied to specified tab
+ * 6. Element structure — tab titles, title HTML tag, tabindex, data-tab attributes
+ * 7. Interaction      — click to open/close tab; hover; keyboard navigation
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.ADVANCED_ACCORDION_PAGE_SLUG ?? "advanced-accordion"}/`;

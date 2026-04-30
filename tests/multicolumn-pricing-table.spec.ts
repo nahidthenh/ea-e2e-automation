@@ -1,3 +1,14 @@
+/**
+ * Covered: Essential Addons — Multicolumn Pricing Table widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Table structure   — wrapper / table / columns layout
+ * 3. Title column      — title column cells rendered
+ * 4. Package columns   — title h2; prices (old/sale price); period; buy button
+ * 5. Featured badge    — featured column has badge element
+ * 6. Collapse button   — collapse/expand button present and functional
+ * 7. Interaction       — hover (no JS errors); button clicks (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.MULTICOLUMN_PRICING_TABLE_PAGE_SLUG ?? "multicolumn-pricing-table"}/`;

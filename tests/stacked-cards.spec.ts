@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Stacked Cards widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Container          — stacked cards container and scroll wrapper present
+ * 3. Vertical cards     — eael-stacked-cards__item with data-stacked_card;
+ *                         media; content; title; link button
+ * 4. Horizontal cards   — eael-stacked-cards__item_hr layout renders
+ * 5. Card style         — data-cadr_style attribute values
+ * 6. Scroll trigger     — data attributes for scroll-based animation
+ * 7. Interaction        — scroll (no JS errors); hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.STACKED_CARDS_PAGE_SLUG ?? "stacked-cards"}/`;

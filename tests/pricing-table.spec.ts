@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Pricing Table widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Pricing styles    — style-1 / style-2 / style-3 CSS class on card
+ * 3. Pricing card      — header / title / price-tag / body features list / footer button
+ * 4. Style-2 icon      — icon element present in style-2 header
+ * 5. Featured ribbon   — featured class and ribbon element on featured plan
+ * 6. Sale price        — old price and sale price rendered
+ * 7. Button link       — href; external target="_blank"; nofollow rel
+ * 8. Interaction       — hover (no JS errors); button click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.PRICING_TABLE_PAGE_SLUG ?? "pricing-table"}/`;

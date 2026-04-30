@@ -1,3 +1,14 @@
+/**
+ * Covered: Essential Addons — Advanced Tabs widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Layout variants   — horizontal / vertical layout class
+ * 3. Icon variants     — inline / stacked / off; alignment before / after tab title
+ * 4. Tab navigation    — active-default tab; content text; clicking tabs; tab titles
+ * 5. Toggle behaviour  — eael-tab-toggle mode; inactive class on collapsed tab
+ * 6. Element structure — id prefix, role=tablist/tab, tabindex 0/-1, aria-controls
+ * 7. Interaction       — click to switch tabs; hover (no JS errors); keyboard access
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.ADVANCED_TABS_PAGE_SLUG ?? "advanced-tabs"}/`;

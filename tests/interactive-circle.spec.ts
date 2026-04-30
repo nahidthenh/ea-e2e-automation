@@ -1,3 +1,19 @@
+/**
+ * Covered: Essential Addons — Interactive Circle widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Preset styles      — 4 free presets (eael-interactive-circle-preset-1/2/3/4);
+ *                         items present; btn text visible; content attached
+ * 3. Button visibility  — btn-icon-off (no icon, text visible) /
+ *                         btn-text-off (no .eael-circle-btn-txt, icon present)
+ * 4. Content icon       — Preset 2: .eael-circle-content-icon visible / hidden
+ * 5. Mouse event        — eael-interactive-circle-event-click / hover class
+ * 6. Rotation animation — eael-interactive-circle-rotate class on / off
+ * 7. Item link          — <a> tag with target="_blank"; no <a> on default
+ * 8. Connector shapes   — Presets 3 & 4: .eael-circle-icon-shapes; .eael-shape-1
+ * 9. Element structure  — tabindex=0; btn-content panel; content text; known presets
+ * 10. Interaction       — keyboard focus; hover; click; "Home" btn text verified
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.INTERACTIVE_CIRCLE_PAGE_SLUG ?? "interactive-circle"}/`;

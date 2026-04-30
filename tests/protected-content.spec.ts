@@ -1,3 +1,13 @@
+/**
+ * Covered: Essential Addons — Protected Content widget
+ *
+ * 1. Page health          — HTTP 200, no PHP errors, no JS errors
+ * 2. Role protection      — eael-protected-content div present; message wrapper;
+ *                           message text rendered for non-matching roles
+ * 3. Password protection  — message wrapper; form with password input and submit button;
+ *                           nonce hidden input present
+ * 4. Interaction          — submit form (no JS errors); correct password reveals content
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.PROTECTED_CONTENT_PAGE_SLUG ?? "protected-content"}/`;

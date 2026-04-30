@@ -1,3 +1,17 @@
+/**
+ * Covered: Essential Addons — Advanced Menu widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Skin variants     — 8 skins (default through skin-seven); skin class on wrapper
+ * 3. Layout variants   — horizontal / vertical layout class
+ * 4. Item alignment    — left / center / right alignment class
+ * 5. Hamburger options — left / center / right position; toggle button;
+ *                        data-hamburger-device attribute
+ * 6. Full-width option — eael-advanced-menu--stretch class applied
+ * 7. Menu item content — hrefs and link text rendered correctly
+ * 8. Element structure — ul/li/button tag structure
+ * 9. Interaction       — hover and click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.ADVANCED_MENU_PAGE_SLUG ?? "advanced-menu"}/`;

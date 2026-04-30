@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — CTA Box widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Layout styles     — basic / flex / icon-flex; .content/.action/.icon child divs
+ * 3. Presets           — cta-preset-1 / cta-preset-2; cta-btn-preset-2
+ * 4. Button features   — "Click Here" text; href "#"; secondary button "Learn More"
+ * 5. Link behaviour    — external target="_blank"; nofollow; no-target default
+ * 6. Alignment         — content-align-cta-center / default prefix classes
+ * 7. Element structure — <a>/<h2> tags; eael-cta-heading class; bg-lite class
+ * 8. Interaction       — hover (no JS errors); button clicks (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.CTA_BOX_PAGE_SLUG ?? "cta-box"}/`;

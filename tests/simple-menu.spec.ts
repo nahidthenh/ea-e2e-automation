@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Simple Menu widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Presets           — preset-1 / preset-2 / preset-3 class on container
+ * 3. Menu layout       — horizontal / vertical layout class
+ * 4. Item alignment    — left / center / right alignment class
+ * 5. Hamburger toggle  — toggle button with SVG icon present
+ * 6. Menu items        — Alpha / Beta / Gamma hrefs rendered
+ * 7. Full-width option — full-width class applied
+ * 8. Interaction       — hamburger click opens menu (no JS errors); item hover
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.SIMPLE_MENU_PAGE_SLUG ?? "simple-menu"}/`;

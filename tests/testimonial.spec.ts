@@ -1,3 +1,19 @@
+/**
+ * Covered: Essential Addons — Testimonial widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Skins (8 layouts)  — default/classic/middle/icon-left/icon-right/
+ *                         content-top-inline/content-bottom-inline/simple-layout;
+ *                         item visible, CSS class applied, description + user + company
+ * 3. Avatar toggle      — image block present / absent; content still renders without avatar
+ * 4. Quote icon toggle  — span.eael-testimonial-quote present / absent
+ * 5. Rating toggle      — star list present / absent; rating CSS class on item
+ * 6. Rating number      — rating-one class on item; 5 <li> still in DOM
+ * 7. Rating position    — default (inside content); top (stars precede content in DOM)
+ * 8. Content alignment  — center / right text-align computed style
+ * 9. Element structure  — div item, <p>/<h3> user tag per skin, 5-star list, known skin class
+ * 10. Interaction       — hover per skin (no JS errors); click on default testimonial
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TESTIMONIAL_PAGE_SLUG ?? "testimonial"}/`;

@@ -1,3 +1,20 @@
+/**
+ * Covered: Essential Addons — Fancy Text widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Animation types    — 9 types (typing/fadeIn/fadeInUp/fadeInDown/fadeInLeft/
+ *                         fadeInRight/zoomIn/bounceIn/swing) via
+ *                         data-fancy-text-transition-type; pipe-separated strings
+ * 3. Alignment          — center / left / right text-align
+ * 4. Cursor toggle      — data-fancy-text-cursor yes / not-yes
+ * 5. Loop toggle        — data-fancy-text-loop yes / not-yes
+ * 6. Start trigger      — page_load / view_port via data-fancy-text-action
+ * 7. Prefix / suffix    — prefix "This is the"; suffix "of the sentence";
+ *                         prefix-only; suffix-only
+ * 8. Element structure  — style-1 class; data-fancy-text-id; eael-fancy-text- id prefix;
+ *                         clearfix div
+ * 9. Interaction        — hover (no JS errors); animation plays
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FANCY_TEXT_PAGE_SLUG ?? "fancy-text"}/`;

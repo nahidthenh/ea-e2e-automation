@@ -1,3 +1,17 @@
+/**
+ * Covered: Essential Addons — Logo Carousel widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Carousel types    — slide / fade effects; multiple effect variants
+ * 3. Slides content    — slide count; logo images rendered; logo titles
+ * 4. Navigation        — arrows (next/prev) show / hide; pagination dots show / hide
+ * 5. Grayscale mode    — grayscale CSS filter applied / removed
+ * 6. Marquee mode      — marquee animation class applied
+ * 7. RTL direction     — dir="rtl" attribute on slider
+ * 8. Playback          — loop; autoplay data attribute
+ * 9. Tooltip           — tooltip text on logo hover
+ * 10. Interaction      — hover (no JS errors); arrow clicks (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.LOGO_CAROUSEL_PAGE_SLUG ?? "logo-carousel"}/`;

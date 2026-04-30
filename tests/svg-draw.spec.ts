@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — SVG Draw widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Animation classes  — page-load / none / page-scroll / mouse-hover
+ * 3. Fill SVG           — fill-svg class toggled on/off
+ * 4. Data settings      — data-settings JSON attached to wrapper
+ * 5. SVG element        — SVG renders inside widget container
+ * 6. Link wrapping      — <a> tag wraps SVG when link enabled
+ * 7. Interaction        — hover triggers draw animation (no JS errors);
+ *                         scroll triggers page-scroll variant
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.SVG_DRAW_PAGE_SLUG ?? "svg-draw"}/`;

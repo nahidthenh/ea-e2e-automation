@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Content Ticker widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Animation effects  — slide / fade; direction RTL
+ * 3. Ticker structure   — eael-ticker-wrap, swiper, swiper-wrapper, slides present
+ * 4. Arrows config      — show / hide; data-arrows; next/prev buttons
+ * 5. Playback controls  — loop; autoplay (sentinel 999999); pause-on-hover; grab-cursor
+ * 6. Tag variants       — badge text "Trending Today" / "Latest News" / no-tag
+ * 7. Pro custom content — 3 slides; external / nofollow links
+ * 8. Interaction        — hover (no JS errors); arrow clicks (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.CONTENT_TICKER_PAGE_SLUG ?? "content-ticker"}/`;

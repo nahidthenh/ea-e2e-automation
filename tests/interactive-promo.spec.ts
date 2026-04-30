@@ -1,3 +1,16 @@
+/**
+ * Covered: Essential Addons — Interactive Promo widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Promo effects     — 15 CSS effects (lily/sadie/layla/oscar/marley/ruby/roxy/
+ *                        bubba/romeo/sarah/chico/milo/apollo/jazz/ming);
+ *                        figure class check; "I am Interactive" heading
+ * 3. Link behaviour    — default href "#"; external target="_blank"; nofollow; no-target
+ * 4. Element structure — eael-interactive-promo class; id="eael-promo-*";
+ *                        figure>img; figcaption with h2+p "Click to inspect";
+ *                        <a> tag; known 15 effects
+ * 5. Interaction       — hover on each effect (no JS errors); click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.INTERACTIVE_PROMO_PAGE_SLUG ?? "interactive-promo"}/`;

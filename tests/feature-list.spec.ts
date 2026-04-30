@@ -1,3 +1,18 @@
+/**
+ * Covered: Essential Addons — Feature List widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Layout variants   — vertical / horizontal class
+ * 3. Icon position     — left / top / right via -icon-position- class on wrapper
+ * 4. Icon shape        — circle / square / rhombus on list
+ * 5. Shape view        — stacked / framed class
+ * 6. Connector         — classic (.connector span) / modern / none
+ * 7. Icon type (image) — .eael-feature-list-img element present
+ * 8. Link behaviour    — external target="_blank"; nofollow; span vs a tag
+ * 9. Title HTML tag    — h2 default; h3 custom
+ * 10. Element structure — ul/li, icon-box, icon-inner, content-box; known shapes/views
+ * 11. Interaction      — hover (no JS errors); click links (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FEATURE_LIST_PAGE_SLUG ?? "feature-list"}/`;

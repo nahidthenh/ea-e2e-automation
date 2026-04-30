@@ -1,3 +1,19 @@
+/**
+ * Covered: Essential Addons — Info Box widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Icon/Image position — top / bottom / left / right via icon-on-{pos} class
+ * 3. Icon/Media type    — none (no .infobox-icon) / number (.infobox-icon-number "42") /
+ *                         icon (.eael-icon-only)
+ * 4. Sub title          — show / hide; text "This Is A Sub Title"
+ * 5. Button             — show / hide; text "Learn More"; href "#";
+ *                         external target="_blank"; nofollow
+ * 6. Clickable infobox  — <a> wrapping .eael-infobox; href; target="_blank";
+ *                         no button when clickable
+ * 7. Content alignment  — eael-infobox-content-align-*left/right; text-align computed
+ * 8. Element structure  — h2 tag; infobox-title-section
+ * 9. Interaction        — hover (no JS errors); click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.INFO_BOX_PAGE_SLUG ?? "info-box"}/`;

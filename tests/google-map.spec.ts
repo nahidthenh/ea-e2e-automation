@@ -1,3 +1,16 @@
+/**
+ * Covered: Essential Addons — Google Map widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Map types         — 5 types (basic/marker/static/routes/panorama) via
+ *                        data-map_type and eael-google-map-{type} class
+ * 3. Widget structure  — data-id; id="eael-google-map-*"; google-map-notice;
+ *                        data-map_addr="Marina Bay, Singapore"; data-map_zoom="14"
+ * 4. Control toggles   — zoom / fullscreen / scroll-zoom / street-view
+ *                        true/false via data attributes
+ * 5. Marker search     — show / hide; input element; placeholder "Search Marker..."
+ * 6. Interaction       — hover (no JS errors); map renders without JS errors
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.GOOGLE_MAP_PAGE_SLUG ?? "google-map"}/`;

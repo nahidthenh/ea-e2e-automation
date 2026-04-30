@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Team Member Carousel widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Carousel wrap     — outer wrap and swiper container present
+ * 3. Slides            — eael-tm slide items rendered
+ * 4. Team member image — image element present inside slide
+ * 5. Overlay content   — social icons / all_content overlay variants
+ * 6. Normal content    — name tag; position tag; social links; description
+ * 7. Navigation        — arrows (next/prev) show / hide; pagination dots show / hide
+ * 8. Interaction       — hover (no JS errors); arrow click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TEAM_MEMBER_CAROUSEL_PAGE_SLUG ?? "team-member-carousel"}/`;

@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Divider widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Divider types     — plain / text "Section Title" / icon
+ * 3. Direction         — horizontal / vertical class
+ * 4. Line toggles      — left / right border div show / hide
+ * 5. Alignment         — left / center / right text-align
+ * 6. Border styles     — solid / dashed / dotted / double CSS classes and computed style
+ * 7. Element structure — direction class; eael-divider-content wraps text/icon
+ * 8. Interaction       — hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.DIVIDER_PAGE_SLUG ?? "divider"}/`;

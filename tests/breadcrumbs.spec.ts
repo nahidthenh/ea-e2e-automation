@@ -1,3 +1,14 @@
+/**
+ * Covered: Essential Addons — Breadcrumbs widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Breadcrumb content — home link "Home" / custom text; current page label; separator
+ * 3. Prefix variants  — none / icon / text "Browse:"
+ * 4. Separator variants — icon type / custom text ">>"
+ * 5. Alignment        — left / center / right justify-content computed style
+ * 6. Element structure — div/span tags; multiple widget instances rendered
+ * 7. Interaction       — hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.BREADCRUMBS_PAGE_SLUG ?? "breadcrumbs"}/`;

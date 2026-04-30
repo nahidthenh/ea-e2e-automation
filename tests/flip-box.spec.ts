@@ -1,3 +1,18 @@
+/**
+ * Covered: Essential Addons — Flip Box widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Flip types         — 7 animation classes (eael-animate-left/right/up/down/
+ *                         zoom-in/zoom-out/fade-in)
+ * 3. Event type         — eael-flip-box-hover (default) / eael-flip-box-click
+ * 4. Front icon types   — icon present / none (no children) / image (.eael-flipbox-image-as-icon)
+ * 5. Link types         — none=div / box=a / title=a.flipbox-linked-title /
+ *                         button=.flipbox-button "Get Started"
+ * 6. Content alignment  — eael-flipbox-content-align-center / left prefix class
+ * 7. Element structure  — front/back title text; h2 default; front content;
+ *                         eael-animate-flip; eael-flipbox-fixed-height
+ * 8. Interaction        — hover (no JS errors); click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FLIP_BOX_PAGE_SLUG ?? "flip-box"}/`;

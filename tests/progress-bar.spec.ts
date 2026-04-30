@@ -1,3 +1,14 @@
+/**
+ * Covered: Essential Addons — Progress Bar widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Line layout      — container / title / progressbar div; data-layout; data-count;
+ *                       data-duration; stripe class; count-wrap; line-fill element
+ * 3. Circle layout    — circle-container / circle-pie / circle-inner /
+ *                       circle-inner-content with title and count
+ * 4. Interaction      — hover triggers animation (no JS errors);
+ *                       scroll-into-view starts animation
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.PROGRESS_BAR_PAGE_SLUG ?? "progress-bar"}/`;

@@ -1,3 +1,16 @@
+/**
+ * Covered: Essential Addons — Content Timeline widget
+ *
+ * 1. Page health          — HTTP 200, no PHP errors, no JS errors
+ * 2. Layout positions     — center / left / right class on container
+ * 3. Circle icon variants — icon present; no bullet class
+ * 4. Title visibility     — show / hide; text "Alpha Event"
+ * 5. Excerpt visibility   — show / hide
+ * 6. Read more visibility — show / hide; text "Read More"
+ * 7. Element structure    — date "Jan 01, 2024"; h2/h3 title tag; card element; 3 blocks
+ * 8. Link behaviour       — href "#"; target="_blank"; nofollow rel
+ * 9. Interaction          — hover (no JS errors); click links (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.CONTENT_TIMELINE_PAGE_SLUG ?? "content-timeline"}/`;

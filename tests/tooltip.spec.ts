@@ -1,3 +1,19 @@
+/**
+ * Covered: Essential Addons — Tooltip widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Content types    — icon (default) / text ("Hover Me!") / image (img inside trigger) /
+ *                       shortcode (div trigger tag); .eael-tooltip visible,
+ *                       .eael-tooltip-content and .eael-tooltip-text present
+ * 3. Direction        — right (default) / left / top / bottom class on tooltip text
+ * 4. Link behaviour   — external (target="_blank", href="#"); nofollow (rel contains
+ *                       "nofollow"); default widget has no anchor
+ * 5. Alignment        — center / right prefix class on widget wrapper
+ * 6. Element structure — div.eael-tooltip, span trigger (icon/text types), tabindex="0",
+ *                        aria-describedby → tooltip id, role="tooltip", id match
+ * 7. Interaction      — keyboard focus on trigger; hover on all tooltips (no JS errors);
+ *                       click trigger (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TOOLTIP_PAGE_SLUG ?? "tooltip"}/`;

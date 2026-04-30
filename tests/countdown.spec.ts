@@ -1,3 +1,21 @@
+/**
+ * Covered: Essential Addons — Countdown widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Default countdown — 4 units (Days/Hours/Minutes/Seconds) visible;
+ *                        data-countdown-type=due_date; data-expire-type=none;
+ *                        label-block class
+ * 3. Timer type        — evergreen (data-evergreen-time)
+ * 4. Label position    — inline label variant
+ * 5. Layout            — list view (display:grid) vs grid view (display:table-cell)
+ * 6. Unit visibility   — no hours / no seconds variants
+ * 7. Separator         — solid / dotted CSS classes
+ * 8. Expire action     — text message (data-expiry-title / data-expiry-text)
+ * 9. Alignment         — center / left / right text-align
+ * 10. Element structure — data-days/hours/minutes/seconds attrs; 4 <li> items;
+ *                         data-countdown-id
+ * 11. Interaction      — hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.COUNTDOWN_PAGE_SLUG ?? "countdown"}/`;

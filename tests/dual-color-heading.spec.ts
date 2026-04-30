@@ -1,3 +1,19 @@
+/**
+ * Covered: Essential Addons — Dual Color Heading widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Layout style types — 4 free styles (dch-default / dch-icon-on-top /
+ *                         dch-icon-subtext-on-top / dch-subtext-on-top)
+ * 3. Icon configuration — on / off; position verified via bounding box comparison
+ * 4. Separator          — none by default; line type (separator-one/two);
+ *                         icon type (i/svg)
+ * 5. Alignment          — left / center / right prefix classes
+ *                         (eael-dual-header-content-align-*)
+ * 6. Multiple titles    — 3 spans with eael-dch-title-text
+ *                         ("Alpha Title" / "Beta Title" / "Gamma Title")
+ * 7. Element structure  — h2 default / h4 variant; .lead class; gradient inline style
+ * 8. Interaction        — hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.DUAL_COLOR_HEADING_PAGE_SLUG ?? "dual-color-heading"}/`;

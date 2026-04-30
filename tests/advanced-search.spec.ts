@@ -1,3 +1,16 @@
+/**
+ * Covered: Essential Addons — Advanced Search widget
+ *
+ * 1. Page health          — HTTP 200, no PHP errors, no JS errors
+ * 2. Form layout styles   — 3 styles via eael-advanced-search-form-style-N class
+ * 3. Result content styles — 3 styles via eael-item-style-N class
+ * 4. Search button        — show / hide; default text / custom text
+ * 5. Category dropdown    — show / hide; "All Categories" default option
+ * 6. Search input attrs   — placeholder, autocomplete, name attributes
+ * 7. Result container     — not-found element, load-more, data-settings JSON,
+ *                           result_on_new_tab attribute
+ * 8. Interaction          — typing in search input (no JS errors); form submit
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.ADVANCED_SEARCH_PAGE_SLUG ?? "advanced-search"}/`;

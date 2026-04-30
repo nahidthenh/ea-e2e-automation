@@ -1,3 +1,13 @@
+/**
+ * Covered: Essential Addons — Static Product widget
+ *
+ * 1. Page health         — HTTP 200, no PHP errors, no JS errors
+ * 2. Product media       — overlay; demo button; cart button
+ * 3. Product details     — heading link; description; price; reviews; details button
+ * 4. Layout styles       — default / style-two / style-three CSS class on wrapper
+ * 5. Add-to-cart button  — button position variants; button text and href
+ * 6. Interaction         — hover (no JS errors); add-to-cart click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.STATIC_PRODUCT_PAGE_SLUG ?? "static-product"}/`;

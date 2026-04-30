@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — Counter widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Layout variants   — 6 layouts (eael-counter-layout-1 through layout-6)
+ * 3. Icon types        — none / icon (eael-counter-svg-icon) / image (eael-counter-icon-img)
+ * 4. Number options    — prefix "$"; suffix "%"; comma separator on/off; number divider;
+ *                        data-to="250"; data-speed
+ * 5. Alignment         — left / center / right text-align
+ * 6. Element structure — title tag div; data-target attr; number-wrap element
+ * 7. Interaction       — hover; counter animation verified (0–250 range)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.COUNTER_PAGE_SLUG ?? "counter"}/`;

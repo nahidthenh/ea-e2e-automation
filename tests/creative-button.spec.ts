@@ -1,3 +1,18 @@
+/**
+ * Covered: Essential Addons — Creative Button widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Button effects     — 6 free effects (default/winona/ujarak/wayra/tamaya/rayen);
+ *                         CSS class, "Click Me!" text, data-text="Go!"
+ * 3. Pro button effects — 10 pro effects (pipaluk/moema/wave/aylen/saqui/
+ *                         wapasha/nuka/antiman/quidel/shikoba)
+ * 4. Tamaya effect      — secondary text in before/after divs with "Go!" text
+ * 5. Icon configuration — left / right position; no icon on opposite side
+ * 6. Link behaviour     — href "#"; external target="_blank"; nofollow; no-target default
+ * 7. Button alignment   — center (justify-content:center); right (justify-content:flex-end)
+ * 8. Element structure  — <a> tag; .cretive-button-text class
+ * 9. Interaction        — hover (no JS errors); click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.CREATIVE_BUTTON_PAGE_SLUG ?? "creative-button"}/`;

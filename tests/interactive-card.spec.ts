@@ -1,3 +1,20 @@
+/**
+ * Covered: Essential Addons — Interactive Card widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Front panel styles — text-card (.front-text-content "Interactive Cards" + "More" btn) /
+ *                         img-card (.image-screen-overlay, no .front-text-content)
+ * 3. Rear panel types   — img-grid (.content-inner "Cool Headline"/"Read More") /
+ *                         scrollable (.content-overflow) /
+ *                         video (iframe youtube.com/embed)
+ * 4. Button icons       — front-btn-icon left class / no icon when off;
+ *                         rear-btn-icon left class
+ * 5. Link behaviour     — default "#"; external target="_blank"; nofollow; no-target
+ * 6. Content animation  — data-animation: content-show / slide-in-left / slide-in-right
+ * 7. Element structure  — interactive-card class; data-interactive-card-id;
+ *                         data-animation-time; close button; counter "1"
+ * 8. Interaction        — hover; click front button reveals rear panel (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.INTERACTIVE_CARD_PAGE_SLUG ?? "interactive-card"}/`;

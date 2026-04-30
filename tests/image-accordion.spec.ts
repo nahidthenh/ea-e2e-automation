@@ -1,3 +1,19 @@
+/**
+ * Covered: Essential Addons — Image Accordion widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Accordion type     — on-hover / on-click via data-img-accordion-type; 3 items
+ * 3. Direction          — horizontal / vertical class
+ * 4. Content alignment  — horizontal: center/left/right;
+ *                         vertical: center/top/bottom via eael-img-accordion-*-align-*
+ * 5. Active item        — overlay-active class; overlay-inner-show class;
+ *                         no overlay-active on default
+ * 6. Link behaviour     — external target="_blank" href example.com; nofollow; disabled (no <a>)
+ * 7. Element structure  — titles "City Lights"/"Ocean Breeze"/"Mountain Peak";
+ *                         h2 default/h3/span title tags; overlay divs match item count;
+ *                         tabindex=0; data-img-accordion-id
+ * 8. Interaction        — hover / click to open (no JS errors); keyboard focus
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.IMAGE_ACCORDION_PAGE_SLUG ?? "image-accordion"}/`;

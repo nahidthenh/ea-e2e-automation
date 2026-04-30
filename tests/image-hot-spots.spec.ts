@@ -1,3 +1,21 @@
+/**
+ * Covered: Essential Addons — Image Hot Spots widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Hotspot types      — icon (.eael-hotspot-icon-wrap) / text "Info" /
+ *                         blank (no icon or text)
+ * 3. Glow effect        — hotspot-animation class on / off
+ * 4. Tooltip            — eael-hot-spot-tooptip class; data-tipso "This is tooltip text";
+ *                         disabled (no class); global position "top"; local "bottom";
+ *                         arrow "yes"
+ * 5. Link behaviour     — external target="_blank"; data-link contains example.com;
+ *                         no target default
+ * 6. Image alignment    — centered / left / right prefix class
+ * 7. Multiple hotspots  — 3 count; "Beta" text hotspot
+ * 8. Element structure  — <a> tag; aria-label; eael-image-hotspots wrapper;
+ *                         img inside hot-spot-image
+ * 9. Interaction        — hover (no JS errors); click (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.IMAGE_HOT_SPOTS_PAGE_SLUG ?? "image-hot-spots"}/`;

@@ -1,3 +1,15 @@
+/**
+ * Covered: Essential Addons — One Page Navigation widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Navigation        — container present; nav items rendered; dot wraps with icons
+ * 3. Tooltips          — tooltip content text on each nav item
+ * 4. Alignment         — prefix classes (right/left/top/bottom position)
+ * 5. Data attributes   — scroll-wheel / scroll-keys data attributes
+ * 6. Section IDs       — each nav item links to a section ID on page
+ * 7. Interaction       — click nav dot scrolls to section (no JS errors);
+ *                         keyboard navigation
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.ONE_PAGE_NAVIGATION_PAGE_SLUG ?? "one-page-navigation"}/`;

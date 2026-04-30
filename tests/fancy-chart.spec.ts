@@ -1,3 +1,16 @@
+/**
+ * Covered: Essential Addons — Fancy Chart widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Chart styles      — 7 ApexCharts types (bar/area/line/radar/pie/donut/polarArea)
+ *                        encoded in data-options JSON
+ * 3. Widget structure  — header area, title "Sample Chart Title",
+ *                        description "Sample chart description"
+ * 4. Title tag         — h4 default; h2 variant
+ * 5. Legend toggle     — show=true / show=false in data-options
+ * 6. Toolbar toggle    — show=true / show=false in data-options
+ * 7. Interaction       — hover (no JS errors); ApexCharts SVG renders inside container
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FANCY_CHART_PAGE_SLUG ?? "fancy-chart"}/`;

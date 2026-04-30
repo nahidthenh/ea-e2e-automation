@@ -1,3 +1,14 @@
+/**
+ * Covered: Essential Addons — Image Scroller widget
+ *
+ * 1. Page health      — HTTP 200, no PHP errors, no JS errors
+ * 2. Scroll direction — vertical (eael-image-scroller-vertical) /
+ *                       horizontal (eael-image-scroller-horizontal); no opposite class
+ * 3. Auto scroll      — eael-image-scroller-hover class on / off for both directions
+ * 4. Element structure — div tag; img with non-empty src; height=300px;
+ *                        all 4 instances attached
+ * 5. Interaction      — hover (no JS errors); scroll behaviour
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.IMAGE_SCROLLER_PAGE_SLUG ?? "image-scroller"}/`;

@@ -1,3 +1,19 @@
+/**
+ * Covered: Essential Addons — Image Comparison widget
+ *
+ * 1. Page health        — HTTP 200, no PHP errors, no JS errors
+ * 2. Orientation        — horizontal / vertical via data-orientation
+ * 3. Slider interaction — data-onhover / data-onclick; toggle buttons count=2;
+ *                         "Show Before"/"Show After" labels; active class
+ * 4. Toggle button content — icon-only (empty text) / icon present; text+icon both
+ * 5. Overlay            — data-overlay yes / empty
+ * 6. Labels             — data-before_label "Before" / custom "Original";
+ *                         data-after_label "After" / custom "Edited"
+ * 7. Offset             — data-offset 0.7 default / 0.3 variant
+ * 8. Element structure  — eael-before-img; eael-after-img; twentytwenty-container;
+ *                         id="eael-image-comparison-*"
+ * 9. Interaction        — drag handle (no JS errors); toggle button click
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.IMAGE_COMPARISON_PAGE_SLUG ?? "image-comparison"}/`;

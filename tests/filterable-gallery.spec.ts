@@ -1,3 +1,19 @@
+/**
+ * Covered: Essential Addons — Filterable Gallery widget
+ *
+ * 1. Page health       — HTTP 200, no PHP errors, no JS errors
+ * 2. Layout styles     — hoverer / card / layout_3 via data-layout-mode
+ * 3. Grid style        — eael-filter-gallery-grid / masonry CSS class
+ * 4. Filter controls   — show / hide; "All" (data-filter=*); category filters
+ *                        (eael-cf-nature / eael-cf-city); layout_3 filter wrap
+ * 5. Gallery items     — 3 items; eael-cf-nature/city classes; thumbnail present;
+ *                        data-settings JSON; data-init-show=3
+ * 6. Hover style       — eael-slide-up / eael-none / eael-fade-in / eael-zoom-in
+ *                        on caption; caption-style-hoverer / card
+ * 7. Link/popup        — data-settings popup: buttons / media / none
+ * 8. Pro layouts       — grid_flow_gallery / harmonic_gallery with filter bar
+ * 9. Interaction       — filter click; hover (no JS errors)
+ */
 import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FILTERABLE_GALLERY_PAGE_SLUG ?? "filterable-gallery"}/`;

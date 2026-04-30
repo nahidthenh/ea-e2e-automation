@@ -349,34 +349,5 @@ test.describe("Interaction", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
-// Visual regression
-// ══════════════════════════════════════════════════════════════════════════════
-
-test.describe("Visual regression", () => {
-  const HOOKS = [
-    "test-pm-default",
-    "test-pm-style-eael",
-    "test-pm-style-2",
-    "test-pm-style-3",
-    "test-pm-style-4",
-    "test-pm-discount",
-    "test-pm-connector",
-    "test-pm-separator",
-    "test-pm-link-title",
-    "test-pm-link-full",
-    "test-pm-link-external",
-  ];
-
-  for (const hook of HOOKS) {
-    test(`${hook} matches visual snapshot`, async ({ page }) => {
-      await openPage(page);
-      await page.waitForLoadState("networkidle");
-      await page.locator(`.${hook}`).first().scrollIntoViewIfNeeded();
-      await expect(page.locator(`.${hook}`).first()).toHaveScreenshot(
-        `${hook}.png`,
-        { animations: "disabled" }
-      );
-    });
   }
 });

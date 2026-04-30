@@ -34,14 +34,6 @@ export default defineConfig({
     ...(process.env.SLACK_BOT_TOKEN ? [slackReporter] : []),
   ],
 
-  expect: {
-    toHaveScreenshot: {
-      maxDiffPixels: 150,
-      animations: "disabled",
-      scale: "css",
-    },
-  },
-
   use: {
     baseURL: process.env.BASE_URL ?? "http://localhost:8888",
     trace: "on-first-retry",

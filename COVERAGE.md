@@ -92,7 +92,49 @@
 | Post Grid | `Post_Grid.php` |
 | Post Timeline | `Post_Timeline.php` |
 | Sticky Video | `Sticky_Video.php` |
+| Post Block | `Post_Block.php` |
+| Post Carousel | `Post_Carousel.php` |
+| Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
+| Event Calendar | `Event_Calendar.php` |
+
+
+### WooCommerce
+
+| Widget | PHP File |
+|---|---|
+| Woo Add To Cart | `Woo_Add_To_Cart.php` |
+| Woo Cart | `Woo_Cart.php` |
+| Woo Checkout | `Woo_Checkout.php` |
+| Woo Product Carousel | `Woo_Product_Carousel.php` |
+| Woo Product Compare | `Woo_Product_Compare.php` |
+| Woo Product Gallery | `Woo_Product_Gallery.php` |
+| Woo Product Images | `Woo_Product_Images.php` |
+| Woo Product Price | `Woo_Product_Price.php` |
+| Woo Product Rating | `Woo_Product_Rating.php` |
+| Product Grid | `Product_Grid.php` |
+| Woo Account Dashboard | `Woo_Account_Dashboard.php` |
+| Woo Collections | `Woo_Collections.php` |
+| Woo Cross Sells | `Woo_Cross_Sells.php` |
+| Woo Product Slider | `Woo_Product_Slider.php` |
+| Woo Thank You | `Woo_Thank_You.php` |
+
+### Third-party Integrations
+
+| Widget | PHP File |
+|---|---|
+| Better Payment | `Better_Payment.php` |
+| BetterDocs Category Box | `Betterdocs_Category_Box.php` |
+| BetterDocs Category Grid | `Betterdocs_Category_Grid.php` |
+| BetterDocs Search Form | `Betterdocs_Search_Form.php` |
+| EmbedPress | `EmbedPress.php` |
+| Event Calendar | `Event_Calendar.php` |
+| Facebook Feed | `Facebook_Feed.php` |
 | Twitter Feed | `Twitter_Feed.php` |
+| Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |
+| Instagram Feed | `Instagram_Feed.php` |
+| LD Course List | `LD_Course_List.php` |
+| Mailchimp | `Mailchimp.php` |
+---
 
 ### Form Integrations
 
@@ -107,67 +149,3 @@
 | TypeForm | `TypeForm.php` |
 | WeForms | `WeForms.php` |
 | WP Forms | `WpForms.php` |
-
-### WooCommerce
-
-| Widget | PHP File |
-|---|---|
-| Woo Add To Cart | `Woo_Add_To_Cart.php` |
-| Woo Cart | `Woo_Cart.php` |
-| Woo Checkout | `Woo_Checkout.php` |
-| Woo Product Carousel | `Woo_Product_Carousel.php` |
-| Woo Product Compare | `Woo_Product_Compare.php` |
-| Woo Product Gallery | `Woo_Product_Gallery.php` |
-| Woo Product Images | `Woo_Product_Images.php` |
-| ~~Woo Product List~~ | ~~`Woo_Product_List.php`~~ |
-| Woo Product Price | `Woo_Product_Price.php` |
-| Woo Product Rating | `Woo_Product_Rating.php` |
-| Product Grid | `Product_Grid.php` |
-
-### Third-party Integrations
-
-| Widget | PHP File |
-|---|---|
-| Better Payment | `Better_Payment.php` |
-| BetterDocs Category Box | `Betterdocs_Category_Box.php` |
-| BetterDocs Category Grid | `Betterdocs_Category_Grid.php` |
-| BetterDocs Search Form | `Betterdocs_Search_Form.php` |
-| EmbedPress | `EmbedPress.php` |
-| Event Calendar | `Event_Calendar.php` |
-| Facebook Feed | `Facebook_Feed.php` |
-
----
-
-## ❌ Not Covered — Pro Widgets (34)
-
-### Core / General
-
-| Widget | PHP File |
-|---|---|
-| ~~Fancy Chart~~ | ~~`Fancy_Chart.php`~~ |
-| Figma To Elementor | `Figma_To_Elementor.php` |
-| ~~Google Map~~ | ~~`Google_Map.php`~~ |
-| Post Block | `Post_Block.php` |
-| Post Carousel | `Post_Carousel.php` |
-| Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
-| Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |
-
-### Third-party Integrations (Pro)
-
-| Widget | PHP File |
-|---|---|
-| Instagram Feed | `Instagram_Feed.php` |
-| LD Course List | `LD_Course_List.php` |
-| Mailchimp | `Mailchimp.php` |
-
-### WooCommerce (Pro)
-
-| Widget | PHP File |
-|---|---|
-| Woo Account Dashboard | `Woo_Account_Dashboard.php` |
-| Woo Collections | `Woo_Collections.php` |
-| Woo Cross Sells | `Woo_Cross_Sells.php` |
-| Woo Product Slider | `Woo_Product_Slider.php` |
-| Woo Thank You | `Woo_Thank_You.php` |
-
----

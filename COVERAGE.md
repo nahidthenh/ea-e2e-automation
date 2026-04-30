@@ -140,7 +140,7 @@
 | Widget | PHP File |
 |---|---|
 | Advanced Search | `Advanced_Search.php` | ✅ |
-| Content Timeline | `Content_Timeline.php` |
+| Content Timeline | `Content_Timeline.php` | ✅ |
 | Dynamic Filterable Gallery | `Dynamic_Filterable_Gallery.php` |
 | Fancy Chart | `Fancy_Chart.php` |
 | Figma To Elementor | `Figma_To_Elementor.php` |

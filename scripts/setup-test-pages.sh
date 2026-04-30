@@ -261,4 +261,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-advanced-search-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-content-timeline-page.php
+
 log "Test pages ready."

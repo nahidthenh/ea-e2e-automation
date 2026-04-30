@@ -486,7 +486,38 @@ This section is **mandatory** — it catches CSS/layout regressions that structu
 
 ---
 
-## Step 13 — Update COVERAGE.md
+## Step 13 — Establish visual regression baselines
+
+After the spec is written and the page is seeded, capture the initial baseline screenshots:
+
+```bash
+cd /Users/md.nahidhasan/ea-e2e-automation && \
+npx playwright test tests/{SLUG}.spec.ts --grep "Visual regression" --update-snapshots
+```
+
+This creates the `tests/{SLUG}.spec.ts-snapshots/` folder with one `.png` per hook.
+The test will report "X snapshots written" — that is expected and correct.
+
+> **Important:** If a widget relies on a third-party API key (Google Maps, etc.) or
+> live external data that is absent in the test environment, the baseline will capture
+> whatever the widget renders without that key (e.g. the notice/placeholder).
+> That is still a valid baseline — it will catch any future changes to that state.
+
+Then commit the baselines so CI has something to compare against:
+
+```bash
+git add tests/{SLUG}.spec.ts-snapshots/
+git commit -m "Add visual regression baselines for {PAGE_TITLE}"
+```
+
+> **When to re-run `--update-snapshots`:**
+> - A new hook is added to the PHP setup script → add it to the HOOKS array in the spec, then re-run
+> - An intentional design change is shipped → re-run to accept the new appearance as the new baseline
+> - Never run `--update-snapshots` in CI — baselines must be committed from a local dev machine
+
+---
+
+## Step 14 — Update COVERAGE.md
 
 Open `/Users/md.nahidhasan/ea-e2e-automation/COVERAGE.md` if it exists.
 If it does not exist, skip this step (COVERAGE.md is generated separately).
@@ -516,4 +547,5 @@ Before finishing, confirm:
 - [ ] Docker setup ran without PHP fatal errors (warnings about Array-to-string from Elementor internals are acceptable)
 - [ ] Verify command confirms `widgets=N headings=M` with correct N
 - [ ] `openPage()` includes PHP fatal error check — every test calls it before any assertion
+- [ ] Baseline screenshots captured with `--update-snapshots` and committed to git
 - [ ] `COVERAGE.md` updated if the file exists

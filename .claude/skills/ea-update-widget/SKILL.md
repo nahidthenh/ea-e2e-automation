@@ -181,11 +181,15 @@ test.describe("{Feature} toggle", () => {
 });
 ```
 
+### Also add the new hook to the Visual regression HOOKS array
+
+Find the existing `Visual regression` describe block in `tests/{SLUG}.spec.ts` and add the new hook(s) to the `HOOKS` array so they get a baseline screenshot too.
+
 ### Coding conventions (same as ea-widget-tests)
 - `for...of Object.entries(styleMap)` — no `forEach`
 - Every test calls `openPage(page)` first
 - No `await page.waitForTimeout()` except inside hover loops (150 ms)
-- `toBeAttached()` for structural assertions where visibility is not guaranteed
+- Use `toBeVisible()` for elements that should appear on screen; use `toBeAttached()` only for elements that may be off-screen or hidden by CSS
 
 ---
 

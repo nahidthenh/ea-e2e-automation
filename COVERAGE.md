@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 27 | **52** |
-| Not covered | 35 | 14 | **49** |
-| **Coverage** | **42%** | **66%** | **51%** |
+| Covered | 25 | 28 | **53** |
+| Not covered | 35 | 13 | **48** |
+| **Coverage** | **42%** | **68%** | **52%** |
 
 ---
 
-## ✅ Covered Widgets (52)
+## ✅ Covered Widgets (53)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -74,6 +74,7 @@
 | Content Timeline | Pro | [tests/content-timeline.spec.ts](tests/content-timeline.spec.ts) |
 | Dynamic Filterable Gallery | Pro | [tests/dynamic-filterable-gallery.spec.ts](tests/dynamic-filterable-gallery.spec.ts) |
 | Fancy Chart | Pro | [tests/fancy-chart.spec.ts](tests/fancy-chart.spec.ts) |
+| Google Map | Pro | [tests/google-map.spec.ts](tests/google-map.spec.ts) |
 
 ---
 
@@ -145,7 +146,7 @@
 |---|---|
 | ~~Fancy Chart~~ | ~~`Fancy_Chart.php`~~ |
 | Figma To Elementor | `Figma_To_Elementor.php` |
-| Google Map | `Google_Map.php` |
+| ~~Google Map~~ | ~~`Google_Map.php`~~ |
 | Post Block | `Post_Block.php` |
 | Post Carousel | `Post_Carousel.php` |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |

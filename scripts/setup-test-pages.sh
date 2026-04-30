@@ -276,4 +276,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-fancy-chart-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-google-map-page.php
+
 log "Test pages ready."

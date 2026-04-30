@@ -256,4 +256,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-image-scroller-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-advanced-search-page.php
+
 log "Test pages ready."

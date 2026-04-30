@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 25 | 13 | **38** |
-| Not covered | 35 | 28 | **63** |
-| **Coverage** | **42%** | **32%** | **38%** |
+| Covered | 25 | 14 | **39** |
+| Not covered | 35 | 27 | **62** |
+| **Coverage** | **42%** | **34%** | **39%** |
 
 ---
 
@@ -65,6 +65,7 @@
 | Post List (Smart Post List) | Pro | [tests/post-list.spec.ts](tests/post-list.spec.ts) |
 | Woo Product List | Free | [tests/woo-product-list.spec.ts](tests/woo-product-list.spec.ts) |
 | Testimonial Slider | Pro | [tests/testimonial-slider.spec.ts](tests/testimonial-slider.spec.ts) |
+| Static Product | Pro | [tests/static-product.spec.ts](tests/static-product.spec.ts) |
 
 ---
 
@@ -148,7 +149,7 @@
 | Protected Content | `Protected_Content.php` |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Stacked Cards | `Stacked_Cards.php` |
-| Static Product | `Static_Product.php` |
+| ~~Static Product~~ | ~~`Static_Product.php`~~ |
 | ~~Testimonial Slider~~ | ~~`Testimonial_Slider.php`~~ |
 | Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |
 

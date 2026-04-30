@@ -231,4 +231,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-testimonial-slider-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-static-product-page.php
+
 log "Test pages ready."

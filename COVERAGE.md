@@ -90,7 +90,6 @@
 | Data Table | `Data_Table.php` |
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` |
-| ~~Post Grid~~ | ~~`Post_Grid.php`~~ |
 | Post Timeline | `Post_Timeline.php` |
 | Sticky Video | `Sticky_Video.php` |
 | Post Block | `Post_Block.php` |

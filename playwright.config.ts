@@ -7,7 +7,7 @@ const slackReporter: ReporterDescription = [
   "./node_modules/playwright-slack-report/dist/src/SlackReporter.js",
   {
     slackOAuthToken: process.env.SLACK_BOT_TOKEN,
-    channels: [process.env.SLACK_CHANNEL_ID ?? ""],
+    channels: [process.env.SLACK_CHANNEL_ID, process.env.SLACK_CHANNEL_ID_EA].filter(Boolean) as string[],
     sendResults: "always",
     maxNumberOfFailuresToShow: 0,
     meta: [

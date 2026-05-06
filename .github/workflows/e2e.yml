@@ -13,9 +13,18 @@ on:
         required: false
         default: "master"
         type: string
+      slack_channel:
+        description: "Slack channel(s) to send the report to"
+        required: false
+        default: "both"
+        type: choice
+        options:
+          - both
+          - general
+          - ea main channel
   schedule:
-    # Every Monday at 08:00 BDT (UTC+6) = 02:00 UTC
-    - cron: "0 2 * * 1"
+    # Every Monday at 06:00 BDT (UTC+6) = 00:00 UTC
+    - cron: "0 0 * * 1"
 
 permissions:
   contents: read
@@ -110,7 +119,8 @@ jobs:
         continue-on-error: true
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_CHANNEL_ID: ${{ (github.event_name == 'schedule' || inputs.slack_channel == 'both' || inputs.slack_channel == 'general') && secrets.SLACK_CHANNEL_ID || '' }}
+          SLACK_CHANNEL_ID_EA: ${{ (github.event_name == 'schedule' || inputs.slack_channel == 'both' || inputs.slack_channel == 'ea') && secrets.SLACK_CHANNEL_ID_EA || '' }}
           PAGES_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: npm test
 

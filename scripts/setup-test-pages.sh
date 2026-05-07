@@ -291,4 +291,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-post-block-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-post-carousel-page.php
+
 log "Test pages ready."

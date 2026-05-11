@@ -1,6 +1,6 @@
 # EA Widget Test Coverage
 
-> **Last updated:** 2026-04-30
+> **Last updated:** 2026-05-11
 > **Plugin sources:**
 > - Free: `ea-plugins/essential-addons-for-elementor-lite/includes/Elements/`
 > - Pro:  `ea-plugins/essential-addons-elementor/includes/Elements/`
@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 28 | 30 | **58** |
-| Not covered | 32 | 11 | **43** |
-| **Coverage** | **47%** | **73%** | **57%** |
+| Covered | 28 | 31 | **59** |
+| Not covered | 32 | 10 | **42** |
+| **Coverage** | **47%** | **76%** | **58%** |
 
 ---
 
-## ✅ Covered Widgets (58)
+## ✅ Covered Widgets (59)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -80,10 +80,11 @@
 | Post Carousel | Pro | [tests/post-carousel.spec.ts](tests/post-carousel.spec.ts) |
 | Post Timeline | Free | [tests/post-timeline.spec.ts](tests/post-timeline.spec.ts) |
 | Sticky Video | Free | [tests/sticky-video.spec.ts](tests/sticky-video.spec.ts) |
+| 360 Degree Photo Viewer (Sphere Photo Viewer) | Pro | [tests/sphere-photo-viewer.spec.ts](tests/sphere-photo-viewer.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (33)
+## ❌ Not Covered — Free Widgets (32)
 
 ### Core / General
 
@@ -94,7 +95,6 @@
 | Data Table | `Data_Table.php` |
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` |
-| Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Event Calendar | `Event_Calendar.php` |
 
 

@@ -100,6 +100,8 @@ test.describe("Page health", () => {
 
   test("no PHP fatal errors", async ({ page }) => {
     await openPage(page);
+    await expect(page.getByText("Fatal error")).toHaveCount(0);
+    await expect(page.getByText("Parse error")).toHaveCount(0);
   });
 
   test("no JavaScript errors on load", async ({ page }) => {

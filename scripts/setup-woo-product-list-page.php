@@ -4,14 +4,6 @@
  * Run via: wp eval-file /scripts/setup-woo-product-list-page.php
  */
 
-if ( ! class_exists( 'WooCommerce' ) ) {
-    WP_CLI::warning( 'WooCommerce not active — skipping Woo Product List page setup.' );
-    return;
-}
-
-// Seed sample products so the widget has data to display.
-require_once '/scripts/setup-sample-products.php';
-
 if ( ! function_exists( 'ea_make_id' ) ) {
     function ea_make_id(): string {
         return substr( md5( uniqid( '', true ) ), 0, 8 );

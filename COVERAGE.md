@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 30 | 32 | **62** |
-| Not covered | 29 | 10 | **39** |
-| **Coverage** | **50%** | **78%** | **61%** |
+| Covered | 31 | 32 | **63** |
+| Not covered | 28 | 10 | **38** |
+| **Coverage** | **52%** | **78%** | **62%** |
 
 ---
 
-## ✅ Covered Widgets (62)
+## ✅ Covered Widgets (63)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -84,10 +84,11 @@
 | Woo Product Slider | Pro | [tests/woo-product-slider.spec.ts](tests/woo-product-slider.spec.ts) |
 | Woo Product Carousel | Free | [tests/woo-product-carousel.spec.ts](tests/woo-product-carousel.spec.ts) |
 | Woo Product Compare | Free | [tests/woo-product-compare.spec.ts](tests/woo-product-compare.spec.ts) |
+| Woo Product Gallery | Free | [tests/woo-product-gallery.spec.ts](tests/woo-product-gallery.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (29)
+## ❌ Not Covered — Free Widgets (28)
 
 ### Core / General
 
@@ -108,7 +109,6 @@
 | Woo Add To Cart | `Woo_Add_To_Cart.php` |
 | Woo Cart | `Woo_Cart.php` |
 | Woo Checkout | `Woo_Checkout.php` |
-| Woo Product Gallery | `Woo_Product_Gallery.php` |
 | Woo Product Images | `Woo_Product_Images.php` |
 | Woo Product Price | `Woo_Product_Price.php` |
 | Woo Product Rating | `Woo_Product_Rating.php` |

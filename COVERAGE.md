@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 28 | 32 | **60** |
-| Not covered | 31 | 10 | **41** |
-| **Coverage** | **47%** | **78%** | **59%** |
+| Covered | 29 | 32 | **61** |
+| Not covered | 30 | 10 | **40** |
+| **Coverage** | **48%** | **78%** | **60%** |
 
 ---
 
-## ✅ Covered Widgets (60)
+## ✅ Covered Widgets (61)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -82,10 +82,11 @@
 | Sticky Video | Free | [tests/sticky-video.spec.ts](tests/sticky-video.spec.ts) |
 | 360 Degree Photo Viewer (Sphere Photo Viewer) | Pro | [tests/sphere-photo-viewer.spec.ts](tests/sphere-photo-viewer.spec.ts) |
 | Woo Product Slider | Pro | [tests/woo-product-slider.spec.ts](tests/woo-product-slider.spec.ts) |
+| Woo Product Carousel | Free | [tests/woo-product-carousel.spec.ts](tests/woo-product-carousel.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (31)
+## ❌ Not Covered — Free Widgets (30)
 
 ### Core / General
 
@@ -106,7 +107,6 @@
 | Woo Add To Cart | `Woo_Add_To_Cart.php` |
 | Woo Cart | `Woo_Cart.php` |
 | Woo Checkout | `Woo_Checkout.php` |
-| Woo Product Carousel | `Woo_Product_Carousel.php` |
 | Woo Product Compare | `Woo_Product_Compare.php` |
 | Woo Product Gallery | `Woo_Product_Gallery.php` |
 | Woo Product Images | `Woo_Product_Images.php` |

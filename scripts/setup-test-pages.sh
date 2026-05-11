@@ -296,4 +296,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-post-carousel-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-post-timeline-page.php
+
 log "Test pages ready."

@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 26 | 30 | **56** |
-| Not covered | 34 | 11 | **45** |
-| **Coverage** | **43%** | **73%** | **55%** |
+| Covered | 27 | 30 | **57** |
+| Not covered | 33 | 11 | **44** |
+| **Coverage** | **45%** | **73%** | **56%** |
 
 ---
 
-## ✅ Covered Widgets (56)
+## ✅ Covered Widgets (57)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -78,10 +78,11 @@
 | Post Grid | Free | [tests/post-grid.spec.ts](tests/post-grid.spec.ts) |
 | Post Block | Pro | [tests/post-block.spec.ts](tests/post-block.spec.ts) |
 | Post Carousel | Pro | [tests/post-carousel.spec.ts](tests/post-carousel.spec.ts) |
+| Post Timeline | Free | [tests/post-timeline.spec.ts](tests/post-timeline.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (35)
+## ❌ Not Covered — Free Widgets (34)
 
 ### Core / General
 
@@ -92,7 +93,6 @@
 | Data Table | `Data_Table.php` |
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` |
-| Post Timeline | `Post_Timeline.php` |
 | Sticky Video | `Sticky_Video.php` |
 | Sphere Photo Viewer | `Sphere_Photo_Viewer.php` |
 | Event Calendar | `Event_Calendar.php` |

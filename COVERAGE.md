@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 28 | 31 | **59** |
-| Not covered | 32 | 10 | **42** |
-| **Coverage** | **47%** | **76%** | **58%** |
+| Covered | 28 | 32 | **60** |
+| Not covered | 31 | 10 | **41** |
+| **Coverage** | **47%** | **78%** | **59%** |
 
 ---
 
-## ✅ Covered Widgets (59)
+## ✅ Covered Widgets (60)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -81,10 +81,11 @@
 | Post Timeline | Free | [tests/post-timeline.spec.ts](tests/post-timeline.spec.ts) |
 | Sticky Video | Free | [tests/sticky-video.spec.ts](tests/sticky-video.spec.ts) |
 | 360 Degree Photo Viewer (Sphere Photo Viewer) | Pro | [tests/sphere-photo-viewer.spec.ts](tests/sphere-photo-viewer.spec.ts) |
+| Woo Product Slider | Pro | [tests/woo-product-slider.spec.ts](tests/woo-product-slider.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (32)
+## ❌ Not Covered — Free Widgets (31)
 
 ### Core / General
 
@@ -115,7 +116,6 @@
 | Woo Account Dashboard | `Woo_Account_Dashboard.php` |
 | Woo Collections | `Woo_Collections.php` |
 | Woo Cross Sells | `Woo_Cross_Sells.php` |
-| Woo Product Slider | `Woo_Product_Slider.php` |
 | Woo Thank You | `Woo_Thank_You.php` |
 
 ### Third-party Integrations

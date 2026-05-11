@@ -321,4 +321,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-woo-product-carousel-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-woo-product-compare-page.php
+
 log "Test pages ready."

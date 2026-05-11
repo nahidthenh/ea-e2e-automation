@@ -17,6 +17,7 @@ function ea_upsert_page( string $slug, string $title ): int {
     $existing = get_page_by_path( $slug, OBJECT, 'page' );
     if ( $existing ) {
         WP_CLI::log( "  exists : {$title} (ID {$existing->ID})" );
+        update_post_meta( (int) $existing->ID, '_wp_page_template', 'elementor-full-width' );
         return (int) $existing->ID;
     }
 
@@ -31,6 +32,7 @@ function ea_upsert_page( string $slug, string $title ): int {
         WP_CLI::error( 'Failed to create "' . $slug . '": ' . $id->get_error_message() );
     }
 
+    update_post_meta( $id, '_wp_page_template', 'elementor-full-width' );
     WP_CLI::log( "  created: {$title} (ID {$id})" );
     return (int) $id;
 }

@@ -91,6 +91,12 @@ wp rewrite flush
 install_plugin_from_org "elementor"
 install_plugin_from_org "woocommerce"
 
+# ── theme ──────────────────────────────────────────────────────────────────────
+
+log "Installing and activating Hello Elementor theme..."
+wp theme install hello-elementor --activate
+log "Theme: hello-elementor activated"
+
 # ── local plugins from ./ea-plugins ───────────────────────────────────────────
 
 PLUGINS_SRC="/tmp/ea-plugins"

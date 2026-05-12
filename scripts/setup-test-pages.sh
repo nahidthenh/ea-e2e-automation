@@ -361,4 +361,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-login-register-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-woo-cart-page.php
+
 log "Test pages ready."

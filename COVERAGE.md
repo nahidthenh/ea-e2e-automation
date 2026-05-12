@@ -12,17 +12,18 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 33 | 32 | **65** |
-| Not covered | 26 | 10 | **36** |
-| **Coverage** | **55%** | **78%** | **64%** |
+| Covered | 34 | 32 | **66** |
+| Not covered | 25 | 10 | **35** |
+| **Coverage** | **57%** | **78%** | **65%** |
 
 ---
 
-## ✅ Covered Widgets (63)
+## ✅ Covered Widgets (66)
 
 | Widget | Plugin | Test File |
 |---|---|---|
 | Advanced Accordion | Free | [tests/advanced-accordion.spec.ts](tests/advanced-accordion.spec.ts) |
+| Business Reviews | Free | [tests/business-reviews.spec.ts](tests/business-reviews.spec.ts) |
 | Career Page | Free | [tests/career-page.spec.ts](tests/career-page.spec.ts) |
 | Countdown | Free | [tests/countdown.spec.ts](tests/countdown.spec.ts) |
 | Image Accordion | Free | [tests/image-accordion.spec.ts](tests/image-accordion.spec.ts) |
@@ -97,7 +98,7 @@
 | Widget | PHP File |
 |---|---|
 | Advanced Data Table | `Advanced_Data_Table.php` | ✅ |
-| Business Reviews | `Business_Reviews.php` |
+| Business Reviews | `Business_Reviews.php` | ✅ |
 | Data Table | `Data_Table.php` | ✅ |
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` | ✅ |

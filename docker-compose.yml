@@ -77,6 +77,9 @@ services:
       OPEN_SEA_API: ${OPEN_SEA_API:-}
       OPEN_SEA_COLLECTIONS: ${OPEN_SEA_COLLECTIONS:-}
       NFT_GALLERY_PAGE_SLUG: ${NFT_GALLERY_PAGE_SLUG:-nft-gallery}
+      GOOGLE_BUSINESS_NEW_API: ${GOOGLE_BUSINESS_NEW_API:-}
+      GOOGLE_BUSINESS_PLACE_ID: ${GOOGLE_BUSINESS_PLACE_ID:-}
+      BUSINESS_REVIEWS_PAGE_SLUG: ${BUSINESS_REVIEWS_PAGE_SLUG:-business-reviews}
     volumes:
       - wordpress_data:/var/www/html
       - ${EA_PLUGINS_PATH}:/tmp/ea-plugins:ro

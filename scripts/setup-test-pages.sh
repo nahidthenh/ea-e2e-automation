@@ -351,4 +351,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-advanced-data-table-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-business-reviews-page.php
+
 log "Test pages ready."

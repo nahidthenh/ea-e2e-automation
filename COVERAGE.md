@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 35 | 33 | **68** |
-| Not covered | 24 | 9 | **33** |
-| **Coverage** | **58%** | **80%** | **67%** |
+| Covered | 36 | 33 | **69** |
+| Not covered | 23 | 9 | **32** |
+| **Coverage** | **60%** | **80%** | **68%** |
 
 ---
 
-## ✅ Covered Widgets (68)
+## ✅ Covered Widgets (69)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -90,10 +90,11 @@
 | Event Calendar | Free | [tests/event-calendar.spec.ts](tests/event-calendar.spec.ts) |
 | Advanced Data Table | Free | [tests/advanced-data-table.spec.ts](tests/advanced-data-table.spec.ts) |
 | Woo Cart | Free | [tests/woo-cart.spec.ts](tests/woo-cart.spec.ts) |
+| Woo Checkout | Free | [tests/woo-checkout.spec.ts](tests/woo-checkout.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (25)
+## ❌ Not Covered — Free Widgets (24)
 
 ### Core / General
 
@@ -111,7 +112,6 @@
 | Widget | PHP File |
 |---|---|
 | Woo Add To Cart | `Woo_Add_To_Cart.php` |
-| Woo Checkout | `Woo_Checkout.php` |
 | Woo Product Images | `Woo_Product_Images.php` |
 | Woo Product Price | `Woo_Product_Price.php` |
 | Woo Product Rating | `Woo_Product_Rating.php` |

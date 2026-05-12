@@ -98,7 +98,7 @@
 | Business Reviews | `Business_Reviews.php` |
 | Data Table | `Data_Table.php` |
 | Login / Register | `Login_Register.php` |
-| NFT Gallery | `NFT_Gallery.php` |
+| NFT Gallery | `NFT_Gallery.php` | ✅ |
 | Event Calendar | `Event_Calendar.php` |
 
 

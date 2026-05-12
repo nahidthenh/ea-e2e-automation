@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 36 | 33 | **69** |
-| Not covered | 23 | 9 | **32** |
-| **Coverage** | **60%** | **80%** | **68%** |
+| Covered | 37 | 33 | **70** |
+| Not covered | 22 | 9 | **31** |
+| **Coverage** | **62%** | **80%** | **69%** |
 
 ---
 
-## ✅ Covered Widgets (69)
+## ✅ Covered Widgets (70)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -91,10 +91,11 @@
 | Advanced Data Table | Free | [tests/advanced-data-table.spec.ts](tests/advanced-data-table.spec.ts) |
 | Woo Cart | Free | [tests/woo-cart.spec.ts](tests/woo-cart.spec.ts) |
 | Woo Checkout | Free | [tests/woo-checkout.spec.ts](tests/woo-checkout.spec.ts) |
+| Product Grid (Woo Product Grid) | Free | [tests/product-grid.spec.ts](tests/product-grid.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (24)
+## ❌ Not Covered — Free Widgets (23)
 
 ### Core / General
 
@@ -115,7 +116,6 @@
 | Woo Product Images | `Woo_Product_Images.php` |
 | Woo Product Price | `Woo_Product_Price.php` |
 | Woo Product Rating | `Woo_Product_Rating.php` |
-| Product Grid | `Product_Grid.php` |
 | Woo Account Dashboard | `Woo_Account_Dashboard.php` |
 | Woo Collections | `Woo_Collections.php` |
 | Woo Cross Sells | `Woo_Cross_Sells.php` |

@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 32 | 32 | **64** |
-| Not covered | 27 | 10 | **37** |
-| **Coverage** | **53%** | **78%** | **63%** |
+| Covered | 33 | 32 | **65** |
+| Not covered | 26 | 10 | **36** |
+| **Coverage** | **55%** | **78%** | **64%** |
 
 ---
 
@@ -86,16 +86,17 @@
 | Woo Product Compare | Free | [tests/woo-product-compare.spec.ts](tests/woo-product-compare.spec.ts) |
 | Woo Product Gallery | Free | [tests/woo-product-gallery.spec.ts](tests/woo-product-gallery.spec.ts) |
 | Event Calendar | Free | [tests/event-calendar.spec.ts](tests/event-calendar.spec.ts) |
+| Advanced Data Table | Free | [tests/advanced-data-table.spec.ts](tests/advanced-data-table.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (27)
+## ❌ Not Covered — Free Widgets (26)
 
 ### Core / General
 
 | Widget | PHP File |
 |---|---|
-| Advanced Data Table | `Advanced_Data_Table.php` |
+| Advanced Data Table | `Advanced_Data_Table.php` | ✅ |
 | Business Reviews | `Business_Reviews.php` |
 | Data Table | `Data_Table.php` | ✅ |
 | Login / Register | `Login_Register.php` |

@@ -346,4 +346,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-event-calendar-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-advanced-data-table-page.php
+
 log "Test pages ready."

@@ -10,7 +10,7 @@ WP_CLI::log( '--- Sample Posts ---' );
 
 require_once __DIR__ . '/helpers-sample-data.php';
 
-// ── helpers ───────────────────────────────────────────────────────────────────
+// - helpers ----------------------------------
 
 function ea_get_or_create_category( string $name, string $slug ): int {
     $term = get_term_by( 'slug', $slug, 'category' );
@@ -70,21 +70,21 @@ function ea_create_post( array $data ): int {
     return (int) $id;
 }
 
-// ── categories ────────────────────────────────────────────────────────────────
+// - categories --------------------------------
 
 $cat_tech     = ea_get_or_create_category( 'Technology', 'technology' );
 $cat_design   = ea_get_or_create_category( 'Design', 'design' );
 $cat_business = ea_get_or_create_category( 'Business', 'business' );
 $cat_lifestyle = ea_get_or_create_category( 'Lifestyle', 'lifestyle' );
 
-// ── tags ──────────────────────────────────────────────────────────────────────
+// - tags -----------------------------------
 
 $tag_tutorial = ea_get_or_create_tag( 'Tutorial', 'tutorial' );
 $tag_tips     = ea_get_or_create_tag( 'Tips', 'tips' );
 $tag_news     = ea_get_or_create_tag( 'News', 'news' );
 $tag_review   = ea_get_or_create_tag( 'Review', 'review' );
 
-// ── posts ─────────────────────────────────────────────────────────────────────
+// - posts -----------------------------------
 
 $lorem = 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.';
 

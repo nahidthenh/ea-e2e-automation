@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Offcanvas page ─────────────────────────────────────────────────────────────
+// - Offcanvas page -------------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Offcanvas page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Offcanvas' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Direction Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Direction Variants ──', 'h2' ),
+    ea_heading( '- Direction Variants -', 'h2' ),
 
     ea_heading( 'Default Offcanvas (Left, Slide)' ),
     ea_widget( 'test-o-default', 'eael-offcanvas',
@@ -111,11 +111,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Transitions
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Transitions ──', 'h2' ),
+    ea_heading( '- Content Transitions -', 'h2' ),
 
     ea_heading( 'Offcanvas | Transition: Reveal' ),
     ea_widget( 'test-o-trans-reveal', 'eael-offcanvas',
@@ -159,11 +159,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Panel Features
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Panel Features ──', 'h2' ),
+    ea_heading( '- Panel Features -', 'h2' ),
 
     ea_heading( 'Offcanvas | With Title' ),
     ea_widget( 'test-o-with-title', 'eael-offcanvas',
@@ -209,11 +209,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Toggle Button Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Toggle Button Variants ──', 'h2' ),
+    ea_heading( '- Toggle Button Variants -', 'h2' ),
 
     ea_heading( 'Offcanvas | Button with Icon' ),
     ea_widget( 'test-o-btn-icon', 'eael-offcanvas',

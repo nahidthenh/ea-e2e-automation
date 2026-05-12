@@ -14,7 +14,7 @@ WP_CLI::log( '--- Sample WooCommerce Products ---' );
 
 require_once __DIR__ . '/helpers-sample-data.php';
 
-// ── helpers ───────────────────────────────────────────────────────────────────
+// - helpers ----------------------------------
 
 function ea_get_or_create_term( string $name, string $taxonomy ): int {
     $term = get_term_by( 'name', $name, $taxonomy );
@@ -67,20 +67,20 @@ function ea_create_simple_product( array $data ): int {
     return (int) $id;
 }
 
-// ── categories ────────────────────────────────────────────────────────────────
+// - categories --------------------------------
 
 $cat_clothing     = ea_get_or_create_term( 'Clothing', 'product_cat' );
 $cat_electronics  = ea_get_or_create_term( 'Electronics', 'product_cat' );
 $cat_accessories  = ea_get_or_create_term( 'Accessories', 'product_cat' );
 $cat_home         = ea_get_or_create_term( 'Home & Garden', 'product_cat' );
 
-// ── tags ──────────────────────────────────────────────────────────────────────
+// - tags -----------------------------------
 
 $tag_new      = ea_get_or_create_term( 'New Arrival', 'product_tag' );
 $tag_sale     = ea_get_or_create_term( 'On Sale', 'product_tag' );
 $tag_featured = ea_get_or_create_term( 'Featured', 'product_tag' );
 
-// ── products ──────────────────────────────────────────────────────────────────
+// - products ---------------------------------
 
 $products = [
     [

@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Advanced Search page ───────────────────────────────────────────────────
+// - Advanced Search page --------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Advanced Search page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Advanced Search' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Form Layout Styles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Form Layout Styles ──', 'h2' ),
+    ea_heading( '- Form Layout Styles -', 'h2' ),
 
     ea_heading( 'Default Advanced Search (Style 1)' ),
     ea_widget( 'test-as-default', 'eael-advanced-search',
@@ -115,11 +115,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Result Content Styles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Result Content Styles ──', 'h2' ),
+    ea_heading( '- Result Content Styles -', 'h2' ),
 
     ea_heading( 'Advanced Search | Content Style 2' ),
     ea_widget( 'test-as-result-2', 'eael-advanced-search',
@@ -143,11 +143,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Search Button Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Search Button Variants ──', 'h2' ),
+    ea_heading( '- Search Button Variants -', 'h2' ),
 
     ea_heading( 'Advanced Search | Button Hidden' ),
     ea_widget( 'test-as-btn-hidden', 'eael-advanced-search',
@@ -170,11 +170,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Category Dropdown
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Category Dropdown ──', 'h2' ),
+    ea_heading( '- Category Dropdown -', 'h2' ),
 
     ea_heading( 'Advanced Search | Category List Shown' ),
     ea_widget( 'test-as-category-on', 'eael-advanced-search',
@@ -189,11 +189,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Link / Tab Behaviour
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Link Behaviour ──', 'h2' ),
+    ea_heading( '- Link Behaviour -', 'h2' ),
 
     ea_heading( 'Advanced Search | Results Open in New Tab' ),
     ea_widget( 'test-as-new-tab', 'eael-advanced-search',
@@ -207,11 +207,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Image Toggle
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Image Toggle ──', 'h2' ),
+    ea_heading( '- Content Image Toggle -', 'h2' ),
 
     ea_heading( 'Advanced Search | Image Hidden' ),
     ea_widget( 'test-as-no-image', 'eael-advanced-search',

@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Testimonial page ───────────────────────────────────────────────────────
+// - Testimonial page ----------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Testimonial page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Testimonial' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Styles / Presets (free — 8 skins)
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Styles / Presets ──', 'h2' ),
+    ea_heading( '- Styles / Presets -', 'h2' ),
 
     ea_heading( 'Default Testimonial' ),
     ea_widget( 'test-t-default', 'eael-testimonial', [
@@ -145,11 +145,11 @@ $widgets = [
         'eael_testimonial_description'   => 'This is a simple layout testimonial.',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Toggles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Toggles ──', 'h2' ),
+    ea_heading( '- Content Toggles -', 'h2' ),
 
     ea_heading( 'Testimonial | No Avatar' ),
     ea_widget( 'test-t-no-avatar', 'eael-testimonial', [
@@ -175,11 +175,11 @@ $widgets = [
         'eael_testimonial_description'   => 'Testimonial without star rating.',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Rating Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Rating Variants ──', 'h2' ),
+    ea_heading( '- Rating Variants -', 'h2' ),
 
     ea_heading( 'Testimonial | Rating: 1 Star' ),
     ea_widget( 'test-t-rating-one', 'eael-testimonial', [
@@ -197,11 +197,11 @@ $widgets = [
         'eael_testimonial_description'     => 'Testimonial with rating at the top.',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Alignment
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Alignment ──', 'h2' ),
+    ea_heading( '- Alignment -', 'h2' ),
 
     ea_heading( 'Testimonial | Alignment: Center' ),
     ea_widget( 'test-t-align-center', 'eael-testimonial', [

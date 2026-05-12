@@ -15,7 +15,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FANCY_CHART_PAGE_SLUG ?? "fancy-chart"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Fancy_Chart::render()):
 //   .{hook}                                           ← elementor-widget wrapper
 //     .eael_fanct_chart_wrapper                       ← outer wrapper (note typo: fanct)
@@ -32,7 +32,7 @@ const titleEl = (hook: string) => `.${hook} .eael_fancy_chart_title`;
 const descEl = (hook: string) => `.${hook} .eael_fancy_chart_header p`;
 const chartContainer = (hook: string) => `.${hook} .eael_fancy_chart`;
 
-// ── chart style → ApexCharts type value ───────────────────────────────────
+// -- chart style → ApexCharts type value -----------------------------------
 const CHART_STYLE_MAP: Record<string, string> = {
   "test-fc-default": "bar",
   "test-fc-area": "area",
@@ -61,9 +61,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -84,9 +84,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Chart styles — wrapper and data-options type
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Chart styles", () => {
   for (const [hook, chartType] of Object.entries(CHART_STYLE_MAP)) {
@@ -116,9 +116,9 @@ test.describe("Chart styles", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Widget structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Widget structure", () => {
   test("header area is present", async ({ page }) => {
@@ -159,9 +159,9 @@ test.describe("Widget structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Title tag
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Title tag", () => {
   test("default title renders as <h4>", async ({ page }) => {
@@ -194,9 +194,9 @@ test.describe("Title tag", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Display toggles — legend and toolbar
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Display toggles — legend", () => {
   test("legend show=true is encoded in data-options", async ({ page }) => {
@@ -248,9 +248,9 @@ test.describe("Display toggles — toolbar", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("hover on each widget instance triggers no JS errors", async ({

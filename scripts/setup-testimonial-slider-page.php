@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Testimonial Slider page ────────────────────────────────────────────────
+// - Testimonial Slider page ------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Testimonial Slider page ---' );
@@ -109,11 +109,11 @@ $no_avatar_items = array_map( function( $item ) {
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Skins / Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Skins / Presets ──', 'h2' ),
+    ea_heading( '- Skins / Presets -', 'h2' ),
 
     ea_heading( 'Default Testimonial Slider' ),
     ea_widget( 'test-ts-default', 'eael-testimonial-slider',
@@ -227,11 +227,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Quote Icon Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Quote Icon Variants ──', 'h2' ),
+    ea_heading( '- Quote Icon Variants -', 'h2' ),
 
     ea_heading( 'Testimonial Slider | No Quote Icon' ),
     ea_widget( 'test-ts-no-quote', 'eael-testimonial-slider',
@@ -247,11 +247,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Navigation Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Navigation Variants ──', 'h2' ),
+    ea_heading( '- Navigation Variants -', 'h2' ),
 
     ea_heading( 'Testimonial Slider | No Arrows' ),
     ea_widget( 'test-ts-no-arrows', 'eael-testimonial-slider',
@@ -281,11 +281,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Alignment Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Alignment Variants ──', 'h2' ),
+    ea_heading( '- Alignment Variants -', 'h2' ),
 
     ea_heading( 'Testimonial Slider | Align Center' ),
     ea_widget( 'test-ts-align-center', 'eael-testimonial-slider',
@@ -317,11 +317,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Avatar & Content
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Avatar & Content ──', 'h2' ),
+    ea_heading( '- Avatar & Content -', 'h2' ),
 
     ea_heading( 'Testimonial Slider | No Avatar' ),
     ea_widget( 'test-ts-no-avatar', 'eael-testimonial-slider',
@@ -337,11 +337,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Carousel Effects
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Carousel Effects ──', 'h2' ),
+    ea_heading( '- Carousel Effects -', 'h2' ),
 
     ea_heading( 'Testimonial Slider | Effect: Fade' ),
     ea_widget( 'test-ts-effect-fade', 'eael-testimonial-slider',

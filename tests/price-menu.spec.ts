@@ -15,7 +15,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.PRICE_MENU_PAGE_SLUG ?? "price-menu"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────────
+// -- selectors ---------------------------------------------------------------
 // DOM shape (from Price_Menu::render()):
 //   .{hook}                                        ← Elementor outer wrapper
 //     .eael-restaurant-menu                        ← main container
@@ -49,7 +49,7 @@ const origPrice   = (hook: string, n = 1) =>
 const descEl      = (hook: string, n = 1) =>
   `.${hook} .eael-restaurant-menu-item-wrap:nth-child(${n}) .eael-restaurant-menu-description`;
 
-// ── style class map ───────────────────────────────────────────────────────────
+// -- style class map ---------------------------------------------------------
 const STYLE_MAP: Record<string, string> = {
   "test-pm-default":    "eael-restaurant-menu-style-1",
   "test-pm-style-eael": "eael-restaurant-menu-style-eael",
@@ -58,7 +58,7 @@ const STYLE_MAP: Record<string, string> = {
   "test-pm-style-4":    "eael-restaurant-menu-style-4",
 } as const;
 
-// ── helpers ───────────────────────────────────────────────────────────────────
+// -- helpers -----------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -78,9 +78,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -101,9 +101,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Menu styles — one instance per style
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Menu styles", () => {
   for (const [hook, styleClass] of Object.entries(STYLE_MAP)) {
@@ -138,9 +138,9 @@ test.describe("Menu styles", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Discount & pricing
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Discount & pricing", () => {
   test("discount: original price element is rendered for first item", async ({ page }) => {
@@ -166,9 +166,9 @@ test.describe("Discount & pricing", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Style-1 features — connector and separator
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Title-price connector (style-1)", () => {
   test("connector: span.eael-price-title-connector is rendered", async ({ page }) => {
@@ -217,9 +217,9 @@ test.describe("Title separator", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Link behaviour
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Link behaviour", () => {
   test("link on title: first item title contains an <a> tag", async ({ page }) => {
@@ -274,9 +274,9 @@ test.describe("Link behaviour", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Element structure", () => {
   test("menu container carries class 'eael-restaurant-menu'", async ({ page }) => {
@@ -315,9 +315,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("hover on each widget instance triggers no JS errors", async ({ page }) => {

@@ -12,7 +12,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.PROTECTED_CONTENT_PAGE_SLUG ?? "protected-content"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Protected_Content::render()):
 //
 // Role protection (unauthenticated visitor — content locked out):
@@ -38,7 +38,7 @@ const formWrap    = (hook: string) => `.${hook} .eael-password-protected-content
 const pwdInput    = (hook: string) => `.${hook} .eael-password`;
 const submitBtn   = (hook: string) => `.${hook} .eael-submit`;
 
-// ── helpers ───────────────────────────────────────────────────────────────
+// -- helpers -------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -58,9 +58,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -81,10 +81,10 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 2. Role-protected content — permission message
 //    Unauthenticated visitors see the message, not the content.
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Role protection — permission message", () => {
   test("default: .eael-protected-content wrapper is present", async ({ page }) => {
@@ -122,10 +122,10 @@ test.describe("Role protection — permission message", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 3. Message type: none
 //    When message_type = 'none', the message wrapper is rendered but empty.
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Message type: none", () => {
   test("message wrapper is attached", async ({ page }) => {
@@ -146,10 +146,10 @@ test.describe("Message type: none", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 4. Password protection — form display
 //    Unauthenticated visitors see the message + the password form.
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Password protection — form display", () => {
   test("message is shown above the form", async ({ page }) => {
@@ -203,9 +203,9 @@ test.describe("Password protection — form display", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 5. Password form inputs — custom placeholder and button text
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Password form inputs", () => {
   test("custom placeholder is applied to the password input", async ({ page }) => {
@@ -242,9 +242,9 @@ test.describe("Password form inputs", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 6. Element structure
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Element structure", () => {
   test("role-protected: .eael-protected-content uses a div tag", async ({ page }) => {
@@ -280,9 +280,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 7. Interaction
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Interaction", () => {
   test("password input is keyboard-focusable", async ({ page }) => {

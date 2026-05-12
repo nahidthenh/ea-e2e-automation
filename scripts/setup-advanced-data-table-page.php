@@ -64,7 +64,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
 	}
 }
 
-// ── Advanced Data Table page ──────────────────────────────────────────────────
+// - Advanced Data Table page -------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Advanced Data Table page ---' );
@@ -83,11 +83,11 @@ $table_html = '<thead><tr><th>Name</th><th>Role</th><th>Department</th></tr></th
 
 $widgets = [
 
-	// ══════════════════════════════════════════════════════════════════════
+	// ====================================================================
 	// Configurations
-	// ══════════════════════════════════════════════════════════════════════
+	// ====================================================================
 
-	ea_heading( '── Advanced Data Table Configurations ──', 'h2' ),
+	ea_heading( '- Advanced Data Table Configurations -', 'h2' ),
 
 	ea_heading( 'Default Advanced Data Table (Sort + Search + Pagination)' ),
 	ea_widget( 'test-adt-default', 'eael-advanced-data-table',

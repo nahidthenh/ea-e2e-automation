@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Pricing Slider page ────────────────────────────────────────────────────
+// - Pricing Slider page --------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Pricing Slider page ---' );
@@ -176,11 +176,11 @@ $panels_nofollow[0]['eael_pricing_panel_price_button_link'] = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Styles / Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Styles / Presets ──', 'h2' ),
+    ea_heading( '- Styles / Presets -', 'h2' ),
 
     ea_heading( 'Default Pricing Slider (Style 1)' ),
     ea_widget( 'test-ps-style-1', 'eael-pricing-slider', [
@@ -200,11 +200,11 @@ $widgets = [
         'eael_pricing_panels_list'             => $panels_style2,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Description Control
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Description Control ──', 'h2' ),
+    ea_heading( '- Description Control -', 'h2' ),
 
     ea_heading( 'Pricing Slider | Description: Hidden' ),
     ea_widget( 'test-ps-no-desc', 'eael-pricing-slider', [
@@ -214,11 +214,11 @@ $widgets = [
         'eael_pricing_panels_list'             => $panels_base,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Plan Features
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Plan Features ──', 'h2' ),
+    ea_heading( '- Plan Features -', 'h2' ),
 
     ea_heading( 'Pricing Slider | Plan Badge (subtitle visible)' ),
     ea_widget( 'test-ps-badge', 'eael-pricing-slider', [
@@ -244,11 +244,11 @@ $widgets = [
         'eael_pricing_panels_list'             => $panels_status,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Link Behaviour
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Link Behaviour ──', 'h2' ),
+    ea_heading( '- Link Behaviour -', 'h2' ),
 
     ea_heading( 'Pricing Slider | External Link (target=_blank)' ),
     ea_widget( 'test-ps-link-external', 'eael-pricing-slider', [

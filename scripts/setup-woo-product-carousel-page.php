@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Woo Product Carousel page ──────────────────────────────────────────────
+// - Woo Product Carousel page -----------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Woo Product Carousel page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Woo Product Carousel' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout Presets ──', 'h2' ),
+    ea_heading( '- Layout Presets -', 'h2' ),
 
     ea_heading( 'Default Woo Product Carousel (Preset 1)' ),
     ea_widget( 'test-wpc-default', 'eael-woo-product-carousel',
@@ -114,11 +114,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Toggles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Toggles ──', 'h2' ),
+    ea_heading( '- Content Toggles -', 'h2' ),
 
     ea_heading( 'Woo Product Carousel | Title: Hidden' ),
     ea_widget( 'test-wpc-no-title', 'eael-woo-product-carousel',
@@ -165,11 +165,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Carousel Effects
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Carousel Effects ──', 'h2' ),
+    ea_heading( '- Carousel Effects -', 'h2' ),
 
     ea_heading( 'Woo Product Carousel | Effect: Coverflow' ),
     ea_widget( 'test-wpc-coverflow', 'eael-woo-product-carousel',
@@ -180,11 +180,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Slider Controls
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Slider Controls ──', 'h2' ),
+    ea_heading( '- Slider Controls -', 'h2' ),
 
     ea_heading( 'Woo Product Carousel | Arrows: On' ),
     ea_widget( 'test-wpc-arrows', 'eael-woo-product-carousel',

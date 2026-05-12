@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Flip Box page ─────────────────────────────────────────────────────────
+// - Flip Box page -----------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Flip Box page ---' );
@@ -88,12 +88,12 @@ $default_settings = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Flip Types
     // Each animates differently; the type class is applied to the container.
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Flip Types ──', 'h2' ),
+    ea_heading( '- Flip Types -', 'h2' ),
 
     ea_heading( 'Default Flip Box (Flip Left)' ),
     ea_widget( 'test-fb-default', 'eael-flip-box', array_merge( $default_settings, [
@@ -130,23 +130,23 @@ $widgets = [
         'eael_flipbox_type' => 'animate-fade-in',
     ] ) ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Event Type
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Event Type ──', 'h2' ),
+    ea_heading( '- Event Type -', 'h2' ),
 
     ea_heading( 'Flip Box | Event: Click' ),
     ea_widget( 'test-fb-click', 'eael-flip-box', array_merge( $default_settings, [
         'eael_flipbox_event_type' => 'click',
     ] ) ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Front Icon Types
     // Default is 'icon'; tested in test-fb-default.
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Front Icon Types ──', 'h2' ),
+    ea_heading( '- Front Icon Types -', 'h2' ),
 
     ea_heading( 'Flip Box | Front Icon: None' ),
     ea_widget( 'test-fb-icon-none', 'eael-flip-box', array_merge( $default_settings, [
@@ -159,11 +159,11 @@ $widgets = [
         'eael_flipbox_image'       => $img,
     ] ) ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Link Types
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Link Types ──', 'h2' ),
+    ea_heading( '- Link Types -', 'h2' ),
 
     ea_heading( 'Flip Box | Link Type: Box' ),
     ea_widget( 'test-fb-link-box', 'eael-flip-box', array_merge( $default_settings, [
@@ -184,11 +184,11 @@ $widgets = [
         'flipbox_button_text' => 'Get Started',
     ] ) ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Alignment (prefix_class: eael-flipbox-content-align-)
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Alignment ──', 'h2' ),
+    ea_heading( '- Content Alignment -', 'h2' ),
 
     ea_heading( 'Flip Box | Alignment: Left' ),
     ea_widget( 'test-fb-align-left', 'eael-flip-box', array_merge( $default_settings, [

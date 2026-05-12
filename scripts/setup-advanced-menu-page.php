@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Create / reuse test nav menu ───────────────────────────────────────────
+// - Create / reuse test nav menu ----------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Advanced Menu page ---' );
@@ -101,18 +101,18 @@ if ( $existing_menu ) {
 $hamburger_icon = [ 'value' => 'eicon-menu-bar', 'library' => 'eicons' ];
 $indicator_icon = [ 'value' => 'eicon-angle-down', 'library' => 'eicons' ];
 
-// ── Advanced Menu page ─────────────────────────────────────────────────────
+// - Advanced Menu page ---------------------------
 
 $slug    = getenv( 'ADVANCED_MENU_PAGE_SLUG' ) ?: 'advanced-menu';
 $page_id = ea_upsert_page( $slug, 'Advanced Menu' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Skins
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Skins ──', 'h2' ),
+    ea_heading( '- Skins -', 'h2' ),
 
     ea_heading( 'Default Advanced Menu (Skin: Default, Horizontal)' ),
     ea_widget( 'test-am-default', 'eael-advanced-menu',
@@ -202,11 +202,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout ──', 'h2' ),
+    ea_heading( '- Layout -', 'h2' ),
 
     ea_heading( 'Advanced Menu | Layout: Vertical' ),
     ea_widget( 'test-am-vertical', 'eael-advanced-menu',
@@ -220,11 +220,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Item Alignment
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Item Alignment ──', 'h2' ),
+    ea_heading( '- Item Alignment -', 'h2' ),
 
     ea_heading( 'Advanced Menu | Align: Center' ),
     ea_widget( 'test-am-align-center', 'eael-advanced-menu',
@@ -250,11 +250,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Hamburger Options
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Hamburger Options ──', 'h2' ),
+    ea_heading( '- Hamburger Options -', 'h2' ),
 
     ea_heading( 'Advanced Menu | Hamburger Align: Left' ),
     ea_widget( 'test-am-hamburger-left', 'eael-advanced-menu',
@@ -280,11 +280,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Options
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Options ──', 'h2' ),
+    ea_heading( '- Options -', 'h2' ),
 
     ea_heading( 'Advanced Menu | Full Width' ),
     ea_widget( 'test-am-full-width', 'eael-advanced-menu',

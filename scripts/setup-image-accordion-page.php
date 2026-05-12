@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Image Accordion page ───────────────────────────────────────────────────
+// - Image Accordion page --------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Image Accordion page ---' );
@@ -159,11 +159,11 @@ function ia_items( array $img_bg, array $overrides = [] ): array {
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Accordion Type (on-hover / on-click)
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Accordion Type ──', 'h2' ),
+    ea_heading( '- Accordion Type -', 'h2' ),
 
     ea_heading( 'Default Image Accordion (on-hover, horizontal)' ),
     ea_widget( 'test-ia-default', 'eael-image-accordion',
@@ -183,11 +183,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Direction
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Direction ──', 'h2' ),
+    ea_heading( '- Direction -', 'h2' ),
 
     ea_heading( 'Image Accordion | Direction: Vertical' ),
     ea_widget( 'test-ia-vertical', 'eael-image-accordion',
@@ -198,11 +198,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Alignment
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Alignment ──', 'h2' ),
+    ea_heading( '- Content Alignment -', 'h2' ),
 
     ea_heading( 'Image Accordion | Horizontal Align: Left' ),
     ea_widget( 'test-ia-halign-left', 'eael-image-accordion',
@@ -236,11 +236,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Active Item
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Active Item ──', 'h2' ),
+    ea_heading( '- Active Item -', 'h2' ),
 
     ea_heading( 'Image Accordion | First Item Active' ),
     ea_widget( 'test-ia-active-item', 'eael-image-accordion',
@@ -251,11 +251,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Link Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Link Variants ──', 'h2' ),
+    ea_heading( '- Link Variants -', 'h2' ),
 
     ea_heading( 'Image Accordion | External Link (target=_blank)' ),
     ea_widget( 'test-ia-link-external', 'eael-image-accordion',
@@ -300,11 +300,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Title Tag
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Title Tag ──', 'h2' ),
+    ea_heading( '- Title Tag -', 'h2' ),
 
     ea_heading( 'Image Accordion | Title Tag: H3' ),
     ea_widget( 'test-ia-title-h3', 'eael-image-accordion',

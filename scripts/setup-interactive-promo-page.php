@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Interactive Promo page ─────────────────────────────────────────────────
+// - Interactive Promo page -------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Interactive Promo page ---' );
@@ -95,11 +95,11 @@ $effect_map = [
 
 $widgets = [];
 
-// ══════════════════════════════════════════════════════════════════════
+// ====================================================================
 // Promo Effects
-// ══════════════════════════════════════════════════════════════════════
+// ====================================================================
 
-$widgets[] = ea_heading( '── Promo Effects ──', 'h2' );
+$widgets[] = ea_heading( '- Promo Effects -', 'h2' );
 
 foreach ( $effect_map as $hook => $effect ) {
     $is_default = ( $effect === 'effect-lily' );
@@ -115,11 +115,11 @@ foreach ( $effect_map as $hook => $effect ) {
     );
 }
 
-// ══════════════════════════════════════════════════════════════════════
+// ====================================================================
 // Link Behaviour
-// ══════════════════════════════════════════════════════════════════════
+// ====================================================================
 
-$widgets[] = ea_heading( '── Link Behaviour ──', 'h2' );
+$widgets[] = ea_heading( '- Link Behaviour -', 'h2' );
 
 $widgets[] = ea_heading( 'Interactive Promo | Link: External (target=_blank)' );
 $widgets[] = ea_widget( 'test-ip-link-ext', 'eael-interactive-promo',

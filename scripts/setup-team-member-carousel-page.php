@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Team Member Carousel page ──────────────────────────────────────────────
+// - Team Member Carousel page -----------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Team Member Carousel page ---' );
@@ -107,11 +107,11 @@ $members = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Default / Baseline
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Default / Baseline ──', 'h2' ),
+    ea_heading( '- Default / Baseline -', 'h2' ),
 
     ea_heading( 'Default Team Member Carousel' ),
     ea_widget( 'test-tmc-default', 'eael-team-member-carousel',
@@ -120,11 +120,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Overlay Content Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Overlay Content Variants ──', 'h2' ),
+    ea_heading( '- Overlay Content Variants -', 'h2' ),
 
     ea_heading( 'Team Member Carousel | Overlay: Social Icons' ),
     ea_widget( 'test-tmc-overlay-social', 'eael-team-member-carousel',
@@ -150,11 +150,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Navigation Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Navigation Variants ──', 'h2' ),
+    ea_heading( '- Navigation Variants -', 'h2' ),
 
     ea_heading( 'Team Member Carousel | No Arrows' ),
     ea_widget( 'test-tmc-no-arrows', 'eael-team-member-carousel',
@@ -172,11 +172,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Social Links
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Social Links ──', 'h2' ),
+    ea_heading( '- Social Links -', 'h2' ),
 
     ea_heading( 'Team Member Carousel | Social Links: Hidden' ),
     ea_widget( 'test-tmc-no-social', 'eael-team-member-carousel',
@@ -186,11 +186,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Member HTML Tags
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Member HTML Tags ──', 'h2' ),
+    ea_heading( '- Member HTML Tags -', 'h2' ),
 
     ea_heading( 'Team Member Carousel | Name Tag: h2' ),
     ea_widget( 'test-tmc-name-h2', 'eael-team-member-carousel',
@@ -200,11 +200,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Box Alignment
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Box Alignment ──', 'h2' ),
+    ea_heading( '- Box Alignment -', 'h2' ),
 
     ea_heading( 'Team Member Carousel | Align: Center' ),
     ea_widget( 'test-tmc-align-center', 'eael-team-member-carousel',

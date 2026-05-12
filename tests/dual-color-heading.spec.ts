@@ -18,7 +18,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.DUAL_COLOR_HEADING_PAGE_SLUG ?? "dual-color-heading"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────────
+// -- selectors ---------------------------------------------------------------
 // DOM shape (from Dual_Color_Header::render()):
 //   .{hook}                              ← elementor-widget wrapper
 //     .eael-dual-header                  ← EA main wrapper
@@ -38,7 +38,7 @@ const subtext = (hook: string) => `.${hook} .eael-dual-header .subtext`;
 const icon    = (hook: string) => `.${hook} .eael-dual-header .eael-dch-svg-icon`;
 const sep     = (hook: string) => `.${hook} .eael-dual-header .eael-dch-separator-wrap`;
 
-// ── layout style types (free) ─────────────────────────────────────────────────
+// -- layout style types (free) -----------------------------------------------
 const STYLE_MAP: Record<string, string> = {
   "test-dch-default":          "dch-default",
   "test-dch-icon-top":         "dch-icon-on-top",
@@ -46,7 +46,7 @@ const STYLE_MAP: Record<string, string> = {
   "test-dch-subtext-top":      "dch-subtext-on-top",
 };
 
-// ── helpers ───────────────────────────────────────────────────────────────────
+// -- helpers -----------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -66,9 +66,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -89,9 +89,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Layout style types — one instance per free style
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Layout style types", () => {
   for (const [hook] of Object.entries(STYLE_MAP)) {
@@ -113,9 +113,9 @@ test.describe("Layout style types", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Icon configuration
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Icon configuration", () => {
   test("icon-on: .eael-dch-svg-icon is rendered in default layout", async ({ page }) => {
@@ -159,9 +159,9 @@ test.describe("Icon configuration", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Separator
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Separator", () => {
   test("separator hidden by default", async ({ page }) => {
@@ -208,11 +208,11 @@ test.describe("Separator", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Alignment
 //    Alignment is applied as a prefix_class on the elementor widget wrapper:
 //    .eael-dual-header-content-align-{value}
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Alignment", () => {
   test("left-aligned widget wrapper has eael-dual-header-content-align-left class", async ({ page }) => {
@@ -237,9 +237,9 @@ test.describe("Alignment", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Multiple titles mode
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Multiple titles mode", () => {
   const hook = "test-dch-multiple-titles";
@@ -274,9 +274,9 @@ test.describe("Multiple titles mode", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Element structure", () => {
   test("default title renders as <h2>", async ({ page }) => {
@@ -326,9 +326,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 8. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("hover on each layout-type instance triggers no JS errors", async ({ page }) => {

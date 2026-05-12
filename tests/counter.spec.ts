@@ -14,7 +14,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.COUNTER_PAGE_SLUG ?? "counter"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Counter::render() — pro-only widget):
 //   .{hook}                                        ← widget wrapper (_css_classes)
 //     .eael-counter-container                      ← outer; text-align from counter_align
@@ -43,7 +43,7 @@ const iconWrap  = (hook: string) => `.${hook} .eael-counter-icon-wrap`;
 const prefix    = (hook: string) => `.${hook} .eael-counter-number-prefix`;
 const suffix    = (hook: string) => `.${hook} .eael-counter-number-suffix`;
 
-// ── layout classes set by counter_layout ──────────────────────────────────
+// -- layout classes set by counter_layout ----------------------------------
 const LAYOUT_MAP: Record<string, string> = {
   "test-c-default":  "eael-counter-layout-1",
   "test-c-layout-2": "eael-counter-layout-2",
@@ -71,9 +71,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -94,9 +94,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Layout variants — one instance per layout
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Layout variants", () => {
   for (const [hook, layoutClass] of Object.entries(LAYOUT_MAP)) {
@@ -125,9 +125,9 @@ test.describe("Layout variants", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Icon types
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Icon types", () => {
   test("none — no .eael-counter-icon-wrap rendered", async ({ page }) => {
@@ -162,9 +162,9 @@ test.describe("Icon types", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Number options
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Number options", () => {
   test("prefix — .eael-counter-number-prefix is rendered", async ({ page }) => {
@@ -242,9 +242,9 @@ test.describe("Number options", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Alignment
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Alignment", () => {
   test("left-aligned .eael-counter-container has text-align: left", async ({ page }) => {
@@ -275,9 +275,9 @@ test.describe("Alignment", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Element structure", () => {
   test("title renders as the configured HTML tag (default: div)", async ({ page }) => {
@@ -312,9 +312,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("hover on each layout variant triggers no JS errors", async ({ page }) => {

@@ -74,7 +74,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Image Scroller page ────────────────────────────────────────────────────
+// - Image Scroller page --------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Image Scroller page ---' );
@@ -90,11 +90,11 @@ $placeholder_img = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Scroll Direction
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Scroll Direction ──', 'h2' ),
+    ea_heading( '- Scroll Direction -', 'h2' ),
 
     ea_heading( 'Image Scroller | Default (Vertical, Auto Scroll On)' ),
     ea_widget( 'test-is-default', 'eael-image-scroller', [
@@ -111,11 +111,11 @@ $widgets = [
         'eael_image_scroller_direction'        => 'horizontal',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Auto Scroll
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Auto Scroll ──', 'h2' ),
+    ea_heading( '- Auto Scroll -', 'h2' ),
 
     ea_heading( 'Image Scroller | Vertical, Auto Scroll Off' ),
     ea_widget( 'test-is-autoscroll-off', 'eael-image-scroller', [

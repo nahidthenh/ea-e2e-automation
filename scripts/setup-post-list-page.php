@@ -66,13 +66,13 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Sample posts (required for Post List widget to render items) ───────────────
+// - Sample posts (required for Post List widget to render items) --------
 // setup-sample-posts.php seeds 12 posts with categories, tags, and thumbnails.
 // When run standalone (not via setup-test-pages.sh), this require_once ensures
 // posts are present before the widget page is created.
 require_once '/scripts/setup-sample-posts.php';
 
-// ── Post List page ─────────────────────────────────────────────────────────────
+// - Post List page -------------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Post List page ---' );
@@ -82,11 +82,11 @@ $page_id = ea_upsert_page( $slug, 'Post List' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout Types
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout Types ──', 'h2' ),
+    ea_heading( '- Layout Types -', 'h2' ),
 
     ea_heading( 'Default Post List (Layout: Default)' ),
     ea_widget( 'test-pl-default', 'eael-post-list',
@@ -156,11 +156,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Top Bar & Filter Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Top Bar & Filter Variants ──', 'h2' ),
+    ea_heading( '- Top Bar & Filter Variants -', 'h2' ),
 
     ea_heading( 'Post List | No Top Bar' ),
     ea_widget( 'test-pl-no-topbar', 'eael-post-list',
@@ -192,11 +192,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Pagination Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Pagination Variants ──', 'h2' ),
+    ea_heading( '- Pagination Variants -', 'h2' ),
 
     ea_heading( 'Post List | No Pagination' ),
     ea_widget( 'test-pl-no-pagination', 'eael-post-list',
@@ -230,11 +230,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Toggle Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Toggle Variants ──', 'h2' ),
+    ea_heading( '- Content Toggle Variants -', 'h2' ),
 
     ea_heading( 'Post List | No Feature Image' ),
     ea_widget( 'test-pl-no-image', 'eael-post-list',

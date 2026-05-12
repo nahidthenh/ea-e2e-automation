@@ -13,7 +13,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FLIP_CAROUSEL_PAGE_SLUG ?? "flip-carousel"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Flip_Carousel::render()):
 //
 //   .{hook}
@@ -34,7 +34,7 @@ const slideLink = (hook: string) => `.${hook} .eael-flip-item a`;
 const slideText = (hook: string) => `.${hook} .flip-carousel-text`;
 const content   = (hook: string) => `.${hook} .eael-flip-carousel-content`;
 
-// ── known carousel types ───────────────────────────────────────────────────
+// -- known carousel types -------------------------------------------------
 const CAROUSEL_TYPE_MAP: Record<string, string> = {
   "test-fc-coverflow": "coverflow",
   "test-fc-carousel":  "carousel",
@@ -42,7 +42,7 @@ const CAROUSEL_TYPE_MAP: Record<string, string> = {
   "test-fc-wheel":     "wheel",
 };
 
-// ── helpers ───────────────────────────────────────────────────────────────
+// -- helpers -------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -62,9 +62,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -85,9 +85,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 2. Carousel types — data-style attribute and visibility
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Carousel types", () => {
   for (const [hook, type] of Object.entries(CAROUSEL_TYPE_MAP)) {
@@ -114,10 +114,10 @@ test.describe("Carousel types", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 3. Slide text (footer text)
 //    Slide text renders as p.flip-carousel-text inside each li.eael-flip-item.
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Slide text (footer label)", () => {
   test("coverflow: .flip-carousel-text elements are rendered", async ({ page }) => {
@@ -139,9 +139,9 @@ test.describe("Slide text (footer label)", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 4. Content view — hover and always-show modes
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Content view", () => {
   test("hover: .eael-flip-carousel has class 'hover'", async ({ page }) => {
@@ -183,9 +183,9 @@ test.describe("Content view", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 5. Slide links — external and nofollow
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Slide links", () => {
   test("external: anchor tag is rendered inside slide items", async ({ page }) => {
@@ -236,9 +236,9 @@ test.describe("Slide links", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 6. Element structure
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Element structure", () => {
   test(".eael-flip-carousel is a div", async ({ page }) => {
@@ -294,9 +294,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 7. Interaction
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Interaction", () => {
   test("hover over all carousel instances causes no JS errors", async ({ page }) => {

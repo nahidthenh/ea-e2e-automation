@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Toggle page ────────────────────────────────────────────────────────────────
+// - Toggle page --------------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Toggle page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Toggle' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Effects Styles
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Effects Styles ──', 'h2' ),
+    ea_heading( '- Effects Styles -', 'h2' ),
 
     ea_heading( 'Default Toggle (Default Style, Round Switch)' ),
     ea_widget( 'test-t-default', 'eael-toggle', [
@@ -109,11 +109,11 @@ $widgets = [
         'secondary_content'         => 'Secondary Content',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Switch Styles
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Switch Styles ──', 'h2' ),
+    ea_heading( '- Switch Styles -', 'h2' ),
 
     ea_heading( 'Toggle | Switch Style: Rectangle' ),
     ea_widget( 'test-t-rectangle', 'eael-toggle', [
@@ -124,11 +124,11 @@ $widgets = [
         'secondary_content'=> 'Secondary Content',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Alignment
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Alignment ──', 'h2' ),
+    ea_heading( '- Alignment -', 'h2' ),
 
     ea_heading( 'Toggle | Switch Alignment: Left' ),
     ea_widget( 'test-t-align-left', 'eael-toggle', [

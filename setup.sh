@@ -15,7 +15,7 @@ echo "=========================================="
 echo " EA E2E Automation — Environment Setup"
 echo "=========================================="
 
-# ── 1. Validate ea-plugins directory ──────────────────────────────────────────
+# -- 1. Validate ea-plugins directory ------------------------------------------
 
 if [ ! -d "${SCRIPT_DIR}/ea-plugins" ]; then
   echo "ERROR: ./ea-plugins directory not found."
@@ -23,31 +23,31 @@ if [ ! -d "${SCRIPT_DIR}/ea-plugins" ]; then
   exit 1
 fi
 
-# ── 2. Start database and WordPress ───────────────────────────────────────────
+# -- 2. Start database and WordPress -------------------------------------------
 
 echo ""
 echo "[1/3] Starting Docker services..."
 docker compose up -d db wordpress
 
-# ── 3. Wait for WordPress HTTP endpoint ───────────────────────────────────────
+# -- 3. Wait for WordPress HTTP endpoint ---------------------------------------
 
 echo ""
 echo "[2/3] Waiting for WordPress to be reachable..."
 bash "${SCRIPT_DIR}/scripts/wait-for-wordpress.sh"
 
-# ── 4. Run WP-CLI configuration ───────────────────────────────────────────────
+# -- 4. Run WP-CLI configuration ---------------------------------------------
 
 echo ""
 echo "[3/4] Configuring WordPress..."
 docker compose run --rm wpcli bash /scripts/configure-wordpress.sh
 
-# ── 5. Create and seed test pages ─────────────────────────────────────────────
+# -- 5. Create and seed test pages ---------------------------------------------
 
 echo ""
 echo "[4/4] Setting up test pages..."
 docker compose run --rm wpcli bash /scripts/setup-test-pages.sh
 
-# ── Done ──────────────────────────────────────────────────────────────────────
+# -- Done --------------------------------------------------------------------
 
 echo ""
 echo "=========================================="

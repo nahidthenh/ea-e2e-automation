@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Advanced Accordion page ───────────────────────────────────────────────
+// - Advanced Accordion page ------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Advanced Accordion page ---' );
@@ -116,13 +116,13 @@ $tabs_first_active[0]['eael_adv_accordion_tab_default_active'] = 'yes';
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Accordion Types
     // 'accordion' closes other tabs when one opens; 'toggle' each tab
     // toggles independently. data-accordion-type attribute encodes the type.
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Accordion Types ──', 'h2' ),
+    ea_heading( '- Accordion Types -', 'h2' ),
 
     ea_heading( 'Default Advanced Accordion' ),
     ea_widget( 'test-aa-default', 'eael-adv-accordion', [
@@ -138,11 +138,11 @@ $widgets = [
         'eael_adv_accordion_tab'      => $tabs,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Toggle Icon Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Toggle Icon ──', 'h2' ),
+    ea_heading( '- Toggle Icon -', 'h2' ),
 
     ea_heading( 'Advanced Accordion | Toggle Icon: Off' ),
     ea_widget( 'test-aa-icon-off', 'eael-adv-accordion', [
@@ -168,11 +168,11 @@ $widgets = [
         'eael_adv_accordion_tab'      => $tabs_no_tab_icon,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Default Active Tab
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Default Active Tab ──', 'h2' ),
+    ea_heading( '- Default Active Tab -', 'h2' ),
 
     ea_heading( 'Advanced Accordion | First Tab Default Active' ),
     ea_widget( 'test-aa-active-default', 'eael-adv-accordion', [
@@ -181,11 +181,11 @@ $widgets = [
         'eael_adv_accordion_tab'      => $tabs_first_active,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Title Tag
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Title Tag ──', 'h2' ),
+    ea_heading( '- Title Tag -', 'h2' ),
 
     ea_heading( 'Advanced Accordion | Title Tag: H3' ),
     ea_widget( 'test-aa-h3-title', 'eael-adv-accordion', [

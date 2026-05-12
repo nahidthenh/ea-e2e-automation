@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Create / reuse test nav menu ───────────────────────────────────────────
+// - Create / reuse test nav menu ----------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Simple Menu page ---' );
@@ -97,7 +97,7 @@ if ( $existing_menu ) {
     WP_CLI::log( "  menu   : '{$menu_name}' created (ID {$test_menu_id}) with 3 items" );
 }
 
-// ── Simple Menu page ───────────────────────────────────────────────────────
+// - Simple Menu page ----------------------------
 
 $slug    = getenv( 'SIMPLE_MENU_PAGE_SLUG' ) ?: 'simple-menu';
 $page_id = ea_upsert_page( $slug, 'Simple Menu' );
@@ -108,11 +108,11 @@ $indicator_icon = [ 'value' => 'eicon-angle-down', 'library' => 'eicons' ];
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Presets ──', 'h2' ),
+    ea_heading( '- Presets -', 'h2' ),
 
     ea_heading( 'Default Simple Menu (Preset 1, Horizontal)' ),
     ea_widget( 'test-sm-default', 'eael-simple-menu',
@@ -146,11 +146,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout ──', 'h2' ),
+    ea_heading( '- Layout -', 'h2' ),
 
     ea_heading( 'Simple Menu | Layout: Vertical' ),
     ea_widget( 'test-sm-vertical', 'eael-simple-menu',
@@ -163,11 +163,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Item Alignment
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Item Alignment ──', 'h2' ),
+    ea_heading( '- Item Alignment -', 'h2' ),
 
     ea_heading( 'Simple Menu | Align: Center' ),
     ea_widget( 'test-sm-align-center', 'eael-simple-menu',
@@ -191,11 +191,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Options
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Options ──', 'h2' ),
+    ea_heading( '- Options -', 'h2' ),
 
     ea_heading( 'Simple Menu | Full Width' ),
     ea_widget( 'test-sm-full-width', 'eael-simple-menu',

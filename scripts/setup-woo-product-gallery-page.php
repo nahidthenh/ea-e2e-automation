@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Woo Product Gallery page ───────────────────────────────────────────────
+// - Woo Product Gallery page ------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Woo Product Gallery page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Woo Product Gallery' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout Presets ──', 'h2' ),
+    ea_heading( '- Layout Presets -', 'h2' ),
 
     ea_heading( 'Default Woo Product Gallery (Preset 1)' ),
     ea_widget( 'test-wpg-default', 'eael-woo-product-gallery',
@@ -118,11 +118,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Product Layout
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Product Layout ──', 'h2' ),
+    ea_heading( '- Product Layout -', 'h2' ),
 
     ea_heading( 'Woo Product Gallery | Layout: Grid' ),
     ea_widget( 'test-wpg-grid', 'eael-woo-product-gallery',
@@ -134,11 +134,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Toggles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Toggles ──', 'h2' ),
+    ea_heading( '- Content Toggles -', 'h2' ),
 
     ea_heading( 'Woo Product Gallery | Price: Hidden' ),
     ea_widget( 'test-wpg-no-price', 'eael-woo-product-gallery',
@@ -180,11 +180,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Load More
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Load More ──', 'h2' ),
+    ea_heading( '- Load More -', 'h2' ),
 
     ea_heading( 'Woo Product Gallery | Load More: Button' ),
     ea_widget( 'test-wpg-load-more', 'eael-woo-product-gallery',
@@ -197,11 +197,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Product Filters
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Product Filters ──', 'h2' ),
+    ea_heading( '- Product Filters -', 'h2' ),
 
     ea_heading( 'Woo Product Gallery | Filter: Featured Products' ),
     ea_widget( 'test-wpg-filter-featured', 'eael-woo-product-gallery',

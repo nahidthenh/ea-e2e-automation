@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Interactive Card page ──────────────────────────────────────────────────
+// - Interactive Card page -------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Interactive Card page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Interactive Card' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Front Styles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Front Styles ──', 'h2' ),
+    ea_heading( '- Front Styles -', 'h2' ),
 
     ea_heading( 'Default Interactive Card (Text Card)' ),
     ea_widget( 'test-icard-default', 'eael-interactive-card',
@@ -96,11 +96,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Rear Panel Types
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Rear Panel Types ──', 'h2' ),
+    ea_heading( '- Rear Panel Types -', 'h2' ),
 
     ea_heading( 'Interactive Card | Rear: Scrollable' ),
     ea_widget( 'test-icard-scrollable', 'eael-interactive-card',
@@ -117,11 +117,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Button & Icon
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Button & Icon ──', 'h2' ),
+    ea_heading( '- Button & Icon -', 'h2' ),
 
     ea_heading( 'Interactive Card | Front Btn Icon: On (Left)' ),
     ea_widget( 'test-icard-front-btn-icon', 'eael-interactive-card',
@@ -141,11 +141,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Link Behaviour
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Link Behaviour ──', 'h2' ),
+    ea_heading( '- Link Behaviour -', 'h2' ),
 
     ea_heading( 'Interactive Card | Rear Link: External (target=_blank)' ),
     ea_widget( 'test-icard-link-ext', 'eael-interactive-card',
@@ -171,11 +171,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Animation
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Animation ──', 'h2' ),
+    ea_heading( '- Content Animation -', 'h2' ),
 
     ea_heading( 'Interactive Card | Animation: Slide In Left' ),
     ea_widget( 'test-icard-anim-left', 'eael-interactive-card',

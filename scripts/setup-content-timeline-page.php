@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Content Timeline page ──────────────────────────────────────────────────
+// - Content Timeline page -------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Content Timeline page ---' );
@@ -74,7 +74,7 @@ WP_CLI::log( '--- Content Timeline page ---' );
 $slug    = getenv( 'CONTENT_TIMELINE_PAGE_SLUG' ) ?: 'content-timeline';
 $page_id = ea_upsert_page( $slug, 'Content Timeline' );
 
-// ── Reusable repeater items ─────────────────────────────────────────────────
+// - Reusable repeater items -------------------------
 
 function ct_item( string $title, string $date, string $excerpt = '', array $link_override = [] ): array {
     $link = array_merge(
@@ -113,11 +113,11 @@ $default_items = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout Positions
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout Positions ──', 'h2' ),
+    ea_heading( '- Layout Positions -', 'h2' ),
 
     ea_heading( 'Default Content Timeline (Center)' ),
     ea_widget( 'test-ct-default', 'eael-content-timeline',
@@ -164,11 +164,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Circle Icon Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Circle Icon Variants ──', 'h2' ),
+    ea_heading( '- Circle Icon Variants -', 'h2' ),
 
     ea_heading( 'Content Timeline | Circle: Bullet' ),
     ea_widget( 'test-ct-bullet', 'eael-content-timeline',
@@ -187,11 +187,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Visibility Toggles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Visibility Toggles ──', 'h2' ),
+    ea_heading( '- Content Visibility Toggles -', 'h2' ),
 
     ea_heading( 'Content Timeline | Title Hidden' ),
     ea_widget( 'test-ct-no-title', 'eael-content-timeline',
@@ -247,11 +247,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Title Tag
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Title Tag Variants ──', 'h2' ),
+    ea_heading( '- Title Tag Variants -', 'h2' ),
 
     ea_heading( 'Content Timeline | Title as H3' ),
     ea_widget( 'test-ct-title-h3', 'eael-content-timeline',
@@ -268,11 +268,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Link Behaviour
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Link Behaviour ──', 'h2' ),
+    ea_heading( '- Link Behaviour -', 'h2' ),
 
     ea_heading( 'Content Timeline | External Link (target=_blank)' ),
     ea_widget( 'test-ct-external', 'eael-content-timeline',

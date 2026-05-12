@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Content Ticker page ────────────────────────────────────────────────────────
+// - Content Ticker page ----------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Content Ticker page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Content Ticker' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Animation & Effect Settings
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Animation & Effect Settings ──', 'h2' ),
+    ea_heading( '- Animation & Effect Settings -', 'h2' ),
 
     ea_heading( 'Default Content Ticker' ),
     ea_widget( 'test-ct-default', 'eael-content-ticker',
@@ -107,11 +107,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Navigation & Playback Controls
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Navigation & Playback Controls ──', 'h2' ),
+    ea_heading( '- Navigation & Playback Controls -', 'h2' ),
 
     ea_heading( 'Content Ticker | Arrows: Off' ),
     ea_widget( 'test-ct-arrows-off', 'eael-content-ticker',
@@ -149,11 +149,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Tag Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Tag Variants ──', 'h2' ),
+    ea_heading( '- Tag Variants -', 'h2' ),
 
     ea_heading( 'Content Ticker | No Tag Text' ),
     ea_widget( 'test-ct-no-tag', 'eael-content-ticker',
@@ -169,11 +169,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Pro: Custom Content
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Pro: Custom Content ──', 'h2' ),
+    ea_heading( '- Pro: Custom Content -', 'h2' ),
 
     ea_heading( 'Content Ticker | Pro: Custom Content Items' ),
     ea_widget( 'test-ct-pro-custom', 'eael-content-ticker',

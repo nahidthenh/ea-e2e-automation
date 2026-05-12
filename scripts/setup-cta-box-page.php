@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── CTA Box page ───────────────────────────────────────────────────────────────
+// - CTA Box page --------------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- CTA Box page ---' );
@@ -81,12 +81,12 @@ $nofollow_link   = [ 'url' => '#', 'is_external' => '', 'nofollow' => 'on', 'cus
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Layout Styles
     // eael_cta_type controls which layout template is rendered.
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Layout Styles ──', 'h2' ),
+    ea_heading( '- Layout Styles -', 'h2' ),
 
     ea_heading( 'Default CTA Box' ),
     ea_widget( 'test-ctab-default', 'eael-cta-box', [
@@ -114,11 +114,11 @@ $widgets = [
         'eael_cta_btn_link'          => $default_link,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Presets
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Presets ──', 'h2' ),
+    ea_heading( '- Presets -', 'h2' ),
 
     ea_heading( 'CTA Box | Preset 2' ),
     ea_widget( 'test-ctab-preset-2', 'eael-cta-box', [
@@ -130,11 +130,11 @@ $widgets = [
         'eael_cta_btn_link'   => $default_link,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Buttons
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Buttons ──', 'h2' ),
+    ea_heading( '- Buttons -', 'h2' ),
 
     ea_heading( 'CTA Box | Secondary Button' ),
     ea_widget( 'test-ctab-secondary', 'eael-cta-box', [
@@ -147,11 +147,11 @@ $widgets = [
         'eael_cta_secondary_btn_link'    => $default_link,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Link Variants
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Link Variants ──', 'h2' ),
+    ea_heading( '- Link Variants -', 'h2' ),
 
     ea_heading( 'CTA Box | External Link (target=_blank)' ),
     ea_widget( 'test-ctab-link-external', 'eael-cta-box', [
@@ -169,12 +169,12 @@ $widgets = [
         'eael_cta_btn_link' => $nofollow_link,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Alignment
     // prefix_class 'content-align-%s' → e.g. content-align-cta-center on {{WRAPPER}}
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Alignment ──', 'h2' ),
+    ea_heading( '- Alignment -', 'h2' ),
 
     ea_heading( 'CTA Box | Alignment: Center' ),
     ea_widget( 'test-ctab-align-center', 'eael-cta-box', [

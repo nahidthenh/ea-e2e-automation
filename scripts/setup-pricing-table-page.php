@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Pricing Table page ─────────────────────────────────────────────────────
+// - Pricing Table page ---------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Pricing Table page ---' );
@@ -83,11 +83,11 @@ $default_items = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Free Styles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Free Styles ──', 'h2' ),
+    ea_heading( '- Free Styles -', 'h2' ),
 
     ea_heading( 'Default Pricing Table (Style 1)' ),
     ea_widget( 'test-pt-default', 'eael-pricing-table', [
@@ -117,11 +117,11 @@ $widgets = [
         'eael_pricing_table_items'          => $default_items,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // List Icon Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── List Icon Variants ──', 'h2' ),
+    ea_heading( '- List Icon Variants -', 'h2' ),
 
     ea_heading( 'Pricing Table | List Icon: Off' ),
     ea_widget( 'test-pt-icon-off', 'eael-pricing-table', [
@@ -152,11 +152,11 @@ $widgets = [
         'eael_pricing_table_items'           => $default_items,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Ribbon / Featured Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Ribbon / Featured Variants ──', 'h2' ),
+    ea_heading( '- Ribbon / Featured Variants -', 'h2' ),
 
     ea_heading( 'Pricing Table | Featured: Ribbon 1' ),
     ea_widget( 'test-pt-ribbon-1', 'eael-pricing-table', [
@@ -189,11 +189,11 @@ $widgets = [
         'eael_pricing_table_items'              => $default_items,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Button Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Button Variants ──', 'h2' ),
+    ea_heading( '- Button Variants -', 'h2' ),
 
     ea_heading( 'Pricing Table | Button Hidden' ),
     ea_widget( 'test-pt-btn-hide', 'eael-pricing-table', [
@@ -232,11 +232,11 @@ $widgets = [
         'eael_pricing_table_items'           => $default_items,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Pricing Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Pricing Variants ──', 'h2' ),
+    ea_heading( '- Pricing Variants -', 'h2' ),
 
     ea_heading( 'Pricing Table | On Sale' ),
     ea_widget( 'test-pt-onsale', 'eael-pricing-table', [
@@ -253,11 +253,11 @@ $widgets = [
         'eael_pricing_table_items'           => $default_items,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Pro Styles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Pro Styles ──', 'h2' ),
+    ea_heading( '- Pro Styles -', 'h2' ),
 
     ea_heading( 'Pro Style 3' ),
     ea_widget( 'test-pt-pro-style-3', 'eael-pricing-table', [

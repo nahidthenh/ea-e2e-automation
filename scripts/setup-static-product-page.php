@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Static Product page ────────────────────────────────────────────────────
+// - Static Product page --------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Static Product page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Static Product' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layouts
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layouts ──', 'h2' ),
+    ea_heading( '- Layouts -', 'h2' ),
 
     ea_heading( 'Default Static Product' ),
     ea_widget( 'test-sp-default', 'eael-static-product',
@@ -126,11 +126,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Price & Rating Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Price & Rating Variants ──', 'h2' ),
+    ea_heading( '- Price & Rating Variants -', 'h2' ),
 
     ea_heading( 'Static Product | Price Visible' ),
     ea_widget( 'test-sp-with-price', 'eael-static-product',
@@ -164,11 +164,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Button Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Button Variants ──', 'h2' ),
+    ea_heading( '- Button Variants -', 'h2' ),
 
     ea_heading( 'Static Product | No Details Button' ),
     ea_widget( 'test-sp-no-details-btn', 'eael-static-product',
@@ -201,11 +201,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Link Behaviour
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Link Behaviour ──', 'h2' ),
+    ea_heading( '- Link Behaviour -', 'h2' ),
 
     ea_heading( 'Static Product | External Link (target=_blank)' ),
     ea_widget( 'test-sp-link-external', 'eael-static-product',
@@ -222,11 +222,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Alignment
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Alignment ──', 'h2' ),
+    ea_heading( '- Content Alignment -', 'h2' ),
 
     ea_heading( 'Static Product | Align Left' ),
     ea_widget( 'test-sp-align-left', 'eael-static-product',

@@ -17,7 +17,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.CREATIVE_BUTTON_PAGE_SLUG ?? "creative-button"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────────
+// -- selectors ---------------------------------------------------------------
 // Each widget on the page gets a stable CSS class (set via _css_classes in
 // Elementor) so tests can target specific configurations independently.
 //
@@ -37,7 +37,7 @@ const btn  = (hook: string) => `.${hook} .eael-creative-button`;
 const wrap = (hook: string) => `.${hook} .eael-creative-button-wrapper`;
 const text = (hook: string) => `.${hook} .cretive-button-text`;
 
-// ── free effect classes defined in the widget ─────────────────────────────────
+// -- free effect classes defined in the widget ---------------------------------
 const FREE_EFFECTS = [
   "eael-creative-button--default",
   "eael-creative-button--winona",
@@ -47,7 +47,7 @@ const FREE_EFFECTS = [
   "eael-creative-button--rayen",
 ] as const;
 
-// ── pro effect classes (requires EA Pro) ──────────────────────────────────────
+// -- pro effect classes (requires EA Pro) --------------------------------------
 const PRO_EFFECTS = [
   "eael-creative-button--pipaluk",
   "eael-creative-button--moema",
@@ -61,7 +61,7 @@ const PRO_EFFECTS = [
   "eael-creative-button--shikoba",
 ] as const;
 
-// ── helpers ───────────────────────────────────────────────────────────────────
+// -- helpers -----------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -81,9 +81,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -104,9 +104,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Button effects — one instance per free effect
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Button effects", () => {
   const effectMap: Record<string, string> = {
@@ -147,9 +147,9 @@ test.describe("Button effects", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Pro button effects
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Pro button effects", () => {
   // Derive hooks from PRO_EFFECTS so the two stay in sync automatically.
@@ -187,10 +187,10 @@ test.describe("Pro button effects", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Tamaya effect — unique DOM structure
 //    Tamaya renders explicit before/after divs (not just data-text).
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Tamaya effect — secondary text DOM nodes", () => {
   const hook = "test-cb-tamaya";
@@ -224,9 +224,9 @@ test.describe("Tamaya effect — secondary text DOM nodes", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Icon — left and right positions
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Icon configuration", () => {
   test("icon-left: .eael-creative-button-icon-left is rendered", async ({ page }) => {
@@ -265,9 +265,9 @@ test.describe("Icon configuration", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Link behaviour
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Link behaviour", () => {
   test("default button href is '#'", async ({ page }) => {
@@ -314,10 +314,10 @@ test.describe("Link behaviour", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Button alignment
 //    Alignment is applied as justify-content on .eael-creative-button-wrapper.
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Button alignment", () => {
   test("center-aligned wrapper has justify-content: center", async ({ page }) => {
@@ -339,9 +339,9 @@ test.describe("Button alignment", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 8. Button element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Button element structure", () => {
   test("button is rendered as an <a> tag", async ({ page }) => {
@@ -371,9 +371,9 @@ test.describe("Button element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 9. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("button is keyboard-focusable", async ({ page }) => {

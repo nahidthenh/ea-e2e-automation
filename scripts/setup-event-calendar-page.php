@@ -64,7 +64,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
 	}
 }
 
-// ── Event Calendar page ──────────────────────────────────────────────────────
+// - Event Calendar page ---------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Event Calendar page ---' );
@@ -129,11 +129,11 @@ $sample_events = [
 
 $widgets = [
 
-	// ══════════════════════════════════════════════════════════════════════
+	// ====================================================================
 	// Calendar Layout (FullCalendar — JS initialized)
-	// ══════════════════════════════════════════════════════════════════════
+	// ====================================================================
 
-	ea_heading( '── Calendar Layout (FullCalendar) ──', 'h2' ),
+	ea_heading( '- Calendar Layout (FullCalendar) -', 'h2' ),
 
 	ea_heading( 'Default Event Calendar (Month View)' ),
 	ea_widget( 'test-ec-cal-default', 'eael-event-calendar',
@@ -175,11 +175,11 @@ $widgets = [
 		]
 	),
 
-	// ══════════════════════════════════════════════════════════════════════
+	// ====================================================================
 	// Table Layout (server-side HTML)
-	// ══════════════════════════════════════════════════════════════════════
+	// ====================================================================
 
-	ea_heading( '── Table Layout ──', 'h2' ),
+	ea_heading( '- Table Layout -', 'h2' ),
 
 	ea_heading( 'Event Calendar | Table — All Columns + Search' ),
 	ea_widget( 'test-ec-table', 'eael-event-calendar',

@@ -70,7 +70,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Protected Content page ─────────────────────────────────────────────────
+// - Protected Content page -------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Protected Content page ---' );
@@ -80,11 +80,11 @@ $page_id = ea_upsert_page( $slug, 'Protected Content' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Role-Based Protection
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Role-Based Protection ──', 'h2' ),
+    ea_heading( '- Role-Based Protection -', 'h2' ),
 
     ea_heading( 'Default Protected Content' ),
     ea_widget( 'test-pc-default', 'eael-protected-content',
@@ -115,11 +115,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Password Protection
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Password Protection ──', 'h2' ),
+    ea_heading( '- Password Protection -', 'h2' ),
 
     ea_heading( 'Protected Content | Password Form (defaults)' ),
     ea_widget( 'test-pc-password-form', 'eael-protected-content',

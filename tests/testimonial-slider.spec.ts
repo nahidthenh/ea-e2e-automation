@@ -19,7 +19,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TESTIMONIAL_SLIDER_PAGE_SLUG ?? "testimonial-slider"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Testimonial_Slider::render()):
 //   .{hook}                                              ← Elementor widget wrapper
 //     .swiper-container-wrap.eael-testimonial-slider.{style}  ← outer wrap
@@ -43,7 +43,7 @@ const slide = (hook: string) => `.${hook} .eael-testimonial-item`;
 const name  = (hook: string) => `.${hook} .eael-testimonial-user`;
 const desc  = (hook: string) => `.${hook} .eael-testimonial-text`;
 
-// ── skin map: hook → skin CSS class applied to the outer wrap ─────────────
+// -- skin map: hook → skin CSS class applied to the outer wrap -------------
 const SKIN_MAP: Record<string, string> = {
   "test-ts-default":              "default-style",
   "test-ts-classic":              "classic-style",
@@ -55,7 +55,7 @@ const SKIN_MAP: Record<string, string> = {
   "test-ts-content-bottom-inline":"content-bottom-icon-title-inline",
 };
 
-// ── helpers ───────────────────────────────────────────────────────────────
+// -- helpers -------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -75,9 +75,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -98,9 +98,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 2. Testimonial Slider skins
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Testimonial Slider skins", () => {
   for (const [hook, skinClass] of Object.entries(SKIN_MAP)) {
@@ -133,9 +133,9 @@ test.describe("Testimonial Slider skins", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 3. Quote icon configuration
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Quote icon", () => {
   test("quote icon present when enabled (default style)", async ({ page }) => {
@@ -153,9 +153,9 @@ test.describe("Quote icon", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 4. Navigation — arrows and dots
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Navigation controls", () => {
   test("arrows present when enabled (default)", async ({ page }) => {
@@ -193,9 +193,9 @@ test.describe("Navigation controls", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 5. Alignment — CSS class applied to each slide
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Alignment", () => {
   test("center-aligned slides carry eael-testimonial-align-center class", async ({ page }) => {
@@ -220,9 +220,9 @@ test.describe("Alignment", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 6. Avatar
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Avatar", () => {
   test("avatar image block present when enabled", async ({ page }) => {
@@ -240,9 +240,9 @@ test.describe("Avatar", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 7. Rating stars
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Rating stars", () => {
   test("star rating element is present in default widget", async ({ page }) => {
@@ -261,9 +261,9 @@ test.describe("Rating stars", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 8. Carousel effect data attribute
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Carousel effect", () => {
   test("slide effect: data-effect is 'slide' by default", async ({ page }) => {
@@ -281,9 +281,9 @@ test.describe("Carousel effect", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 9. Element structure
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Element structure", () => {
   test("outer wrap contains class eael-testimonial-slider", async ({ page }) => {
@@ -318,9 +318,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 10. Interaction
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Interaction", () => {
   test("hover on each skin instance triggers no JS errors", async ({ page }) => {

@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Dual Color Heading page ────────────────────────────────────────────────────
+// - Dual Color Heading page --------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Dual Color Heading page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Dual Color Heading' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Styles / Layout Types
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Styles / Layout Types ──', 'h2' ),
+    ea_heading( '- Styles / Layout Types -', 'h2' ),
 
     ea_heading( 'Default Dual Color Heading' ),
     ea_widget( 'test-dch-default', 'eael-dual-color-header',
@@ -117,11 +117,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Icon Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Icon Variants ──', 'h2' ),
+    ea_heading( '- Icon Variants -', 'h2' ),
 
     ea_heading( 'Dual Color Heading | Icon: Off' ),
     ea_widget( 'test-dch-icon-off', 'eael-dual-color-header',
@@ -132,11 +132,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Separator Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Separator Variants ──', 'h2' ),
+    ea_heading( '- Separator Variants -', 'h2' ),
 
     ea_heading( 'Dual Color Heading | Separator: Line' ),
     ea_widget( 'test-dch-separator', 'eael-dual-color-header',
@@ -159,11 +159,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Alignment Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Alignment Variants ──', 'h2' ),
+    ea_heading( '- Alignment Variants -', 'h2' ),
 
     ea_heading( 'Dual Color Heading | Align: Left' ),
     ea_widget( 'test-dch-align-left', 'eael-dual-color-header',
@@ -183,11 +183,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Multiple Titles Mode
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Multiple Titles Mode ──', 'h2' ),
+    ea_heading( '- Multiple Titles Mode -', 'h2' ),
 
     ea_heading( 'Dual Color Heading | Multiple Titles' ),
     ea_widget( 'test-dch-multiple-titles', 'eael-dual-color-header',
@@ -201,11 +201,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // HTML Tag Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── HTML Tag Variants ──', 'h2' ),
+    ea_heading( '- HTML Tag Variants -', 'h2' ),
 
     ea_heading( 'Dual Color Heading | Tag: H4' ),
     ea_widget( 'test-dch-tag-h4', 'eael-dual-color-header',
@@ -216,11 +216,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Color Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Color Variants ──', 'h2' ),
+    ea_heading( '- Color Variants -', 'h2' ),
 
     ea_heading( 'Dual Color Heading | Gradient Color' ),
     ea_widget( 'test-dch-gradient', 'eael-dual-color-header',

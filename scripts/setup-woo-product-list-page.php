@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Woo Product List page ──────────────────────────────────────────────────────
+// - Woo Product List page ---------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Woo Product List page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Woo Product List' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout Presets ──', 'h2' ),
+    ea_heading( '- Layout Presets -', 'h2' ),
 
     ea_heading( 'Default Woo Product List (Preset 1)' ),
     ea_widget( 'test-wpl-default', 'eael-woo-product-list', [] ),
@@ -95,22 +95,22 @@ $widgets = [
         'eael_dynamic_template_layout' => 'preset-3',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Image Alignment
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Image Alignment ──', 'h2' ),
+    ea_heading( '- Image Alignment -', 'h2' ),
 
     ea_heading( 'Woo Product List | Image Alignment: Right' ),
     ea_widget( 'test-wpl-img-right', 'eael-woo-product-list', [
         'eael_product_list_image_alignment' => 'image-alignment-right',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Toggles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Toggles ──', 'h2' ),
+    ea_heading( '- Content Toggles -', 'h2' ),
 
     ea_heading( 'Woo Product List | Rating Hidden' ),
     ea_widget( 'test-wpl-no-rating', 'eael-woo-product-list', [
@@ -127,11 +127,11 @@ $widgets = [
         'eael_woo_product_list_price_show' => '',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Button Positions
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Button Positions ──', 'h2' ),
+    ea_heading( '- Button Positions -', 'h2' ),
 
     ea_heading( 'Woo Product List | Buttons: Static Only' ),
     ea_widget( 'test-wpl-btn-static', 'eael-woo-product-list', [
@@ -143,22 +143,22 @@ $widgets = [
         'eael_product_list_content_general_button_position' => 'on-hover',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Total Sold Progress Bar
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Total Sold ──', 'h2' ),
+    ea_heading( '- Total Sold -', 'h2' ),
 
     ea_heading( 'Woo Product List | Total Sold Progress Bar' ),
     ea_widget( 'test-wpl-total-sold', 'eael-woo-product-list', [
         'eael_woo_product_list_total_sold_show' => 'yes',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Product Filters
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Product Filters ──', 'h2' ),
+    ea_heading( '- Product Filters -', 'h2' ),
 
     ea_heading( 'Woo Product List | Filter: Featured Products' ),
     ea_widget( 'test-wpl-featured', 'eael-woo-product-list', [

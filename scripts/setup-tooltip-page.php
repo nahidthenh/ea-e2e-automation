@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Tooltip page ───────────────────────────────────────────────────────────────
+// - Tooltip page --------------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Tooltip page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Tooltip' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Content Types
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Content Types ──', 'h2' ),
+    ea_heading( '- Content Types -', 'h2' ),
 
     ea_heading( 'Default Tooltip' ),
     ea_widget( 'test-t-default', 'eael-tooltip', [
@@ -112,11 +112,11 @@ $widgets = [
         'eael_tooltip_hover_content'     => 'Shortcode tooltip content',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Tooltip Direction
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Tooltip Direction ──', 'h2' ),
+    ea_heading( '- Tooltip Direction -', 'h2' ),
 
     ea_heading( 'Tooltip Direction: Left' ),
     ea_widget( 'test-t-dir-left', 'eael-tooltip', [
@@ -136,11 +136,11 @@ $widgets = [
         'eael_tooltip_hover_content' => 'Bottom tooltip',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Link Variants
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Link Variants ──', 'h2' ),
+    ea_heading( '- Link Variants -', 'h2' ),
 
     ea_heading( 'Tooltip | External Link (target=_blank)' ),
     ea_widget( 'test-t-link-external', 'eael-tooltip', [
@@ -166,11 +166,11 @@ $widgets = [
         'eael_tooltip_hover_content' => 'Nofollow link tooltip',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Alignment
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Alignment ──', 'h2' ),
+    ea_heading( '- Alignment -', 'h2' ),
 
     ea_heading( 'Tooltip | Alignment: Center' ),
     ea_widget( 'test-t-align-center', 'eael-tooltip', [

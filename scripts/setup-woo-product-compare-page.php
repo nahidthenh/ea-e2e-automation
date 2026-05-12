@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Woo Product Compare page ───────────────────────────────────────────────
+// - Woo Product Compare page ------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Woo Product Compare page ---' );
@@ -87,11 +87,11 @@ $page_id = ea_upsert_page( $slug, 'Woo Product Compare' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Empty State
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Empty State ──', 'h2' ),
+    ea_heading( '- Empty State -', 'h2' ),
 
     ea_heading( 'Default Woo Product Compare (no products)' ),
     ea_widget( 'test-wpco-default', 'eael-woo-product-compare',
@@ -102,11 +102,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // With Products
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── With Products ──', 'h2' ),
+    ea_heading( '- With Products -', 'h2' ),
 
     ea_heading( 'Woo Product Compare | With Products (default theme)' ),
     ea_widget( 'test-wpco-with-products', 'eael-woo-product-compare',
@@ -117,11 +117,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Theme Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Theme Variants ──', 'h2' ),
+    ea_heading( '- Theme Variants -', 'h2' ),
 
     ea_heading( 'Woo Product Compare | Theme 1' ),
     ea_widget( 'test-wpco-theme-1', 'eael-woo-product-compare',
@@ -177,11 +177,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Table Title
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Table Title ──', 'h2' ),
+    ea_heading( '- Table Title -', 'h2' ),
 
     ea_heading( 'Woo Product Compare | No Table Title' ),
     ea_widget( 'test-wpco-no-title', 'eael-woo-product-compare',
@@ -192,11 +192,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Options
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Options ──', 'h2' ),
+    ea_heading( '- Content Options -', 'h2' ),
 
     ea_heading( 'Woo Product Compare | Linkable Image: On' ),
     ea_widget( 'test-wpco-linkable-img', 'eael-woo-product-compare',

@@ -85,7 +85,7 @@ $default_dots = [
     ],
 ];
 
-// ── One Page Navigation page ───────────────────────────────────────────────────
+// - One Page Navigation page --------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- One Page Navigation page ---' );
@@ -95,11 +95,11 @@ $page_id = ea_upsert_page( $slug, 'One Page Navigation' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Baseline / Default
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Default / Baseline ──', 'h2' ),
+    ea_heading( '- Default / Baseline -', 'h2' ),
 
     ea_heading( 'Default One Page Navigation' ),
     ea_widget( 'test-opn-default', 'eael-one-page-nav',
@@ -110,11 +110,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Alignment Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Alignment Variants ──', 'h2' ),
+    ea_heading( '- Alignment Variants -', 'h2' ),
 
     ea_heading( 'One Page Navigation | Alignment: Right (explicit)' ),
     ea_widget( 'test-opn-align-right', 'eael-one-page-nav',
@@ -148,11 +148,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Tooltip Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Tooltip Variants ──', 'h2' ),
+    ea_heading( '- Tooltip Variants -', 'h2' ),
 
     ea_heading( 'One Page Navigation | Tooltip: Off' ),
     ea_widget( 'test-opn-tooltip-off', 'eael-one-page-nav',
@@ -171,11 +171,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Scroll Behaviour
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Scroll Behaviour ──', 'h2' ),
+    ea_heading( '- Scroll Behaviour -', 'h2' ),
 
     ea_heading( 'One Page Navigation | Scroll Wheel: On' ),
     ea_widget( 'test-opn-scroll-wheel-on', 'eael-one-page-nav',

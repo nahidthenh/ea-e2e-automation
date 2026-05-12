@@ -64,7 +64,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Business Reviews page ──────────────────────────────────────────────────
+// - Business Reviews page -------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Business Reviews page ---' );
@@ -96,11 +96,11 @@ $base = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Slider Layout — Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Slider Layout ──', 'h2' ),
+    ea_heading( '- Slider Layout -', 'h2' ),
 
     ea_heading( 'Business Reviews | Slider Preset 1 (default)' ),
     ea_widget( 'test-br-default', 'eael-business-reviews',
@@ -153,11 +153,11 @@ $widgets = [
         ] )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Grid Layout — Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Grid Layout ──', 'h2' ),
+    ea_heading( '- Grid Layout -', 'h2' ),
 
     ea_heading( 'Business Reviews | Grid Preset 1' ),
     ea_widget( 'test-br-grid', 'eael-business-reviews',
@@ -183,11 +183,11 @@ $widgets = [
         ] )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Toggles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Toggles ──', 'h2' ),
+    ea_heading( '- Content Toggles -', 'h2' ),
 
     ea_heading( 'Business Reviews | No Reviewer Avatar' ),
     ea_widget( 'test-br-no-avatar', 'eael-business-reviews',

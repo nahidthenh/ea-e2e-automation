@@ -13,7 +13,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.IMAGE_SCROLLER_PAGE_SLUG ?? "image-scroller"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Image_Scroller::render()):
 //
 //   .{hook}
@@ -26,7 +26,7 @@ const PAGE_URL = `/${process.env.IMAGE_SCROLLER_PAGE_SLUG ?? "image-scroller"}/`
 const wrap = (hook: string) => `.${hook} .eael-image-scroller`;
 const img  = (hook: string) => `.${hook} .eael-image-scroller img`;
 
-// ── helpers ───────────────────────────────────────────────────────────────
+// -- helpers -------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -46,9 +46,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -69,9 +69,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 2. Scroll direction
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Scroll direction", () => {
   test("default: .eael-image-scroller wrapper is visible", async ({ page }) => {
@@ -111,11 +111,11 @@ test.describe("Scroll direction", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 3. Auto scroll
 //    auto_scroll = 'yes' → adds class .eael-image-scroller-hover
 //    auto_scroll off     → class is absent
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Auto scroll", () => {
   test("auto_scroll on: .eael-image-scroller-hover class is present", async ({ page }) => {
@@ -160,9 +160,9 @@ test.describe("Auto scroll", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 4. Element structure
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Element structure", () => {
   test(".eael-image-scroller is a div", async ({ page }) => {
@@ -212,9 +212,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 5. Interaction
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Interaction", () => {
   test("hover over all instances causes no JS errors", async ({ page }) => {

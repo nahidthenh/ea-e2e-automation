@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Multicolumn Pricing Table page ────────────────────────────────────────────
+// - Multicolumn Pricing Table page ----------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Multicolumn Pricing Table page ---' );
@@ -130,11 +130,11 @@ $default_features = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Layouts
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Layouts ──', 'h2' ),
+    ea_heading( '- Layouts -', 'h2' ),
 
     ea_heading( 'Default Multicolumn Pricing Table (Retro Layout)' ),
     ea_widget( 'test-mpt-default', 'eael-multicolumn-pricing-table', [
@@ -159,11 +159,11 @@ $widgets = [
         'eael_mcpt_packages'            => $default_packages,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Featured badge
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Featured Badge ──', 'h2' ),
+    ea_heading( '- Featured Badge -', 'h2' ),
 
     ea_heading( 'Multicolumn Pricing Table | Featured Package (Bronze)' ),
     ea_widget( 'test-mpt-featured', 'eael-multicolumn-pricing-table', [
@@ -222,11 +222,11 @@ $widgets = [
         ],
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Collapse feature rows
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Collapse Feature ──', 'h2' ),
+    ea_heading( '- Collapse Feature -', 'h2' ),
 
     ea_heading( 'Multicolumn Pricing Table | Collapse Enabled (2 rows)' ),
     ea_widget( 'test-mpt-collapse', 'eael-multicolumn-pricing-table', [
@@ -245,11 +245,11 @@ $widgets = [
         'eael_mcpt_packages'                      => $default_packages,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Sale price
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Sale Price ──', 'h2' ),
+    ea_heading( '- Sale Price -', 'h2' ),
 
     ea_heading( 'Multicolumn Pricing Table | Sale Price on Gold' ),
     ea_widget( 'test-mpt-sale', 'eael-multicolumn-pricing-table', [
@@ -306,11 +306,11 @@ $widgets = [
         ],
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Package title tag
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Title Tag ──', 'h2' ),
+    ea_heading( '- Title Tag -', 'h2' ),
 
     ea_heading( 'Multicolumn Pricing Table | Title Tag H3' ),
     ea_widget( 'test-mpt-tag-h3', 'eael-multicolumn-pricing-table', [
@@ -323,11 +323,11 @@ $widgets = [
         'eael_mcpt_packages'            => $default_packages,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Link behaviour
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Link Behaviour ──', 'h2' ),
+    ea_heading( '- Link Behaviour -', 'h2' ),
 
     ea_heading( 'Multicolumn Pricing Table | External Link (target=_blank)' ),
     ea_widget( 'test-mpt-external', 'eael-multicolumn-pricing-table', [
@@ -381,11 +381,11 @@ $widgets = [
         ],
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Button disabled
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Button Disabled ──', 'h2' ),
+    ea_heading( '- Button Disabled -', 'h2' ),
 
     ea_heading( 'Multicolumn Pricing Table | Button Disabled' ),
     ea_widget( 'test-mpt-no-btn', 'eael-multicolumn-pricing-table', [

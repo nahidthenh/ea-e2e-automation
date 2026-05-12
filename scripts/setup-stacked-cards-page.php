@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Stacked Cards page ─────────────────────────────────────────────────────
+// - Stacked Cards page ---------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Stacked Cards page ---' );
@@ -123,11 +123,11 @@ $icon_cards = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Card Style (Vertical / Horizontal)
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Card Style ──', 'h2' ),
+    ea_heading( '- Card Style -', 'h2' ),
 
     ea_heading( 'Default Stacked Cards (Vertical)' ),
     ea_widget( 'test-sc-default', 'eael-stacked-cards',
@@ -147,11 +147,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Transform Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Transform Variants ──', 'h2' ),
+    ea_heading( '- Transform Variants -', 'h2' ),
 
     ea_heading( 'Stacked Cards | Transform: None' ),
     ea_widget( 'test-sc-transform-none', 'eael-stacked-cards',
@@ -182,11 +182,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Variants ──', 'h2' ),
+    ea_heading( '- Content Variants -', 'h2' ),
 
     ea_heading( 'Stacked Cards | With Read More Button' ),
     ea_widget( 'test-sc-with-button', 'eael-stacked-cards',

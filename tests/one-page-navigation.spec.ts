@@ -14,7 +14,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.ONE_PAGE_NAVIGATION_PAGE_SLUG ?? "one-page-navigation"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────────
+// -- selectors ---------------------------------------------------------------
 // DOM shape (from One_Page_Navigation::render()):
 //   .{hook}                              ← elementor-widget wrapper (also gets nav-align-{value})
 //     .eael-one-page-nav-container
@@ -33,7 +33,7 @@ const dotWrap   = (hook: string) => `.${hook} .eael-nav-dot-wrap`;
 const tooltip   = (hook: string) => `.${hook} .eael-nav-dot-tooltip`;
 const tooltipContent = (hook: string) => `.${hook} .eael-nav-dot-tooltip-content`;
 
-// ── alignment prefix classes (added to {{WRAPPER}} via prefix_class) ──────────
+// -- alignment prefix classes (added to {{WRAPPER}} via prefix_class) ----------
 const ALIGN_MAP: Record<string, string> = {
   "test-opn-align-right":  "nav-align-right",
   "test-opn-align-left":   "nav-align-left",
@@ -41,7 +41,7 @@ const ALIGN_MAP: Record<string, string> = {
   "test-opn-align-bottom": "nav-align-bottom",
 } as const;
 
-// ── helpers ───────────────────────────────────────────────────────────────────
+// -- helpers -----------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -61,9 +61,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -84,9 +84,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Default widget — baseline smoke test
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Default widget", () => {
   const hook = "test-opn-default";
@@ -142,10 +142,10 @@ test.describe("Default widget", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Alignment variants
 //    heading_alignment sets nav-align-{value} on the Elementor widget wrapper.
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Alignment variants", () => {
   for (const [hook, alignClass] of Object.entries(ALIGN_MAP)) {
@@ -163,9 +163,9 @@ test.describe("Alignment variants", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Tooltip behaviour
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Tooltip behaviour", () => {
   test("tooltip-on: tooltip span is rendered for each item", async ({ page }) => {
@@ -201,9 +201,9 @@ test.describe("Tooltip behaviour", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Scroll behaviour — data-* attributes reflect control values
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Scroll behaviour attributes", () => {
   test("scroll-wheel-on: data-scroll-wheel is 'on'", async ({ page }) => {
@@ -241,9 +241,9 @@ test.describe("Scroll behaviour attributes", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Element structure", () => {
   test("nav is rendered as a <ul> element", async ({ page }) => {
@@ -279,9 +279,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("first nav item anchor is keyboard-focusable", async ({ page }) => {

@@ -7,7 +7,7 @@ log() { echo "[setup-pages] $*"; }
 
 log "Creating and configuring test pages..."
 
-# ── Sample data (must run before any widget that depends on posts/products) ──
+# - Sample data (must run before any widget that depends on posts/products) -
 
 command wp \
   --path="${WP_PATH}" \
@@ -19,7 +19,7 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-sample-products.php
 
-# ── Widget pages ──────────────────────────────────────────────────────────────
+# - Widget pages -------------------------------
 
 command wp \
   --path="${WP_PATH}" \

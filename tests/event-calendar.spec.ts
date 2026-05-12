@@ -16,7 +16,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.EVENT_CALENDAR_PAGE_SLUG ?? "event-calendar"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Event_Calendar::render()):
 //
 // Calendar layout:
@@ -48,7 +48,7 @@ const tbody          = (hook: string) => `.${hook} .eael-event-calendar-table tb
 const tableSearch    = (hook: string) => `.${hook} .ea-ec-search-wrap input.eael-event-calendar-table-search`;
 const pagination     = (hook: string) => `.${hook} .eael-event-calendar-pagination`;
 
-// ── calendar view map (hook → expected data-defaultview) ──────────────────
+// -- calendar view map (hook → expected data-defaultview) ------------------
 const CAL_VIEWS: Record<string, string> = {
   "test-ec-cal-default": "dayGridMonth",
   "test-ec-cal-week":    "timeGridWeek",
@@ -74,9 +74,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -97,9 +97,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Calendar layout — PHP-rendered container
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Calendar layout — container", () => {
   test("test-ec-cal-default: outer wrapper has layout-calendar class", async ({ page }) => {
@@ -132,9 +132,9 @@ test.describe("Calendar layout — container", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. FullCalendar JS initialization
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("FullCalendar JS initialization", () => {
   for (const hook of Object.keys(CAL_VIEWS)) {
@@ -152,9 +152,9 @@ test.describe("FullCalendar JS initialization", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Calendar views — data-defaultview attribute
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Calendar views", () => {
   for (const [hook, expectedView] of Object.entries(CAL_VIEWS)) {
@@ -169,9 +169,9 @@ test.describe("Calendar views", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Table layout — structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Table layout — structure", () => {
   test("test-ec-table: outer wrapper has layout-table class", async ({ page }) => {
@@ -200,9 +200,9 @@ test.describe("Table layout — structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Table content — event titles appear in rows
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Table content", () => {
   test("test-ec-table: 'Team Kickoff Meeting' appears in tbody", async ({ page }) => {
@@ -224,9 +224,9 @@ test.describe("Table content", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Table columns — header labels and column toggle
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Table columns", () => {
   test("test-ec-table: thead contains 'Title' column header", async ({ page }) => {
@@ -273,9 +273,9 @@ test.describe("Table columns", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 8. Search control
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Search control", () => {
   test("test-ec-table: search input is rendered when enabled", async ({ page }) => {
@@ -296,9 +296,9 @@ test.describe("Search control", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 9. Pagination
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Pagination", () => {
   test("test-ec-table-paginated: .eael-event-calendar-pagination is rendered", async ({ page }) => {
@@ -329,9 +329,9 @@ test.describe("Pagination", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 10. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("hover over table rows triggers no JS errors", async ({ page }) => {

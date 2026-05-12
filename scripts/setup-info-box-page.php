@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Info Box page ──────────────────────────────────────────────────────────
+// - Info Box page -----------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Info Box page ---' );
@@ -79,11 +79,11 @@ $link_default = [ 'url' => '#', 'is_external' => '', 'nofollow' => '', 'custom_a
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Image/Icon Position Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Image/Icon Position ──', 'h2' ),
+    ea_heading( '- Image/Icon Position -', 'h2' ),
 
     ea_heading( 'Default Info Box (Icon on Top)' ),
     ea_widget( 'test-ib-default', 'eael-info-box', [
@@ -121,11 +121,11 @@ $widgets = [
         'eael_infobox_text'        => '<p>Icon appears to the right of content.</p>',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Icon / Media Type Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Icon / Media Type ──', 'h2' ),
+    ea_heading( '- Icon / Media Type -', 'h2' ),
 
     ea_heading( 'Info Box | No Icon (None)' ),
     ea_widget( 'test-ib-icon-none', 'eael-info-box', [
@@ -142,11 +142,11 @@ $widgets = [
         'eael_infobox_text'        => '<p>This info box shows a number.</p>',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Sub Title Variant
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Sub Title ──', 'h2' ),
+    ea_heading( '- Sub Title -', 'h2' ),
 
     ea_heading( 'Info Box | With Sub Title' ),
     ea_widget( 'test-ib-subtitle', 'eael-info-box', [
@@ -158,11 +158,11 @@ $widgets = [
         'eael_infobox_text'           => '<p>Info box with sub title visible.</p>',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Button Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Button ──', 'h2' ),
+    ea_heading( '- Button -', 'h2' ),
 
     ea_heading( 'Info Box | With Button' ),
     ea_widget( 'test-ib-btn', 'eael-info-box', [
@@ -204,11 +204,11 @@ $widgets = [
         ],
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Clickable Infobox
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Clickable Infobox ──', 'h2' ),
+    ea_heading( '- Clickable Infobox -', 'h2' ),
 
     ea_heading( 'Info Box | Clickable' ),
     ea_widget( 'test-ib-clickable', 'eael-info-box', [
@@ -224,11 +224,11 @@ $widgets = [
         ],
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Alignment (applies when img-on-top)
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Alignment ──', 'h2' ),
+    ea_heading( '- Content Alignment -', 'h2' ),
 
     ea_heading( 'Info Box | Align Left' ),
     ea_widget( 'test-ib-align-left', 'eael-info-box', [

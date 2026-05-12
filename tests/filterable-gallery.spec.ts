@@ -18,7 +18,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FILTERABLE_GALLERY_PAGE_SLUG ?? "filterable-gallery"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Filterable_Gallery::render()):
 //   .{hook}                                           ← elementor-widget wrapper
 //     div.eael-filter-gallery-wrapper                 ← root
@@ -46,10 +46,10 @@ const container  = (hook: string) => `.${hook} .eael-filter-gallery-container`;
 const galleryItem = (hook: string) => `.${hook} .eael-filterable-gallery-item-wrap`;
 const caption    = (hook: string) => `.${hook} .gallery-item-caption-wrap`;
 
-// ── known values ──────────────────────────────────────────────────────────
+// -- known values --------------------------------------------------------
 const FREE_LAYOUTS   = ["hoverer", "card", "layout_3"] as const;
 
-// ── helpers ───────────────────────────────────────────────────────────────
+// -- helpers -------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -69,9 +69,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -92,9 +92,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 2. Layout styles — data-layout-mode attribute
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Layout styles", () => {
   const layoutMap: Record<string, string> = {
@@ -124,9 +124,9 @@ test.describe("Layout styles", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 3. Grid style — container CSS class
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Grid style", () => {
   test("default (grid): container has 'eael-filter-gallery-grid' class", async ({ page }) => {
@@ -144,9 +144,9 @@ test.describe("Grid style", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 4. Filter controls
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Filter controls", () => {
   test("filter enabled: .eael-filter-gallery-control is rendered", async ({ page }) => {
@@ -199,9 +199,9 @@ test.describe("Filter controls", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 5. Gallery items
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Gallery items", () => {
   test("default: renders 3 gallery items on initial load", async ({ page }) => {
@@ -231,9 +231,9 @@ test.describe("Gallery items", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 6. Hover style (overlay layout)
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Hover style (overlay layout)", () => {
   const hoverMap: Record<string, string> = {
@@ -270,9 +270,9 @@ test.describe("Hover style (overlay layout)", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 7. Link / popup settings
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Link / popup settings", () => {
   test("default (buttons): data-settings popup value is 'buttons'", async ({ page }) => {
@@ -306,9 +306,9 @@ test.describe("Link / popup settings", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 8. Element structure
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Element structure", () => {
   test("wrapper has class 'eael-filter-gallery-wrapper'", async ({ page }) => {
@@ -354,12 +354,12 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 9. Pro layouts (grid_flow_gallery, harmonic_gallery)
 //    The free plugin always renders the wrapper + data-layout-mode + filter
 //    bar regardless of whether EA Pro is installed. Tests assert only that
 //    stable free-plugin structure so CI/CD passes either way.
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Pro layouts", () => {
   const proLayoutMap: Record<string, string> = {
@@ -403,9 +403,9 @@ test.describe("Pro layouts", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 10. Interaction
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Interaction", () => {
   test("filter button is keyboard-focusable", async ({ page }) => {

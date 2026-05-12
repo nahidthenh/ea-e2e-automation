@@ -3,7 +3,7 @@ set -euo pipefail
 
 WP_PATH=/var/www/html
 
-# ── helpers ────────────────────────────────────────────────────────────────────
+# - helpers ----------------------------------
 
 log()  { echo "[configure] $*"; }
 wp()   { command wp --path="${WP_PATH}" --allow-root "$@"; }
@@ -59,12 +59,12 @@ install_plugin_from_org() {
   log "Activated: ${slug}"
 }
 
-# ── wait for WordPress files ───────────────────────────────────────────────────
+# - wait for WordPress files --------------------------
 
 wait_for_file "${WP_PATH}/wp-config.php"
 wait_for_db
 
-# ── core install ───────────────────────────────────────────────────────────────
+# - core install --------------------------------
 
 if wp core is-installed 2>/dev/null; then
   log "WordPress already installed — skipping core install."
@@ -80,24 +80,24 @@ else
   log "WordPress core installed."
 fi
 
-# ── permalink ──────────────────────────────────────────────────────────────────
+# - permalink ---------------------------------
 
 log "Setting permalink structure to /%postname%/..."
 wp rewrite structure '/%postname%/'
 wp rewrite flush
 
-# ── free plugins from WordPress.org ───────────────────────────────────────────
+# - free plugins from WordPress.org ----------------------
 
 install_plugin_from_org "elementor"
 install_plugin_from_org "woocommerce"
 
-# ── theme ──────────────────────────────────────────────────────────────────────
+# - theme -----------------------------------
 
 log "Installing and activating Hello Elementor theme..."
 wp theme install hello-elementor --activate
 log "Theme: hello-elementor activated"
 
-# ── local plugins from ./ea-plugins ───────────────────────────────────────────
+# - local plugins from ./ea-plugins ----------------------
 
 PLUGINS_SRC="/tmp/ea-plugins"
 PLUGINS_DEST="${WP_PATH}/wp-content/plugins"
@@ -129,7 +129,7 @@ if [ -d "${PLUGINS_SRC}" ]; then
   done
 fi
 
-# ── summary ────────────────────────────────────────────────────────────────────
+# - summary ----------------------------------
 
 log ""
 log "=========================================="

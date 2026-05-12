@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Progress Bar page ─────────────────────────────────────────────────────
+// - Progress Bar page ---------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Progress Bar page ---' );
@@ -76,12 +76,12 @@ $page_id = ea_upsert_page( $slug, 'Progress Bar' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Free Layouts
     // line, circle, half_circle are available in free mode.
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Free Layouts ──', 'h2' ),
+    ea_heading( '- Free Layouts -', 'h2' ),
 
     ea_heading( 'Default Progress Bar (Line)' ),
     ea_widget( 'test-pb-default', 'eael-progress-bar', [
@@ -109,12 +109,12 @@ $widgets = [
         'progress_bar_postfix_label' => 'End',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Pro Layouts
     // Falls back to line layout when pro is not enabled.
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Pro Layouts ──', 'h2' ),
+    ea_heading( '- Pro Layouts -', 'h2' ),
 
     ea_heading( 'Progress Bar | Pro: Line Rainbow' ),
     ea_widget( 'test-pb-pro-rainbow', 'eael-progress-bar', [
@@ -148,11 +148,11 @@ $widgets = [
         'progress_bar_show_count' => 'yes',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Display Count
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Display Count ──', 'h2' ),
+    ea_heading( '- Display Count -', 'h2' ),
 
     ea_heading( 'Progress Bar | Display Count: Off' ),
     ea_widget( 'test-pb-no-count', 'eael-progress-bar', [
@@ -162,11 +162,11 @@ $widgets = [
         'progress_bar_show_count' => '',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Inner Title (Line only)
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Inner Title ──', 'h2' ),
+    ea_heading( '- Inner Title -', 'h2' ),
 
     ea_heading( 'Progress Bar | Inner Title: On' ),
     ea_widget( 'test-pb-inner-title', 'eael-progress-bar', [
@@ -177,11 +177,11 @@ $widgets = [
         'progress_bar_title_inner'       => 'Inner Label',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Stripe (Line only)
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Stripe ──', 'h2' ),
+    ea_heading( '- Stripe -', 'h2' ),
 
     ea_heading( 'Progress Bar | Stripe: On' ),
     ea_widget( 'test-pb-stripe', 'eael-progress-bar', [
@@ -191,11 +191,11 @@ $widgets = [
         'progress_bar_line_fill_stripe' => 'yes',
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Alignment
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Alignment ──', 'h2' ),
+    ea_heading( '- Alignment -', 'h2' ),
 
     ea_heading( 'Progress Bar | Line: Left Aligned' ),
     ea_widget( 'test-pb-align-left', 'eael-progress-bar', [

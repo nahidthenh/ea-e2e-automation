@@ -7,7 +7,7 @@
  * creating duplicates.
  */
 
-// ── helpers ───────────────────────────────────────────────────────────────────
+// - helpers ----------------------------------
 
 function ea_make_id(): string {
     return substr( md5( uniqid( '', true ) ), 0, 8 );
@@ -102,7 +102,7 @@ function ea_save_elementor_data( int $page_id, array $widgets ): void {
     delete_post_meta( $page_id, '_elementor_css' ); // force CSS regeneration
 }
 
-// ── shared base settings ──────────────────────────────────────────────────────
+// - shared base settings ---------------------------
 
 // Elementor's built-in eicons library is always registered on the frontend.
 // Font Awesome 'fa-solid' gets normalized to empty by Elementor if the FA kit
@@ -126,7 +126,7 @@ function cb_base( string $effect, array $extra = [] ): array {
     ], $extra );
 }
 
-// ── Creative Button page ──────────────────────────────────────────────────────
+// - Creative Button page ---------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Creative Button page ---' );
@@ -136,11 +136,11 @@ $page_id = ea_upsert_page( $slug, 'Creative Button' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Free Effects
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Free Effects ──', 'h2' ),
+    ea_heading( '- Free Effects -', 'h2' ),
 
     ea_heading( 'Default Button' ),
     ea_widget( 'test-cb-default', 'eael-creative-button',
@@ -173,11 +173,11 @@ $widgets = [
         cb_base( 'eael-creative-button--rayen' )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Pro Effects
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Pro Effects ──', 'h2' ),
+    ea_heading( '- Pro Effects -', 'h2' ),
 
     ea_heading( 'Pro Effect: Pipaluk' ),
     ea_widget( 'test-cb-pipaluk', 'eael-creative-button',
@@ -229,11 +229,11 @@ $widgets = [
         cb_base( 'eael-creative-button--shikoba' )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Icon Variants
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Icon Variants ──', 'h2' ),
+    ea_heading( '- Icon Variants -', 'h2' ),
 
     ea_heading( 'Default Button | Icon Position: Left' ),
     ea_widget( 'test-cb-icon-left', 'eael-creative-button',
@@ -251,11 +251,11 @@ $widgets = [
         ] )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Link Behaviour
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Link Behaviour ──', 'h2' ),
+    ea_heading( '- Link Behaviour -', 'h2' ),
 
     ea_heading( 'Default Button | External Link (target=_blank)' ),
     ea_widget( 'test-cb-external', 'eael-creative-button',
@@ -281,11 +281,11 @@ $widgets = [
         ] )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
     // Button Alignment
-    // ══════════════════════════════════════════════════════════════════════════
+    // ========================================================================
 
-    ea_heading( '── Button Alignment ──', 'h2' ),
+    ea_heading( '- Button Alignment -', 'h2' ),
 
     ea_heading( 'Default Button | Align: Left (justify-content: flex-start)' ),
     ea_widget( 'test-cb-align-left', 'eael-creative-button',

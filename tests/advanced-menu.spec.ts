@@ -16,7 +16,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.ADVANCED_MENU_PAGE_SLUG ?? "advanced-menu"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Skin_Default::render() — identical across all skins):
 //   .{hook}                                  ← elementor-widget wrapper
 //     <style>...</style>                     ← inline responsive breakpoint CSS
@@ -37,7 +37,7 @@ const menuItem  = (hook: string) => `.${hook} .eael-advanced-menu > li`;
 const menuLink  = (hook: string) => `.${hook} .eael-advanced-menu > li > a`;
 const toggle    = (hook: string) => `.${hook} .eael-advanced-menu-toggle`;
 
-// ── skin map ──────────────────────────────────────────────────────────────
+// -- skin map ------------------------------------------------------------
 // All 8 skins registered by Advanced_Menu::register_skins()
 const SKIN_MAP: Record<string, string> = {
   "test-am-default":   "default",
@@ -50,7 +50,7 @@ const SKIN_MAP: Record<string, string> = {
   "test-am-skin-seven": "skin-seven",
 };
 
-// ── helpers ───────────────────────────────────────────────────────────────
+// -- helpers -------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -70,9 +70,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -93,9 +93,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 2. Skin variants — one instance per skin
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Skin variants", () => {
   for (const [hook, skinId] of Object.entries(SKIN_MAP)) {
@@ -116,9 +116,9 @@ test.describe("Skin variants", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 3. Layout variants
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Layout variants", () => {
   test("horizontal (default): menu has eael-advanced-menu-horizontal class", async ({ page }) => {
@@ -146,9 +146,9 @@ test.describe("Layout variants", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 4. Item alignment
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Item alignment", () => {
   test("default (left): container has eael-advanced-menu-align-left class", async ({ page }) => {
@@ -173,9 +173,9 @@ test.describe("Item alignment", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 5. Hamburger options
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Hamburger options", () => {
   test("default (right): widget wrapper has eael-advanced-menu-hamburger-align-right class", async ({ page }) => {
@@ -203,9 +203,9 @@ test.describe("Hamburger options", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 6. Full-width option
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Full-width option", () => {
   test("full-width: widget wrapper has eael-advanced-menu--stretch class", async ({ page }) => {
@@ -221,9 +221,9 @@ test.describe("Full-width option", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 7. Menu item content
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Menu item content", () => {
   test("first item link has href='#alpha'", async ({ page }) => {
@@ -257,9 +257,9 @@ test.describe("Menu item content", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 8. Element structure
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Element structure", () => {
   test("menu is a <ul> element", async ({ page }) => {
@@ -315,9 +315,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 9. Interaction
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Interaction", () => {
   test("menu link is keyboard-focusable", async ({ page }) => {

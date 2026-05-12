@@ -17,7 +17,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.FLIP_BOX_PAGE_SLUG ?? "flip-box"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Flip_Box::render()):
 //   .{hook}                                                 ← Elementor widget wrapper
 //     [also carries prefix_class: eael-flipbox-content-align-{value}]
@@ -54,7 +54,7 @@ const frontIconWrap = (hook: string) => `${front(hook)} .eael-elements-flip-box-
 const frontContent  = (hook: string) => `${front(hook)} .eael-elements-flip-box-content`;
 const flipButton    = (hook: string) => `.${hook} .flipbox-button`;
 
-// ── flip type map: hook → expected CSS class on .eael-elements-flip-box-container
+// -- flip type map: hook → expected CSS class on .eael-elements-flip-box-container
 const FLIP_TYPE_MAP: Record<string, string> = {
   "test-fb-default":  "eael-animate-left",
   "test-fb-right":    "eael-animate-right",
@@ -83,9 +83,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -106,9 +106,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Flip types — one instance per animation type
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Flip types", () => {
   for (const [hook, flipClass] of Object.entries(FLIP_TYPE_MAP)) {
@@ -136,9 +136,9 @@ test.describe("Flip types", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Event type
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Event type", () => {
   test("hover (default) — container has eael-flip-box-hover class", async ({ page }) => {
@@ -156,9 +156,9 @@ test.describe("Event type", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Front icon types
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Front icon types", () => {
   test("icon (default) — .eael-elements-flip-box-icon-image rendered in front", async ({ page }) => {
@@ -187,9 +187,9 @@ test.describe("Front icon types", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Link types
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Link types", () => {
   test("none (default) — flip-card renders as div", async ({ page }) => {
@@ -247,9 +247,9 @@ test.describe("Link types", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Content alignment (prefix_class: eael-flipbox-content-align-)
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Content alignment", () => {
   test("center (default) — eael-flipbox-content-align-center applied to wrapper", async ({ page }) => {
@@ -267,9 +267,9 @@ test.describe("Content alignment", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Element structure", () => {
   test("front title text is 'Front Title'", async ({ page }) => {
@@ -313,9 +313,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 8. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("hover on each flip type variant triggers no JS errors", async ({ page }) => {

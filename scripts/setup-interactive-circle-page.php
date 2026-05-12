@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Interactive Circle page ────────────────────────────────────────────────
+// - Interactive Circle page ------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Interactive Circle page ---' );
@@ -157,11 +157,11 @@ $link_items = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Presets ──', 'h2' ),
+    ea_heading( '- Presets -', 'h2' ),
 
     ea_heading( 'Default Interactive Circle' ),
     ea_widget( 'test-ic-default', 'eael-interactive-circle',
@@ -203,11 +203,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Button Visibility
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Button Visibility ──', 'h2' ),
+    ea_heading( '- Button Visibility -', 'h2' ),
 
     ea_heading( 'Interactive Circle | Button Icon: Off' ),
     ea_widget( 'test-ic-btn-icon-off', 'eael-interactive-circle',
@@ -229,11 +229,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Icon (Preset 2 only)
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Icon (Preset 2) ──', 'h2' ),
+    ea_heading( '- Content Icon (Preset 2) -', 'h2' ),
 
     ea_heading( 'Interactive Circle | Content Icon: On' ),
     ea_widget( 'test-ic-content-icon', 'eael-interactive-circle',
@@ -246,11 +246,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Event & Animation
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Event & Animation ──', 'h2' ),
+    ea_heading( '- Event & Animation -', 'h2' ),
 
     ea_heading( 'Interactive Circle | Event: Hover' ),
     ea_widget( 'test-ic-event-hover', 'eael-interactive-circle',
@@ -274,11 +274,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Item Link
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Item Link ──', 'h2' ),
+    ea_heading( '- Item Link -', 'h2' ),
 
     ea_heading( 'Interactive Circle | Item With External Link' ),
     ea_widget( 'test-ic-link', 'eael-interactive-circle',

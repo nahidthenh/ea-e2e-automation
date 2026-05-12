@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Sphere Photo Viewer page ───────────────────────────────────────────────
+// - Sphere Photo Viewer page ------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Sphere Photo Viewer page ---' );
@@ -79,11 +79,11 @@ $panorama_url = 'https://app.essential-addons.com/360-photo-viewer/placeholder.j
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Variants ──', 'h2' ),
+    ea_heading( '- Content Variants -', 'h2' ),
 
     ea_heading( 'Default Sphere Photo Viewer' ),
     ea_widget( 'test-spv-default', 'eael-sphere-photo-viewer',
@@ -116,11 +116,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Settings Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Settings Variants ──', 'h2' ),
+    ea_heading( '- Settings Variants -', 'h2' ),
 
     ea_heading( 'Sphere Photo Viewer | Auto-Rotation: On' ),
     ea_widget( 'test-spv-autorotate', 'eael-sphere-photo-viewer',
@@ -144,11 +144,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Navigation Bar
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Navigation Bar ──', 'h2' ),
+    ea_heading( '- Navigation Bar -', 'h2' ),
 
     ea_heading( 'Sphere Photo Viewer | Navbar: Hidden' ),
     ea_widget( 'test-spv-navbar-hidden', 'eael-sphere-photo-viewer',
@@ -160,11 +160,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Markers
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Markers ──', 'h2' ),
+    ea_heading( '- Markers -', 'h2' ),
 
     ea_heading( 'Sphere Photo Viewer | With Markers' ),
     ea_widget( 'test-spv-markers', 'eael-sphere-photo-viewer',

@@ -21,7 +21,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.WOO_PRODUCT_LIST_PAGE_SLUG ?? "woo-product-list"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Woo_Product_List::render() + preset-1.php template):
 //   .{hook}
 //     .eael-product-list-wrapper.{preset-1|preset-2|preset-3}
@@ -65,7 +65,7 @@ const progressBar = (hook: string) =>
 const imageWrap = (hook: string) =>
   `.${hook} .eael-product-list-image-wrap`;
 
-// ── known layout values ───────────────────────────────────────────────────
+// -- known layout values -------------------------------------------------
 const LAYOUTS = {
   "test-wpl-default":  "preset-1",
   "test-wpl-preset-2": "preset-2",
@@ -90,7 +90,7 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ── Page health ───────────────────────────────────────────────────────────
+// -- Page health ---------------------------------------------------------
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -111,7 +111,7 @@ test.describe("Page health", () => {
   });
 });
 
-// ── Layout presets ────────────────────────────────────────────────────────
+// -- Layout presets ------------------------------------------------------
 
 test.describe("Layout presets", () => {
   for (const [hook, layoutClass] of Object.entries(LAYOUTS)) {
@@ -138,7 +138,7 @@ test.describe("Layout presets", () => {
   }
 });
 
-// ── Image alignment ───────────────────────────────────────────────────────
+// -- Image alignment -----------------------------------------------------
 
 test.describe("Image alignment", () => {
   test("default: no explicit alignment class on item", async ({ page }) => {
@@ -160,7 +160,7 @@ test.describe("Image alignment", () => {
   });
 });
 
-// ── Content toggles ───────────────────────────────────────────────────────
+// -- Content toggles -----------------------------------------------------
 
 test.describe("Rating toggle", () => {
   test("rating visible in default widget", async ({ page }) => {
@@ -198,7 +198,7 @@ test.describe("Price toggle", () => {
   });
 });
 
-// ── Button positions ──────────────────────────────────────────────────────
+// -- Button positions ----------------------------------------------------
 
 test.describe("Button positions", () => {
   test("default (both): static buttons present in footer", async ({ page }) => {
@@ -232,7 +232,7 @@ test.describe("Button positions", () => {
   });
 });
 
-// ── Total sold progress bar ───────────────────────────────────────────────
+// -- Total sold progress bar ---------------------------------------------
 
 test.describe("Total sold progress bar", () => {
   test("progress bar absent in default widget", async ({ page }) => {
@@ -253,7 +253,7 @@ test.describe("Total sold progress bar", () => {
   });
 });
 
-// ── Product filters ───────────────────────────────────────────────────────
+// -- Product filters -----------------------------------------------------
 
 test.describe("Product filters", () => {
   test("featured filter: wrapper renders without error", async ({ page }) => {
@@ -267,7 +267,7 @@ test.describe("Product filters", () => {
   });
 });
 
-// ── Element structure ─────────────────────────────────────────────────────
+// -- Element structure ---------------------------------------------------
 
 test.describe("Element structure", () => {
   test("main wrapper has eael-product-list-wrapper class", async ({ page }) => {
@@ -297,7 +297,7 @@ test.describe("Element structure", () => {
   });
 });
 
-// ── Interaction ───────────────────────────────────────────────────────────
+// -- Interaction ---------------------------------------------------------
 
 test.describe("Interaction", () => {
   test("no JS errors when hovering product items", async ({ page }) => {

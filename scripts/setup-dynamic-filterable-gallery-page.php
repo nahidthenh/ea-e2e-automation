@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Dynamic Filterable Gallery page ───────────────────────────────────────
+// - Dynamic Filterable Gallery page --------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Dynamic Filterable Gallery page ---' );
@@ -102,11 +102,11 @@ $base = [
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Style Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Style Presets ──', 'h2' ),
+    ea_heading( '- Style Presets -', 'h2' ),
 
     ea_heading( 'Default Dynamic Gallery (Hoverer)' ),
     ea_widget( 'test-dfg-default', 'eael-dynamic-filterable-gallery', $base ),
@@ -118,11 +118,11 @@ $widgets = [
         ] )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout Modes
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout Modes ──', 'h2' ),
+    ea_heading( '- Layout Modes -', 'h2' ),
 
     ea_heading( 'Dynamic Gallery | Layout: Masonry' ),
     ea_widget( 'test-dfg-masonry', 'eael-dynamic-filterable-gallery',
@@ -131,11 +131,11 @@ $widgets = [
         ] )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Filter Controls
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Filter Controls ──', 'h2' ),
+    ea_heading( '- Filter Controls -', 'h2' ),
 
     ea_heading( 'Dynamic Gallery | No Filter Controls' ),
     ea_widget( 'test-dfg-no-filter', 'eael-dynamic-filterable-gallery',
@@ -151,11 +151,11 @@ $widgets = [
         ] )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Toggles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Toggles ──', 'h2' ),
+    ea_heading( '- Content Toggles -', 'h2' ),
 
     ea_heading( 'Dynamic Gallery | Title Hidden' ),
     ea_widget( 'test-dfg-no-title', 'eael-dynamic-filterable-gallery',
@@ -171,11 +171,11 @@ $widgets = [
         ] )
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Hover Styles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Hover Styles ──', 'h2' ),
+    ea_heading( '- Hover Styles -', 'h2' ),
 
     ea_heading( 'Dynamic Gallery | Hover: Slide Up' ),
     ea_widget( 'test-dfg-hover-slide', 'eael-dynamic-filterable-gallery',

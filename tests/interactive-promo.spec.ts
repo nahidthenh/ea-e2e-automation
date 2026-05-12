@@ -15,7 +15,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.INTERACTIVE_PROMO_PAGE_SLUG ?? "interactive-promo"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Interactive_Promo::render()):
 //   .{hook}                                        ← elementor-widget wrapper
 //     .eael-interactive-promo[id="eael-promo-{id}"]
@@ -33,7 +33,7 @@ const heading = (hook: string) => `.${hook} .eael-interactive-promo figcaption h
 const body    = (hook: string) => `.${hook} .eael-interactive-promo figcaption p`;
 const link    = (hook: string) => `.${hook} .eael-interactive-promo figcaption a`;
 
-// ── all 15 effect classes ──────────────────────────────────────────────────
+// -- all 15 effect classes ------------------------------------------------
 const EFFECTS = [
   "effect-lily",
   "effect-sadie",
@@ -52,12 +52,12 @@ const EFFECTS = [
   "effect-ming",
 ] as const;
 
-// ── hook → effect class ────────────────────────────────────────────────────
+// -- hook → effect class --------------------------------------------------
 const effectMap: Record<string, string> = Object.fromEntries(
   EFFECTS.map((e) => [`test-ip-${e.replace("effect-", "")}`, e])
 );
 
-// ── helpers ────────────────────────────────────────────────────────────────
+// -- helpers --------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -77,9 +77,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -100,9 +100,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Promo effects — one instance per effect class
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Promo effects", () => {
   for (const [hook, effectClass] of Object.entries(effectMap)) {
@@ -126,9 +126,9 @@ test.describe("Promo effects", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Link behaviour
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Link behaviour", () => {
   test("default: overlay link href is '#'", async ({ page }) => {
@@ -172,9 +172,9 @@ test.describe("Link behaviour", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Element structure", () => {
   test("container has class 'eael-interactive-promo'", async ({ page }) => {
@@ -224,9 +224,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("hover on each effect instance triggers no JS errors", async ({ page }) => {

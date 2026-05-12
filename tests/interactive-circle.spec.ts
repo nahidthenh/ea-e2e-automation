@@ -18,7 +18,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.INTERACTIVE_CIRCLE_PAGE_SLUG ?? "interactive-circle"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Interactive_Circle::render()):
 //   .{hook}                                       ← elementor-widget wrapper
 //     .eael-interactive-circle                    ← container
@@ -43,7 +43,7 @@ const circleBtn  = (hook: string) => `.${hook} .eael-circle-btn`;
 const btnText    = (hook: string) => `.${hook} .eael-circle-btn-txt`;
 const content    = (hook: string) => `.${hook} .eael-circle-content`;
 
-// ── known preset values ────────────────────────────────────────────────────
+// -- known preset values --------------------------------------------------
 const FREE_PRESETS = [
   "eael-interactive-circle-preset-1",
   "eael-interactive-circle-preset-2",
@@ -51,7 +51,7 @@ const FREE_PRESETS = [
   "eael-interactive-circle-preset-4",
 ] as const;
 
-// ── preset → hook map ──────────────────────────────────────────────────────
+// -- preset → hook map ----------------------------------------------------
 const presetMap: Record<string, string> = {
   "test-ic-default":  "eael-interactive-circle-preset-1",
   "test-ic-preset-2": "eael-interactive-circle-preset-2",
@@ -59,7 +59,7 @@ const presetMap: Record<string, string> = {
   "test-ic-preset-4": "eael-interactive-circle-preset-4",
 };
 
-// ── helpers ────────────────────────────────────────────────────────────────
+// -- helpers --------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -79,9 +79,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -102,9 +102,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Preset styles (free) — one instance per preset
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Preset styles (free)", () => {
   for (const [hook, presetClass] of Object.entries(presetMap)) {
@@ -139,9 +139,9 @@ test.describe("Preset styles (free)", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Button visibility controls
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Button visibility", () => {
   test("btn-icon-off: button icon element is absent", async ({ page }) => {
@@ -172,9 +172,9 @@ test.describe("Button visibility", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Content icon (Preset 2 only)
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Content icon — Preset 2", () => {
   test("content-icon-on: .eael-circle-content-icon is rendered", async ({ page }) => {
@@ -200,9 +200,9 @@ test.describe("Content icon — Preset 2", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Mouse event variants
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Mouse event", () => {
   test("event-click (default): wrapper has eael-interactive-circle-event-click class", async ({ page }) => {
@@ -220,9 +220,9 @@ test.describe("Mouse event", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. Rotation animation
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Rotation animation", () => {
   test("rotation-on: wrapper has eael-interactive-circle-rotate class", async ({ page }) => {
@@ -239,9 +239,9 @@ test.describe("Rotation animation", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Item link behaviour
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Item link", () => {
   test("linked item renders an <a> tag inside the button", async ({ page }) => {
@@ -274,9 +274,9 @@ test.describe("Item link", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 8. Preset 3 & 4 — connector shapes
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Connector shapes (Presets 3 & 4)", () => {
   for (const hook of ["test-ic-preset-3", "test-ic-preset-4"]) {
@@ -303,9 +303,9 @@ test.describe("Connector shapes (Presets 3 & 4)", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 9. Element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Element structure", () => {
   test("container has class eael-interactive-circle", async ({ page }) => {
@@ -341,9 +341,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 10. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("circle button is keyboard-focusable", async ({ page }) => {

@@ -69,7 +69,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Flip Carousel page ─────────────────────────────────────────────────────
+// - Flip Carousel page ---------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Flip Carousel page ---' );
@@ -123,11 +123,11 @@ $nofollow_slides = array_fill( 0, 4, $mk( '', '', true, '#', false, true ) );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Carousel Types
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Carousel Types ──', 'h2' ),
+    ea_heading( '- Carousel Types -', 'h2' ),
 
     ea_heading( 'Flip Carousel | Type: Cover-Flow (default)' ),
     ea_widget( 'test-fc-coverflow', 'eael-flip-carousel', [
@@ -152,11 +152,11 @@ $widgets = [
         'eael_flip_carousel_slides' => $text_slides,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content View
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content View ──', 'h2' ),
+    ea_heading( '- Content View -', 'h2' ),
 
     ea_heading( 'Flip Carousel | Content View: Hover' ),
     ea_widget( 'test-fc-content-hover', 'eael-flip-carousel', [
@@ -170,11 +170,11 @@ $widgets = [
         'eael_flip_carousel_slides'       => $content_slides,
     ] ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Slide Links
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Slide Links ──', 'h2' ),
+    ea_heading( '- Slide Links -', 'h2' ),
 
     ea_heading( 'Flip Carousel | Slide Link: External (target=_blank)' ),
     ea_widget( 'test-fc-link-ext', 'eael-flip-carousel', [

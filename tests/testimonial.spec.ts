@@ -18,7 +18,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TESTIMONIAL_PAGE_SLUG ?? "testimonial"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────
+// -- selectors -----------------------------------------------------------
 // DOM shape (from Testimonial::render()):
 //   .{hook}                                  ← elementor-widget wrapper
 //     .eael-testimonial-item.{style}.{rating-cls}
@@ -41,7 +41,7 @@ const stars   = (hook: string) => `.${hook} .testimonial-star-rating`;
 const quote   = (hook: string) => `.${hook} .eael-testimonial-quote`;
 const avatar  = (hook: string) => `.${hook} .eael-testimonial-image`;
 
-// ── free skin classes ─────────────────────────────────────────────────────
+// -- free skin classes ---------------------------------------------------
 const FREE_STYLES = [
   "default-style",
   "classic-style",
@@ -53,7 +53,7 @@ const FREE_STYLES = [
   "simple-layout",
 ] as const;
 
-// ── helpers ───────────────────────────────────────────────────────────────
+// -- helpers -------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -73,9 +73,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -96,9 +96,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 2. Testimonial skins (free — 8 layouts)
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Testimonial skins", () => {
   const skinMap: Record<string, string> = {
@@ -142,9 +142,9 @@ test.describe("Testimonial skins", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 3. Content toggles
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Avatar toggle", () => {
   test("avatar enabled: .eael-testimonial-image is rendered", async ({ page }) => {
@@ -199,9 +199,9 @@ test.describe("Rating toggle", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 4. Rating variants
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Rating number", () => {
   test("rating-one: item carries class 'rating-one'", async ({ page }) => {
@@ -252,11 +252,11 @@ test.describe("Rating position", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 5. Content alignment
 //    Alignment is applied via Elementor's generated CSS:
 //    text-align on .eael-testimonial-content and .eael-testimonial-image.
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Content alignment", () => {
   test("center alignment: .eael-testimonial-content has text-align center", async ({ page }) => {
@@ -278,9 +278,9 @@ test.describe("Content alignment", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 6. Element structure
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Element structure", () => {
   test("testimonial item is a div", async ({ page }) => {
@@ -327,9 +327,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 // 7. Interaction
-// ══════════════════════════════════════════════════════════════════════════
+// ========================================================================
 
 test.describe("Interaction", () => {
   test("hover on each skin instance triggers no JS errors", async ({ page }) => {

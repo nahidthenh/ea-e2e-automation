@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Sticky Video page ──────────────────────────────────────────────────────
+// - Sticky Video page ---------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Sticky Video page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Sticky Video' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Video Sources
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Video Sources ──', 'h2' ),
+    ea_heading( '- Video Sources -', 'h2' ),
 
     ea_heading( 'Default Sticky Video (YouTube)' ),
     ea_widget( 'test-sv-default', 'eael-sticky-video',
@@ -112,11 +112,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Sticky Behaviour
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Sticky Behaviour ──', 'h2' ),
+    ea_heading( '- Sticky Behaviour -', 'h2' ),
 
     ea_heading( 'Sticky Video | Sticky: Off' ),
     ea_widget( 'test-sv-sticky-off', 'eael-sticky-video',
@@ -127,11 +127,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Sticky Position Variants
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Sticky Positions ──', 'h2' ),
+    ea_heading( '- Sticky Positions -', 'h2' ),
 
     ea_heading( 'Sticky Video | Position: Top Left' ),
     ea_widget( 'test-sv-pos-top-left', 'eael-sticky-video',
@@ -163,11 +163,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Overlay Options
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Overlay Options ──', 'h2' ),
+    ea_heading( '- Overlay Options -', 'h2' ),
 
     ea_heading( 'Sticky Video | Overlay: Transparent' ),
     ea_widget( 'test-sv-overlay-transparent', 'eael-sticky-video',
@@ -179,11 +179,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Playback Options
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Playback Options ──', 'h2' ),
+    ea_heading( '- Playback Options -', 'h2' ),
 
     ea_heading( 'Sticky Video | Autoplay: On (muted)' ),
     ea_widget( 'test-sv-autoplay', 'eael-sticky-video',

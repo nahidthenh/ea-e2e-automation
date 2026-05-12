@@ -15,7 +15,7 @@ import { test, expect, Page } from "@playwright/test";
 
 const PAGE_URL = `/${process.env.TEAM_MEMBER_PAGE_SLUG ?? "team-member"}/`;
 
-// ── selectors ─────────────────────────────────────────────────────────────────
+// -- selectors ---------------------------------------------------------------
 // DOM shape (from Team_Member::render()):
 //   .{hook} [.eael-team-align-{value}]          ← Elementor outer wrapper
 //                                                  prefix_class adds alignment class here
@@ -39,13 +39,13 @@ const social   = (hook: string) => `.${hook} .eael-team-member-social-profiles`;
 const desc     = (hook: string) => `.${hook} .eael-team-text`;
 const img      = (hook: string) => `.${hook} .eael-team-image figure img`;
 
-// ── free presets ──────────────────────────────────────────────────────────────
+// -- free presets ------------------------------------------------------------
 const FREE_PRESETS: Record<string, string> = {
   "test-tm-default": "eael-team-members-simple",
   "test-tm-overlay": "eael-team-members-overlay",
 } as const;
 
-// ── helpers ───────────────────────────────────────────────────────────────────
+// -- helpers -----------------------------------------------------------------
 
 async function openPage(page: Page) {
   await page.goto(PAGE_URL);
@@ -65,9 +65,9 @@ function watchErrors(page: Page): string[] {
   return errs;
 }
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 1. Page health
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Page health", () => {
   test("returns HTTP 200", async ({ page }) => {
@@ -88,9 +88,9 @@ test.describe("Page health", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 2. Free presets — one instance per free preset skin
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Free presets", () => {
   for (const [hook, presetClass] of Object.entries(FREE_PRESETS)) {
@@ -120,9 +120,9 @@ test.describe("Free presets", () => {
   }
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 3. Social profiles
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Social profiles", () => {
   test("enabled: social profiles list is rendered", async ({ page }) => {
@@ -158,9 +158,9 @@ test.describe("Social profiles", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 4. Content features
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Text overlay on image", () => {
   test("text overlay: p.eael-team-text-overlay is rendered inside .eael-team-image", async ({ page }) => {
@@ -194,11 +194,11 @@ test.describe("Rounded avatar", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 5. Alignment
 //    prefix_class 'eael-team-align-' is applied to the Elementor widget wrapper
 //    alongside the hook's _css_classes.
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Alignment", () => {
   test("align-left: widget wrapper carries class 'eael-team-align-left'", async ({ page }) => {
@@ -238,9 +238,9 @@ test.describe("Alignment", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 6. HTML tag configuration
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("HTML tag configuration", () => {
   test("default: name is rendered as <h2>", async ({ page }) => {
@@ -292,9 +292,9 @@ test.describe("HTML tag configuration", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 7. Element structure
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Element structure", () => {
   test("default: .eael-team-item is attached", async ({ page }) => {
@@ -335,9 +335,9 @@ test.describe("Element structure", () => {
   });
 });
 
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 // 8. Interaction
-// ══════════════════════════════════════════════════════════════════════════════
+// ============================================================================
 
 test.describe("Interaction", () => {
   test("hover on each widget instance triggers no JS errors", async ({ page }) => {

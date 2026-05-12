@@ -66,7 +66,7 @@ if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     }
 }
 
-// ── Woo Product Slider page ────────────────────────────────────────────────
+// - Woo Product Slider page ------------------------
 
 WP_CLI::log( '' );
 WP_CLI::log( '--- Woo Product Slider page ---' );
@@ -76,11 +76,11 @@ $page_id = ea_upsert_page( $slug, 'Woo Product Slider' );
 
 $widgets = [
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Layout Presets
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Layout Presets ──', 'h2' ),
+    ea_heading( '- Layout Presets -', 'h2' ),
 
     ea_heading( 'Default Woo Product Slider (Preset 1)' ),
     ea_widget( 'test-wps-default', 'eael-woo-product-slider',
@@ -114,11 +114,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Content Toggles
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Content Toggles ──', 'h2' ),
+    ea_heading( '- Content Toggles -', 'h2' ),
 
     ea_heading( 'Woo Product Slider | Title: Hidden' ),
     ea_widget( 'test-wps-no-title', 'eael-woo-product-slider',
@@ -157,11 +157,11 @@ $widgets = [
         ]
     ),
 
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
     // Slider Controls
-    // ══════════════════════════════════════════════════════════════════════
+    // ====================================================================
 
-    ea_heading( '── Slider Controls ──', 'h2' ),
+    ea_heading( '- Slider Controls -', 'h2' ),
 
     ea_heading( 'Woo Product Slider | Arrows: On' ),
     ea_widget( 'test-wps-arrows', 'eael-woo-product-slider',

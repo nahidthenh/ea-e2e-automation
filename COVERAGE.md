@@ -1,6 +1,6 @@
 # EA Widget Test Coverage
 
-> **Last updated:** 2026-05-11
+> **Last updated:** 2026-05-12
 > **Plugin sources:**
 > - Free: `ea-plugins/essential-addons-for-elementor-lite/includes/Elements/`
 > - Pro:  `ea-plugins/essential-addons-elementor/includes/Elements/`
@@ -12,9 +12,9 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 31 | 32 | **63** |
-| Not covered | 28 | 10 | **38** |
-| **Coverage** | **52%** | **78%** | **62%** |
+| Covered | 32 | 32 | **64** |
+| Not covered | 27 | 10 | **37** |
+| **Coverage** | **53%** | **78%** | **63%** |
 
 ---
 
@@ -85,10 +85,11 @@
 | Woo Product Carousel | Free | [tests/woo-product-carousel.spec.ts](tests/woo-product-carousel.spec.ts) |
 | Woo Product Compare | Free | [tests/woo-product-compare.spec.ts](tests/woo-product-compare.spec.ts) |
 | Woo Product Gallery | Free | [tests/woo-product-gallery.spec.ts](tests/woo-product-gallery.spec.ts) |
+| Event Calendar | Free | [tests/event-calendar.spec.ts](tests/event-calendar.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (28)
+## ❌ Not Covered — Free Widgets (27)
 
 ### Core / General
 
@@ -99,7 +100,6 @@
 | Data Table | `Data_Table.php` | ✅ |
 | Login / Register | `Login_Register.php` |
 | NFT Gallery | `NFT_Gallery.php` | ✅ |
-| Event Calendar | `Event_Calendar.php` |
 
 
 ### WooCommerce

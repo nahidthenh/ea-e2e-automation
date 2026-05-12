@@ -356,4 +356,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-business-reviews-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-login-register-page.php
+
 log "Test pages ready."

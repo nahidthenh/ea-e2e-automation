@@ -12,13 +12,13 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 34 | 32 | **66** |
-| Not covered | 25 | 10 | **35** |
-| **Coverage** | **57%** | **78%** | **65%** |
+| Covered | 34 | 33 | **67** |
+| Not covered | 25 | 9 | **34** |
+| **Coverage** | **57%** | **80%** | **66%** |
 
 ---
 
-## ✅ Covered Widgets (66)
+## ✅ Covered Widgets (67)
 
 | Widget | Plugin | Test File |
 |---|---|---|
@@ -62,6 +62,7 @@
 | One Page Navigation | Pro | [tests/one-page-navigation.spec.ts](tests/one-page-navigation.spec.ts) |
 | Logo Carousel | Pro | [tests/logo-carousel.spec.ts](tests/logo-carousel.spec.ts) |
 | Lightbox | Pro | [tests/lightbox.spec.ts](tests/lightbox.spec.ts) |
+| Login / Register | Pro | [tests/login-register.spec.ts](tests/login-register.spec.ts) |
 | Offcanvas | Pro | [tests/offcanvas.spec.ts](tests/offcanvas.spec.ts) |
 | Post List (Smart Post List) | Pro | [tests/post-list.spec.ts](tests/post-list.spec.ts) |
 | Woo Product List | Free | [tests/woo-product-list.spec.ts](tests/woo-product-list.spec.ts) |
@@ -100,7 +101,7 @@
 | Advanced Data Table | `Advanced_Data_Table.php` | ✅ |
 | Business Reviews | `Business_Reviews.php` | ✅ |
 | Data Table | `Data_Table.php` | ✅ |
-| Login / Register | `Login_Register.php` |
+| Login / Register | `Login_Register.php` | ✅ |
 | NFT Gallery | `NFT_Gallery.php` | ✅ |
 
 

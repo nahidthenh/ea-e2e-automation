@@ -376,4 +376,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-product-grid-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-woo-account-dashboard-page.php
+
 log "Test pages ready."

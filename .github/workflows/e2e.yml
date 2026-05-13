@@ -56,6 +56,10 @@ jobs:
       WP_ADMIN_USER: admin
       WP_ADMIN_PASSWORD: admin123
       WP_ADMIN_EMAIL: admin@example.com
+      GOOGLE_BUSINESS_NEW_API: ${{ secrets.GOOGLE_BUSINESS_NEW_API }}
+      GOOGLE_BUSINESS_PLACE_ID: ${{ secrets.GOOGLE_BUSINESS_PLACE_ID }}
+      OPEN_SEA_API: ${{ secrets.OPEN_SEA_API }}
+      OPEN_SEA_COLLECTIONS: ${{ secrets.OPEN_SEA_COLLECTIONS }}
 
     steps:
       - name: Checkout repository

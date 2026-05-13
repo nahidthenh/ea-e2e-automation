@@ -117,7 +117,7 @@
 | Woo Product Price | `Woo_Product_Price.php` |
 | Woo Product Rating | `Woo_Product_Rating.php` |
 | Woo Account Dashboard | `Woo_Account_Dashboard.php` | ✅ |
-| Woo Collections | `Woo_Collections.php` |
+| Woo Collections | `Woo_Collections.php` | ✅ |
 | Woo Cross Sells | `Woo_Cross_Sells.php` |
 | Woo Thank You | `Woo_Thank_You.php` |
 

@@ -53,6 +53,7 @@ services:
       - wordpress_data:/var/www/html
       - ${EA_PLUGINS_PATH}:/tmp/ea-plugins:ro
       - ./mu-plugins:/var/www/html/wp-content/mu-plugins:ro
+      - ./config/php.ini:/usr/local/etc/php/conf.d/ea-uploads.ini:ro
     networks:
       - wp_network
 

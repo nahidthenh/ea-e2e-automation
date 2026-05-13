@@ -6,6 +6,7 @@
     "setup": "bash setup.sh",
     "teardown": "bash teardown.sh",
     "test": "playwright test",
+    "test:last-failed": "playwright test --last-failed",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",

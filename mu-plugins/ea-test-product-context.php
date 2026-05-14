@@ -1,46 +1,44 @@
 <?php
 /**
- * Injects a WooCommerce product context for EA single-product widget test pages.
+ * Renders the Elementor content saved on the EA test product into the
+ * WooCommerce single-product page.
  *
- * When WordPress loads a page whose slug starts with "ea-single-product-test",
- * this plugin finds the first published product (by SKU prefix "ea-") and sets
- * it as the global $product and $post so that EA's single-product widgets
- * (Price, Rating, Add-to-Cart, Images, Gallery) have a valid product to render.
+ * EA's single-product widgets (Add To Cart, Product Images, Product Price,
+ * Product Rating) resolve their product via Helper::get_product(), which
+ * internally calls wc_get_product(get_the_ID()). They MUST run while
+ * global $post is set to the product post — which is exactly the case on
+ * a WC single-product page.
  *
- * This file is auto-loaded by WordPress as a must-use plugin.
+ * The problem: WooCommerce's single-product template never calls the_content(),
+ * so Elementor's the_content filter never fires and the _elementor_data saved
+ * on the product post is never rendered.
+ *
+ * Fix: hook into woocommerce_after_single_product_summary with a very low
+ * priority and manually invoke Elementor's frontend renderer for the product.
  */
 
-add_action( 'wp', function () {
-    if ( ! function_exists( 'wc_get_products' ) ) {
-        return;
-    }
-
-    $post = get_queried_object();
-    if ( ! $post || ! isset( $post->post_name ) ) {
-        return;
-    }
-
-    if ( strpos( $post->post_name, 'ea-single-product-test' ) !== 0 ) {
-        return;
-    }
-
-    $products = wc_get_products( [
-        'limit'   => 1,
-        'status'  => 'publish',
-        'orderby' => 'date',
-        'order'   => 'ASC',
-    ] );
-
-    if ( empty( $products ) ) {
-        return;
-    }
-
-    $wc_product = $products[0];
-
-    global $product;
-    $product = $wc_product;
-
+add_action( 'woocommerce_after_single_product_summary', function () {
     global $post;
-    $post = get_post( $wc_product->get_id() );
-    setup_postdata( $post );
-} );
+
+    if ( ! $post || $post->post_name !== 'ea-widget-test-product' ) {
+        return;
+    }
+
+    if ( ! class_exists( '\Elementor\Plugin' ) ) {
+        return;
+    }
+
+    $document = \Elementor\Plugin::$instance->documents->get_doc_for_frontend( $post->ID );
+    if ( ! $document ) {
+        return;
+    }
+
+    $data = $document->get_elements_data();
+    if ( empty( $data ) ) {
+        return;
+    }
+
+    echo '<div class="ea-single-product-test-widgets">';
+    $document->print_elements_with_wrapper( $data );
+    echo '</div>';
+}, 999 );

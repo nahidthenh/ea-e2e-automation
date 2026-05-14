@@ -58,7 +58,9 @@ if ( ! function_exists( 'ea_build_elementor_data' ) ) {
 if ( ! function_exists( 'ea_save_elementor_data' ) ) {
     function ea_save_elementor_data( int $page_id, array $widgets ): void {
         $data = ea_build_elementor_data( $widgets );
-        update_post_meta( $page_id, '_elementor_data', wp_json_encode( $data ) );
+        // wp_slash() prevents update_post_meta's internal wp_unslash() from
+        // stripping the backslashes that json_encode uses to escape quote chars.
+        update_post_meta( $page_id, '_elementor_data', wp_slash( wp_json_encode( $data ) ) );
         update_post_meta( $page_id, '_elementor_edit_mode', 'builder' );
         update_post_meta( $page_id, '_elementor_version', '3.0.0' );
         delete_post_meta( $page_id, '_elementor_css' );

@@ -96,7 +96,7 @@ function ea_build_elementor_data( array $widgets ): array {
 
 function ea_save_elementor_data( int $page_id, array $widgets ): void {
     $data = ea_build_elementor_data( $widgets );
-    update_post_meta( $page_id, '_elementor_data', wp_json_encode( $data ) );
+    update_post_meta( $page_id, '_elementor_data', wp_slash( wp_json_encode( $data ) ) );
     update_post_meta( $page_id, '_elementor_edit_mode', 'builder' );
     update_post_meta( $page_id, '_elementor_version', '3.0.0' );
     delete_post_meta( $page_id, '_elementor_css' ); // force CSS regeneration

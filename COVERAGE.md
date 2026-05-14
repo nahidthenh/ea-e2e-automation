@@ -1,6 +1,6 @@
 # EA Widget Test Coverage
 
-> **Last updated:** 2026-05-12
+> **Last updated:** 2026-05-14
 > **Plugin sources:**
 > - Free: `ea-plugins/essential-addons-for-elementor-lite/includes/Elements/`
 > - Pro:  `ea-plugins/essential-addons-elementor/includes/Elements/`
@@ -12,19 +12,18 @@
 | | Free | Pro | Total |
 |---|---|---|---|
 | Widgets | 60 | 41 | **101** |
-| Covered | 37 | 33 | **70** |
-| Not covered | 22 | 9 | **31** |
-| **Coverage** | **62%** | **80%** | **69%** |
+| Covered | 42 | 35 | **77** |
+| Not covered | 18 | 6 | **24** |
+| **Coverage** | **70%** | **85%** | **76%** |
 
 ---
 
-## ✅ Covered Widgets (70)
+## ✅ Covered Widgets (77)
 
 | Widget | Plugin | Test File |
 |---|---|---|
 | Advanced Accordion | Free | [tests/advanced-accordion.spec.ts](tests/advanced-accordion.spec.ts) |
 | Business Reviews | Free | [tests/business-reviews.spec.ts](tests/business-reviews.spec.ts) |
-| Career Page | Free | [tests/career-page.spec.ts](tests/career-page.spec.ts) |
 | Countdown | Free | [tests/countdown.spec.ts](tests/countdown.spec.ts) |
 | Image Accordion | Free | [tests/image-accordion.spec.ts](tests/image-accordion.spec.ts) |
 | Image Comparison | Pro | [tests/image-comparison.spec.ts](tests/image-comparison.spec.ts) |
@@ -92,32 +91,23 @@
 | Woo Cart | Free | [tests/woo-cart.spec.ts](tests/woo-cart.spec.ts) |
 | Woo Checkout | Free | [tests/woo-checkout.spec.ts](tests/woo-checkout.spec.ts) |
 | Product Grid (Woo Product Grid) | Free | [tests/product-grid.spec.ts](tests/product-grid.spec.ts) |
+| Data Table | Free | [tests/data-table.spec.ts](tests/data-table.spec.ts) |
+| NFT Gallery | Free | [tests/nft-gallery.spec.ts](tests/nft-gallery.spec.ts) |
+| Woo Account Dashboard | Pro | [tests/woo-account-dashboard.spec.ts](tests/woo-account-dashboard.spec.ts) |
+| Woo Collections | Pro | [tests/woo-collections.spec.ts](tests/woo-collections.spec.ts) |
+| Woo Add To Cart | Free | [tests/woo-add-to-cart.spec.ts](tests/woo-add-to-cart.spec.ts) |
+| Woo Product Images | Free | [tests/woo-product-images.spec.ts](tests/woo-product-images.spec.ts) |
+| Woo Product Price | Free | [tests/woo-product-price.spec.ts](tests/woo-product-price.spec.ts) |
+| Woo Product Rating | Free | [tests/woo-product-rating.spec.ts](tests/woo-product-rating.spec.ts) |
 
 ---
 
-## ❌ Not Covered — Free Widgets (23)
-
-### Core / General
-
-| Widget | PHP File |
-|---|---|
-| Advanced Data Table | `Advanced_Data_Table.php` | ✅ |
-| Business Reviews | `Business_Reviews.php` | ✅ |
-| Data Table | `Data_Table.php` | ✅ |
-| Login / Register | `Login_Register.php` | ✅ |
-| NFT Gallery | `NFT_Gallery.php` | ✅ |
-
+## ❌ Not Covered — Free Widgets (18)
 
 ### WooCommerce
 
 | Widget | PHP File |
 |---|---|
-| Woo Add To Cart | `Woo_Add_To_Cart.php` |
-| Woo Product Images | `Woo_Product_Images.php` |
-| Woo Product Price | `Woo_Product_Price.php` |
-| Woo Product Rating | `Woo_Product_Rating.php` |
-| Woo Account Dashboard | `Woo_Account_Dashboard.php` | ✅ |
-| Woo Collections | `Woo_Collections.php` | ✅ |
 | Woo Cross Sells | `Woo_Cross_Sells.php` |
 | Woo Thank You | `Woo_Thank_You.php` |
 
@@ -130,14 +120,12 @@
 | BetterDocs Category Grid | `Betterdocs_Category_Grid.php` |
 | BetterDocs Search Form | `Betterdocs_Search_Form.php` |
 | EmbedPress | `EmbedPress.php` |
-| Event Calendar | `Event_Calendar.php` |
 | Facebook Feed | `Facebook_Feed.php` |
 | Twitter Feed | `Twitter_Feed.php` |
 | Twitter Feed Carousel | `Twitter_Feed_Carousel.php` |
 | Instagram Feed | `Instagram_Feed.php` |
 | LD Course List | `LD_Course_List.php` |
 | Mailchimp | `Mailchimp.php` |
----
 
 ### Form Integrations
 

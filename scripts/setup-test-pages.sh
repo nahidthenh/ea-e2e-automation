@@ -386,4 +386,9 @@ command wp \
   --allow-root \
   eval-file /scripts/setup-woo-collections-page.php
 
+command wp \
+  --path="${WP_PATH}" \
+  --allow-root \
+  eval-file /scripts/setup-woo-single-product-widgets-page.php
+
 log "Test pages ready."

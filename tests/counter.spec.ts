@@ -348,14 +348,19 @@ test.describe("Interaction", () => {
     // Scroll into view to trigger the count-up animation
     await el.scrollIntoViewIfNeeded();
     await page.waitForTimeout(3000);
-    const text = await el.textContent();
-    const trimmed = text?.trim() ?? "";
-    if (trimmed === "") {
-      // Animation has not yet started — data-to is already verified above
-      return;
-    }
-    const val = parseInt(trimmed.replace(/,/g, ""), 10);
-    expect(Number.isInteger(val), `"${trimmed}" is not an integer`).toBe(true);
+    // The widget uses Odometer — each digit is a separate .odometer-value span.
+    // Collect digits from those spans; fall back to plain textContent otherwise.
+    const val = await page.evaluate(() => {
+      const el = document.querySelector(".test-c-default .eael-counter-number");
+      if (!el) return -1;
+      const digitSpans = el.querySelectorAll(".odometer-value");
+      if (digitSpans.length > 0) {
+        const numStr = Array.from(digitSpans).map((s) => s.textContent ?? "").join("");
+        return parseInt(numStr, 10);
+      }
+      return parseInt((el.textContent ?? "").trim().replace(/[,\s]/g, ""), 10);
+    });
+    expect(Number.isInteger(val), `counter value ${val} is not an integer`).toBe(true);
     expect(val).toBeGreaterThanOrEqual(0);
     expect(val).toBeLessThanOrEqual(250);
   });

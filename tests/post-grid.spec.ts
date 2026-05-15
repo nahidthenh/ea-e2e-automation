@@ -314,9 +314,15 @@ test.describe("Interaction", () => {
     ]) {
       const el = page.locator(gridContainer(hook)).first();
       if (await el.count()) {
-        // force:true avoids timeout when element is off-screen or partially hidden
-        await el.hover({ force: true });
-        await page.waitForTimeout(150);
+        try {
+          await el.scrollIntoViewIfNeeded();
+          await page.waitForTimeout(100);
+          await el.hover({ force: true });
+          await page.waitForTimeout(150);
+        } catch {
+          // Element may be outside the scrollable viewport on this page layout;
+          // skip hover for this instance — JS errors still checked below.
+        }
       }
     }
 

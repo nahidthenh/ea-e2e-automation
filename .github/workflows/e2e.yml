@@ -128,9 +128,11 @@ jobs:
         if: inputs.last_failed
         uses: dawidd6/action-download-artifact@v6
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           name: playwright-last-run
           path: test-results/
           workflow: e2e.yml
+          workflow_conclusion: ""
           if_no_artifact_found: warn
 
       - name: Run E2E tests
@@ -148,6 +150,7 @@ jobs:
         with:
           name: playwright-last-run
           path: test-results/.last-run.json
+          if-no-files-found: warn
           retention-days: 30
           overwrite: true
 

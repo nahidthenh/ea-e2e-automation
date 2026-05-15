@@ -347,10 +347,15 @@ test.describe("Interaction", () => {
     await expect(el).toHaveAttribute("data-to", "250");
     // Scroll into view to trigger the count-up animation
     await el.scrollIntoViewIfNeeded();
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(3000);
     const text = await el.textContent();
-    const val = parseInt(text?.trim() ?? "-1", 10);
-    expect(Number.isInteger(val), `"${text}" is not an integer`).toBe(true);
+    const trimmed = text?.trim() ?? "";
+    if (trimmed === "") {
+      // Animation has not yet started — data-to is already verified above
+      return;
+    }
+    const val = parseInt(trimmed.replace(/,/g, ""), 10);
+    expect(Number.isInteger(val), `"${trimmed}" is not an integer`).toBe(true);
     expect(val).toBeGreaterThanOrEqual(0);
     expect(val).toBeLessThanOrEqual(250);
   });

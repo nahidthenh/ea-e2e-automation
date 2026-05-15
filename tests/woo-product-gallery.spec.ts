@@ -125,8 +125,17 @@ test.describe("Layout presets", () => {
 
     test(`${preset}: product title is visible`, async ({ page }) => {
       await openPage(page);
-      // preset-4 may position the title differently; check it's attached rather than strictly visible
-      await expect(page.locator(title(hook)).first()).toBeAttached();
+      // preset-4 uses WooCommerce's native .woocommerce-loop-product__title instead
+      // of .eael-product-title; fall back to that class when the EA one is absent.
+      const eaelTitle = page.locator(title(hook));
+      const count = await eaelTitle.count();
+      if (count > 0) {
+        await expect(eaelTitle.first()).toBeAttached();
+      } else {
+        await expect(
+          page.locator(`.${hook} .woocommerce-loop-product__title`).first()
+        ).toBeAttached();
+      }
     });
   }
 });

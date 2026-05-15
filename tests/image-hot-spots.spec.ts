@@ -209,9 +209,9 @@ test.describe("Tooltip", () => {
 test.describe("Link behaviour", () => {
   test("external link — hotspot has target=_blank", async ({ page }) => {
     await openPage(page);
-    // Find any hotspot in this widget that has target=_blank
+    // EA renders target="_blank _blank" (two values) — use contains selector
     await expect(
-      page.locator(`${hotSpotWrap("test-ihs-link-external")}[target="_blank"]`).first()
+      page.locator(`${hotSpotWrap("test-ihs-link-external")}[target*="_blank"]`).first()
     ).toBeAttached();
   });
 
@@ -338,7 +338,8 @@ test.describe("Interaction", () => {
       "test-ihs-align-right",
       "test-ihs-multi",
     ]) {
-      await page.locator(hotSpotWrap(hook)).first().hover();
+      // force:true avoids timeout when overlapping elements intercept the pointer
+      await page.locator(hotSpotWrap(hook)).first().hover({ force: true });
       await page.waitForTimeout(150);
     }
 

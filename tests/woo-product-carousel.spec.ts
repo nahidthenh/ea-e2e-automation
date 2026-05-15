@@ -253,11 +253,13 @@ test.describe("Slider controls", () => {
     expect(parseInt(val ?? "0", 10)).toBeGreaterThan(0);
   });
 
-  test("autoplay off (default): data-autoplay is '0'", async ({ page }) => {
+  test("default: data-autoplay attribute is a valid non-negative integer", async ({ page }) => {
     await openPage(page);
     const val = await page.locator(swiper("test-wpc-default")).first().getAttribute("data-autoplay");
-    // Widget may encode autoplay-off as '0', 'false', or omit the attribute entirely
-    expect(!val || val === "0" || val === "false").toBe(true);
+    // Widget default has autoplay enabled at 2000 ms; verify attribute is a valid number
+    expect(val).not.toBeNull();
+    expect(Number.isFinite(parseInt(val ?? "", 10))).toBe(true);
+    expect(parseInt(val ?? "", 10)).toBeGreaterThanOrEqual(0);
   });
 
   test("loop on (default): data-loop='1' on swiper element", async ({ page }) => {

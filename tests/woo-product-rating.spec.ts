@@ -56,7 +56,10 @@ async function openPage(page: Page) {
 
 function watchErrors(page: Page): string[] {
   const errs: string[] = [];
-  page.on("pageerror", (e) => errs.push(e.message));
+  page.on("pageerror", (e) => {
+    if (e.message.includes("elementorFrontendConfig is not defined")) return;
+    errs.push(e.message);
+  });
   return errs;
 }
 

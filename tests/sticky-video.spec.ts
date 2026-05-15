@@ -39,7 +39,7 @@ const PAGE_URL = `/${process.env.STICKY_VIDEO_PAGE_SLUG ?? "sticky-video"}/`;
 const wrapper    = (hook: string) => `.${hook} .eael-sticky-video-wrapper`;
 const player2    = (hook: string) => `.${hook} .eael-sticky-video-player2`;
 const closeBtn   = (hook: string) => `.${hook} .eaelsv-sticky-player-close`;
-const plyrTarget = (hook: string) => `.${hook} [data-plyr-provider]`;
+const plyrTarget = (hook: string) => `.${hook} [id^="eaelsv-player-"]`;
 const selfHosted = (hook: string) => `.${hook} video.eaelsv-player`;
 const plyrInited = (hook: string) => `.${hook} .plyr`;
 

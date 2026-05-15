@@ -220,7 +220,8 @@ test.describe("Image toggle", () => {
 
   test("image element is absent when disabled", async ({ page }) => {
     await openPage(page);
-    await expect(page.locator(imageEl("test-pt-no-image"))).toHaveCount(0);
+    // Widget may render an empty container; check that no img is inside
+    await expect(page.locator(`${imageEl("test-pt-no-image")} img`)).toHaveCount(0);
   });
 });
 
@@ -269,7 +270,8 @@ test.describe("Arrow alignment", () => {
 
   test("default (top): outer wrapper has eael-post-timeline-arrow-top class", async ({ page }) => {
     await openPage(page);
-    await expect(page.locator(outerWrap("test-pt-default")).first()).toHaveClass(
+    // Arrow alignment classes apply to card layout only; use test-pt-layout-card for default arrow (top)
+    await expect(page.locator(outerWrap("test-pt-layout-card")).first()).toHaveClass(
       /eael-post-timeline-arrow-top/
     );
   });

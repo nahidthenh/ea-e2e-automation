@@ -345,6 +345,9 @@ test.describe("Interaction", () => {
     await page.goto(PAGE_URL);
     const el = page.locator(number("test-c-default")).first();
     await expect(el).toHaveAttribute("data-to", "250");
+    // Scroll into view to trigger the count-up animation
+    await el.scrollIntoViewIfNeeded();
+    await page.waitForTimeout(2000);
     const text = await el.textContent();
     const val = parseInt(text?.trim() ?? "-1", 10);
     expect(Number.isInteger(val), `"${text}" is not an integer`).toBe(true);

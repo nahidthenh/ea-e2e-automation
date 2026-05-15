@@ -141,9 +141,10 @@ test.describe("Divider types", () => {
 
   test("icon type: .eael-divider-content has 'eael-divider-icon' class", async ({ page }) => {
     await openPage(page);
+    // .eael-divider-icon is a child element inside .eael-divider-content, not a class on it
     await expect(
-      page.locator(".test-d-icon .eael-divider-content").first()
-    ).toHaveClass(/eael-divider-icon/);
+      page.locator(".test-d-icon .eael-divider-content .eael-divider-icon").first()
+    ).toBeAttached();
   });
 });
 
@@ -290,7 +291,11 @@ test.describe("Border styles", () => {
     const style = await page
       .locator(divider("test-d-plain"))
       .first()
-      .evaluate((el) => getComputedStyle(el).borderBottomStyle);
+      .evaluate((el) => {
+        const cs = getComputedStyle(el);
+        // EA divider may apply the style via border-top or border-bottom
+        return [cs.borderTopStyle, cs.borderBottomStyle].find(s => s !== "none") ?? cs.borderBottomStyle;
+      });
     expect(style).toBe("dashed");
   });
 

@@ -327,13 +327,21 @@ test.describe("Interaction", () => {
     const errs = watchErrors(page);
     await openPage(page);
 
+    // Stop all Swiper autoplay so slides are stable before hovering.
+    await page.evaluate(() => {
+      document.querySelectorAll<HTMLElement>(".swiper").forEach((el) => {
+        (el as any).swiper?.autoplay?.stop();
+      });
+    });
+
     for (const hook of Object.keys(SKIN_MAP)) {
       // Exclude Swiper loop-clone slides (.swiper-slide-duplicate) — they are
       // off-screen and hovering on them triggers internal Swiper errors.
-      await page
+      const target = page
         .locator(`.${hook} .eael-testimonial-item:not(.swiper-slide-duplicate)`)
-        .first()
-        .hover();
+        .first();
+      await target.scrollIntoViewIfNeeded();
+      await target.hover();
       await page.waitForTimeout(150);
     }
 

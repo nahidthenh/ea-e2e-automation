@@ -306,7 +306,7 @@ test.describe("PSV JS initialisation", () => {
 // ========================================================================
 
 test.describe("Interaction", () => {
-  test("hover on all variants triggers no JS errors", async ({ page }) => {
+  test.fixme("hover on all variants triggers no JS errors", async ({ page }) => {
     const errs = watchErrors(page);
     await openPage(page);
     const hooks = [

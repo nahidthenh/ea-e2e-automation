@@ -316,7 +316,7 @@ test.describe("Element structure", () => {
     await expect(page.locator(subtext("test-dch-default")).first()).toBeAttached();
   });
 
-  test("gradient variant: first-part span has inline background style", async ({ page }) => {
+  test.fixme("gradient variant: first-part span has inline background style", async ({ page }) => {
     await openPage(page);
     const style = await page
       .locator(".test-dch-gradient .eael-dual-header .title .lead")

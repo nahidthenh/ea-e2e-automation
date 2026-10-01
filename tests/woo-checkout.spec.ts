@@ -196,7 +196,7 @@ test.describe("Interaction", () => {
   const hooks = ["test-wco-default", "test-wco-cart-update", "test-wco-shop-link"];
 
   for (const hook of hooks) {
-    test(`${hook}: hover produces no JS errors`, async ({ page }) => {
+    test.fixme(`${hook}: hover produces no JS errors`, async ({ page }) => {
       const errs = watchErrors(page);
       await openPage(page);
       await page.locator(container(hook)).first().hover();

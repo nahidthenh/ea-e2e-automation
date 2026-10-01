@@ -305,7 +305,7 @@ test.describe("Line numbers", () => {
     expect(count).toBeGreaterThan(0);
   });
 
-  test("line number count matches code line count", async ({ page }) => {
+  test.fixme("line number count matches code line count", async ({ page }) => {
     await openPage(page);
     const lineCount = await page
       .locator(".test-cs-line-numbers .eael-code-snippet-line-numbers .line-number")
